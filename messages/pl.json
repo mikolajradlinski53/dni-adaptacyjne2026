@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "siteName": "Dni Adaptacyjne 2026",
+    "description": "Obowiązkowe Dni Adaptacyjne dla studentów I roku Uniwersytetu Ekonomicznego we Wrocławiu. 1–3 października 2026. Harmonogram, ważne linki i odpowiedzi na pytania w jednym miejscu."
+  },
+  "nav": {
+    "home": "Start",
+    "about": "O wydarzeniu",
+    "schedule": "Harmonogram",
+    "news": "Newsy",
+    "links": "Ważne linki",
+    "faq": "FAQ",
+    "contact": "Kontakt",
+    "partners": "Partnerzy",
+    "map": "Mapa kampusu",
+    "rules": "Regulamin",
+    "openMenu": "Otwórz menu",
+    "closeMenu": "Zamknij menu"
+  },
+  "common": {
+    "learnMore": "Dowiedz się więcej",
+    "seeSchedule": "Zobacz harmonogram",
+    "draft": "Treść robocza",
+    "linkSoon": "Link wkrótce",
+    "verify": "do weryfikacji",
+    "photoSoon": "Zdjęcie wkrótce",
+    "mandatory": "Udział obowiązkowy dla I roku",
+    "external": "link zewnętrzny"
+  },
+  "hero": {
+    "badge": "1–3 października 2026 · kampus UEW, Wrocław",
+    "title": "Witajcie na UEW!",
+    "lead": "Przed Wami początek akademickiej przygody. Podczas Dni Adaptacyjnych poznacie kampus, ludzi i wszystko, co warto wiedzieć przed pierwszymi zajęciami.",
+    "ctaPrimary": "Sprawdź, co Cię dotyczy",
+    "ctaSecondary": "Zobacz harmonogram"
+  },
+  "countdown": {
+    "heading": "Do startu zostało",
+    "days": "dni",
+    "hours": "godzin",
+    "minutes": "minut",
+    "seconds": "sekund",
+    "after": "Do zobaczenia na kampusie!"
+  },
+  "home": {
+    "socialTitle": "Bądźcie z nami na bieżąco",
+    "socialLead": "Najważniejsze ogłoszenia publikujemy na Facebooku. Dołączcie do wydarzeń, żeby nic Was nie ominęło.",
+    "socialDa": "Wydarzenie FB: Dni Adaptacyjne",
+    "socialParty": "Wydarzenie FB: UE Party x DA",
+    "socialSsuew": "Strona Samorządu Studentów",
+    "docsTitle": "Dokumenty",
+    "docsLead": "Zasady udziału w wydarzeniu znajdziecie w regulaminie.",
+    "docsCta": "Pobierz Regulamin DA 2026 (PDF)",
+    "teamTitle": "Poznajcie nasz Team",
+    "teamLead": "Za Dni Adaptacyjne odpowiada zespół Samorządu Studentów UEW. Podczas wydarzenia poznacie nas po koszulkach i identyfikatorach.",
+    "teamCta": "Zobacz cały zespół",
+    "aboutTitle": "Czym są Dni Adaptacyjne?",
+    "aboutTeaser": "To obowiązkowe wydarzenie organizacyjno-integracyjne dla studentów I roku. W dwa dni przeprowadzimy Was przez kampus, prawa i obowiązki studenta oraz pierwszą wspólną integrację."
+  },
+  "about": {
+    "title": "O Dniach Adaptacyjnych",
+    "intro1": "Dni Adaptacyjne 2026 to obowiązkowe wydarzenie organizacyjno-integracyjne dla studentów I roku Uniwersytetu Ekonomicznego we Wrocławiu. Odbywa się 1–3 października 2026 na terenie kampusu.",
+    "intro2": "To Wasz pierwszy kontakt z uczelnią poza rekrutacją. Pokażemy Wam, jak poruszać się po kampusie, jak działa organizacja studiów i gdzie szukać pomocy, zanim zacznie się semestr.",
+    "legalTitle": "Dlaczego udział jest obowiązkowy?",
+    "legalBody": "Dni Adaptacyjne realizują ustawowy obowiązek szkolenia z praw i obowiązków studenta, wynikający z ustawy Prawo o szkolnictwie wyższym i nauce. Każda osoba przyjęta na I rok musi przejść to szkolenie, a Dni Adaptacyjne są formą jego realizacji na UEW.",
+    "modesTitle": "Wybierz swój tryb studiów",
+    "modesHint": "Zapamiętamy Twój wybór, także na stronie harmonogramu.",
+    "sideTitle": "Wydarzenia towarzyszące",
+    "sideBody": "W piątek wieczorem odbędzie się UE Party x DA, impreza otwarta dla wszystkich pierwszorocznych, niezależnie od trybu i stopnia studiów. Szczegóły znajdziecie w harmonogramie i na wydarzeniu na Facebooku.",
+    "sideCta": "UE Party x DA w harmonogramie"
+  },
+  "schedule": {
+    "title": "Harmonogram",
+    "lead": "Wybierz tryb studiów, żeby zobaczyć plan, który Cię dotyczy.",
+    "note": "Harmonogram roboczy: godziny i miejsca mogą się zmienić. Zmiany ogłaszamy w Newsach i na Facebooku.",
+    "empty": "Harmonogram dla tego trybu pojawi się wkrótce."
+  },
+  "news": {
+    "title": "Newsy",
+    "lead": "Komunikaty i aktualizacje, także na żywo w trakcie wydarzenia.",
+    "readMore": "Czytaj dalej",
+    "back": "Wróć do newsów",
+    "empty": "Na razie brak komunikatów. Zajrzyjcie tu bliżej października."
+  },
+  "links": {
+    "title": "Ważne linki",
+    "lead": "Wszystko, czego szukacie na start studiów, w jednym miejscu."
+  },
+  "faq": {
+    "title": "FAQ",
+    "lead": "Odpowiedzi na pytania, które pierwszoroczni zadają najczęściej.",
+    "note": "Lista robocza. Ostateczne pytania i odpowiedzi dostarczy zespół Dni Adaptacyjnych."
+  },
+  "contact": {
+    "title": "Kontakt",
+    "emailLabel": "Jedyny oficjalny kanał kontaktu",
+    "emailNote": "Piszcie śmiało: odpowiadamy na wszystkie pytania dotyczące Dni Adaptacyjnych.",
+    "teamTitle": "Organizatorzy",
+    "recognizeTitle": "Jak rozpoznać organizatorów podczas wydarzenia?",
+    "teamRoleTitle": "Team Dni Adaptacyjnych",
+    "teamRoleBody": "Odpowiada za sprawy organizacyjne i techniczne oraz reaguje na bieżąco. Do Teamu zgłaszajcie problemy i pytania organizacyjne.",
+    "volunteersTitle": "Wolontariusze",
+    "volunteersBody": "Prowadzą prelekcje, oprowadzają po kampusie i pilnują stoisk. To ich pytajcie o drogę i przebieg dnia.",
+    "outfitNote": "Rozpoznacie nas po koszulkach i identyfikatorach. Zdjęcia pojawią się tutaj przed wydarzeniem."
+  },
+  "partners": {
+    "title": "Partnerzy",
+    "lead": "Dni Adaptacyjne wspierają partnerzy Samorządu Studentów UEW.",
+    "placeholder": "Logotypy partnerów pojawią się wkrótce."
+  },
+  "map": {
+    "title": "Mapa kampusu",
+    "lead": "Kampus UEW mieści się przy ul. Komandorskiej 118/120 we Wrocławiu. Mapa pomoże Wam trafić do właściwych budynków.",
+    "placeholder": "Mapa kampusu w przygotowaniu. Przed wydarzeniem znajdziecie tu wersję do przeglądania na telefonie."
+  },
+  "rules": {
+    "title": "Regulamin i dokumenty",
+    "lead": "Dokumenty dotyczące udziału w Dniach Adaptacyjnych 2026.",
+    "docName": "Regulamin Dni Adaptacyjnych 2026",
+    "docNote": "Plik PDF pojawi się tutaj po zatwierdzeniu regulaminu.",
+    "download": "Pobierz PDF"
+  },
+  "search": {
+    "open": "Szukaj",
+    "placeholder": "Szukaj: harmonogram, USOS, starosta…",
+    "empty": "Brak wyników dla",
+    "hint": "Przeszukujesz podstrony, linki, FAQ i newsy.",
+    "label": "Wyszukiwarka"
+  },
+  "footer": {
+    "organizer": "Organizator: Samorząd Studentów Uniwersytetu Ekonomicznego we Wrocławiu",
+    "contact": "Kontakt",
+    "navTitle": "Na skróty",
+    "legal": "© 2026 Samorząd Studentów UEW"
+  },
+  "langSwitcher": {
+    "label": "Zmień język"
+  },
+  "notFound": {
+    "title": "Nie ma takiej strony",
+    "body": "Sprawdź adres albo wróć na stronę główną.",
+    "cta": "Wróć na start"
+  }
+}

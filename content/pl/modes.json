@@ -1,0 +1,53 @@
+[
+  {
+    "id": "full1",
+    "label": "Stacjonarne · I stopień",
+    "short": "2 dni wydarzenia: czwartek i piątek, 1–2 października.",
+    "days": [
+      {
+        "title": "Dzień 1 · czwartek, 1 października",
+        "items": [
+          "Droga przez kampus: poznacie budynki i najważniejsze miejsca",
+          "Stoiska organizacji studenckich i kół naukowych",
+          "Integracja na Zaprzegubiu"
+        ]
+      },
+      {
+        "title": "Dzień 2 · piątek, 2 października",
+        "items": [
+          "Prelekcje: prawa i obowiązki studenta, zasady studiowania",
+          "Wieczorem: UE Party x DA"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "full2",
+    "label": "Stacjonarne · II stopień",
+    "short": "1 dzień wydarzenia: czwartek, 1 października. W piątek macie już zajęcia.",
+    "days": [
+      {
+        "title": "Dzień 1 · czwartek, 1 października",
+        "items": [
+          "Prelekcje dla II stopnia: prawa i obowiązki studenta, organizacja studiów",
+          "Możliwość udziału w części ogólnej: stoiska organizacji i integracja"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "part",
+    "label": "Niestacjonarne",
+    "short": "Sobota, 3 października, forma online (audycja). Nie musicie przyjeżdżać na kampus.",
+    "days": [
+      {
+        "title": "Sobota, 3 października · online",
+        "items": [
+          "Audycja online: najważniejsze informacje o prawach i obowiązkach studenta",
+          "Organizacja studiów niestacjonarnych",
+          "Link do transmisji pojawi się tutaj i w Newsach"
+        ]
+      }
+    ]
+  }
+]

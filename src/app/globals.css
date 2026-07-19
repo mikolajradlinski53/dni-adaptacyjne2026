@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+/*
+  Tymczasowy system kolorów (do podmiany po dostarczeniu logo DA).
+  Kierunek: żywy gradient fiolet / róż / niebieski na jasnym tle.
+  Gradient jest "committed" akcentem (hero, interakcje), reszta cicha.
+*/
+@theme {
+  --color-ink: oklch(22% 0.04 292);
+  --color-ink-soft: oklch(42% 0.035 292);
+  --color-bg: oklch(99% 0.005 300);
+  --color-surface: oklch(100% 0 0);
+  --color-line: oklch(91% 0.015 295);
+
+  --color-violet: oklch(53% 0.25 296);
+  --color-magenta: oklch(62% 0.24 350);
+  --color-blue: oklch(57% 0.19 262);
+  --color-violet-soft: oklch(96% 0.025 296);
+  --color-magenta-soft: oklch(96.5% 0.02 350);
+  --color-blue-soft: oklch(96% 0.02 262);
+
+  --font-display: "Unbounded Variable", system-ui, sans-serif;
+  --font-sans: "Inter Variable", system-ui, sans-serif;
+
+  --radius-tile: 1.25rem;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-display);
+  text-wrap: balance;
+  letter-spacing: -0.01em;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Marka: gradient jako wypełnienie elementów (nigdy jako tekst) */
+.grad-brand {
+  background-image: linear-gradient(
+    115deg,
+    var(--color-blue) 0%,
+    var(--color-violet) 45%,
+    var(--color-magenta) 100%
+  );
+}
+
+.grad-line {
+  background-image: linear-gradient(
+    90deg,
+    var(--color-blue),
+    var(--color-violet),
+    var(--color-magenta)
+  );
+}
+
+/* Aurora w hero: warstwowe radial-gradienty, subtelne, na jasnym tle */
+.aurora {
+  background:
+    radial-gradient(38rem 22rem at 12% 8%, oklch(90% 0.07 262 / 0.55), transparent 62%),
+    radial-gradient(34rem 22rem at 88% 4%, oklch(90% 0.08 350 / 0.5), transparent 60%),
+    radial-gradient(40rem 26rem at 55% 110%, oklch(90% 0.08 296 / 0.55), transparent 62%);
+}
+
+/* Widoczny fokus klawiaturowy — wymóg dostępności */
+:focus-visible {
+  outline: 3px solid var(--color-violet);
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+::selection {
+  background: var(--color-violet);
+  color: white;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

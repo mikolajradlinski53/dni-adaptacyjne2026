@@ -1,0 +1,11 @@
+[
+  { "mode": "full1", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "time": "09:00", "title": "Droga przez kampus", "place": "Start: budynek A (do potwierdzenia)", "desc": "Spacer po kampusie z wolontariuszami: budynki, dziekanaty, biblioteka." },
+  { "mode": "full1", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "time": "12:00", "title": "Stoiska organizacji i kół naukowych", "place": "Teren kampusu", "desc": "Poznajcie organizacje studenckie i koła naukowe UEW." },
+  { "mode": "full1", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "time": "16:00", "title": "Integracja na Zaprzegubiu", "place": "Zaprzegubie", "desc": "Pierwsza wspólna integracja pierwszorocznych." },
+  { "mode": "full1", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "time": "09:00", "title": "Prelekcje: prawa i obowiązki studenta", "place": "Aula (do potwierdzenia)", "desc": "Obowiązkowe szkolenie z praw i obowiązków studenta oraz zasad studiowania." },
+  { "mode": "full1", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "time": "21:00", "title": "UE Party x DA", "place": "Miejsce w wydarzeniu FB", "desc": "Impreza otwarta dla wszystkich pierwszorocznych." },
+  { "mode": "full2", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "time": "10:00", "title": "Prelekcje dla II stopnia", "place": "Aula (do potwierdzenia)", "desc": "Prawa i obowiązki studenta oraz organizacja studiów II stopnia." },
+  { "mode": "full2", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "time": "12:00", "title": "Część ogólna: stoiska i integracja", "place": "Teren kampusu", "desc": "Dołączcie do części wspólnej z I stopniem, jeśli macie ochotę." },
+  { "mode": "full2", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "time": "21:00", "title": "UE Party x DA", "place": "Miejsce w wydarzeniu FB", "desc": "Impreza otwarta także dla II stopnia. W ciągu dnia macie już zajęcia." },
+  { "mode": "part", "date": "2026-10-03", "dayLabel": "Sobota, 3 października", "time": "10:00", "title": "Audycja online dla niestacjonarnych", "place": "Online: link wkrótce", "desc": "Prawa i obowiązki studenta oraz organizacja studiów niestacjonarnych." }
+]

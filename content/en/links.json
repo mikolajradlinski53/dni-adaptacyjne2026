@@ -1,0 +1,33 @@
+[
+  {
+    "category": "Orientation Days",
+    "items": [
+      { "label": "Student glossary", "href": null, "icon": "book" },
+      { "label": "Health and safety test", "href": null, "icon": "shield" },
+      { "label": "Class rep election", "href": null, "icon": "users" },
+      { "label": "FAQ", "href": "/faq", "icon": "question", "internal": true },
+      { "label": "Programme groups on Facebook", "href": null, "icon": "facebook", "note": "Run by the Student Union" }
+    ]
+  },
+  {
+    "category": "Study organisation",
+    "items": [
+      { "label": "Academic year calendar", "href": null, "icon": "calendar", "note": "university PDF" },
+      { "label": "Class timetable", "href": "https://plan.ue.wroc.pl", "icon": "clock" },
+      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl", "icon": "student", "note": "address to be verified" },
+      { "label": "UEW Intranet", "href": null, "icon": "globe" },
+      { "label": "Eportal", "href": null, "icon": "monitor", "note": "link being changed" }
+    ]
+  },
+  {
+    "category": "Student support",
+    "items": [
+      { "label": "Student Zone (SSUEW)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
+      { "label": "University website", "href": "https://www.ue.wroc.pl", "icon": "buildings" },
+      { "label": "Financial aid and scholarships", "href": null, "icon": "coins" },
+      { "label": "Psychological support", "href": null, "icon": "heart" },
+      { "label": "Teaching surveys", "href": null, "icon": "chart", "note": "link to be verified" },
+      { "label": "Accessibility support office", "href": null, "icon": "wheelchair", "note": "link once the page launches" }
+    ]
+  }
+]

@@ -1,0 +1,144 @@
+{
+  "meta": {
+    "siteName": "Orientation Days 2026",
+    "description": "Mandatory Orientation Days for first-year students of the Wroclaw University of Economics and Business. 1–3 October 2026. Schedule, key links and answers in one place."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "schedule": "Schedule",
+    "news": "News",
+    "links": "Key links",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "partners": "Partners",
+    "map": "Campus map",
+    "rules": "Rules",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu"
+  },
+  "common": {
+    "learnMore": "Learn more",
+    "seeSchedule": "See the schedule",
+    "draft": "Draft content",
+    "linkSoon": "Link coming soon",
+    "verify": "to be verified",
+    "photoSoon": "Photo coming soon",
+    "mandatory": "Mandatory for first-year students",
+    "external": "external link"
+  },
+  "hero": {
+    "badge": "1–3 October 2026 · UEW campus, Wroclaw",
+    "title": "Welcome to UEW!",
+    "lead": "Your academic adventure starts here. During Orientation Days you will get to know the campus, the people and everything worth knowing before your first classes.",
+    "ctaPrimary": "See what applies to you",
+    "ctaSecondary": "See the schedule"
+  },
+  "countdown": {
+    "heading": "Time until we start",
+    "days": "days",
+    "hours": "hours",
+    "minutes": "minutes",
+    "seconds": "seconds",
+    "after": "See you on campus!"
+  },
+  "home": {
+    "socialTitle": "Stay up to date",
+    "socialLead": "The most important announcements go out on Facebook. Join the events so you do not miss anything.",
+    "socialDa": "FB event: Orientation Days",
+    "socialParty": "FB event: UE Party x DA",
+    "socialSsuew": "Student Union website",
+    "docsTitle": "Documents",
+    "docsLead": "The rules of the event are described in the official regulations.",
+    "docsCta": "Download the 2026 Regulations (PDF)",
+    "teamTitle": "Meet our Team",
+    "teamLead": "Orientation Days are run by the UEW Student Union team. During the event you will recognise us by our T-shirts and badges.",
+    "teamCta": "See the whole team",
+    "aboutTitle": "What are Orientation Days?",
+    "aboutTeaser": "A mandatory organisational and social event for first-year students. Over two days we will walk you through the campus, your rights and duties as a student, and the first integration party."
+  },
+  "about": {
+    "title": "About Orientation Days",
+    "intro1": "Orientation Days 2026 is a mandatory organisational and social event for first-year students of the Wroclaw University of Economics and Business. It takes place on 1–3 October 2026 on campus.",
+    "intro2": "It is your first contact with the university after admission. We will show you how to find your way around campus, how your studies are organised and where to look for help before the semester begins.",
+    "legalTitle": "Why is attendance mandatory?",
+    "legalBody": "Orientation Days fulfil the statutory training on student rights and duties required by the Polish Law on Higher Education and Science. Every admitted first-year student must complete this training, and Orientation Days are how UEW delivers it.",
+    "modesTitle": "Choose your study mode",
+    "modesHint": "We will remember your choice, also on the schedule page.",
+    "sideTitle": "Side events",
+    "sideBody": "On Friday evening we host UE Party x DA, a party open to all first-year students regardless of study mode or degree level. Details are in the schedule and in the Facebook event.",
+    "sideCta": "UE Party x DA in the schedule"
+  },
+  "schedule": {
+    "title": "Schedule",
+    "lead": "Choose your study mode to see the plan that applies to you.",
+    "note": "Working schedule: times and rooms may change. Updates are posted in News and on Facebook.",
+    "empty": "The schedule for this mode will appear soon."
+  },
+  "news": {
+    "title": "News",
+    "lead": "Announcements and updates, including live updates during the event.",
+    "readMore": "Read more",
+    "back": "Back to news",
+    "empty": "No announcements yet. Check back closer to October."
+  },
+  "links": {
+    "title": "Key links",
+    "lead": "Everything you need at the start of your studies, in one place."
+  },
+  "faq": {
+    "title": "FAQ",
+    "lead": "Answers to the questions first-year students ask most often.",
+    "note": "Working list. The final questions and answers will come from the Orientation Days team."
+  },
+  "contact": {
+    "title": "Contact",
+    "emailLabel": "The only official contact channel",
+    "emailNote": "Write to us: we answer every question about Orientation Days.",
+    "teamTitle": "Organisers",
+    "recognizeTitle": "How to recognise the organisers during the event?",
+    "teamRoleTitle": "Orientation Days Team",
+    "teamRoleBody": "Responsible for organisational and technical matters and reacting on the spot. Bring problems and organisational questions to the Team.",
+    "volunteersTitle": "Volunteers",
+    "volunteersBody": "They run the talks, guide campus tours and staff the stands. Ask them for directions and the plan of the day.",
+    "outfitNote": "You will recognise us by our T-shirts and badges. Photos will appear here before the event."
+  },
+  "partners": {
+    "title": "Partners",
+    "lead": "Orientation Days are supported by the partners of the UEW Student Union.",
+    "placeholder": "Partner logos will appear soon."
+  },
+  "map": {
+    "title": "Campus map",
+    "lead": "The UEW campus is located at Komandorska 118/120 in Wroclaw. The map will help you find the right buildings.",
+    "placeholder": "The campus map is in preparation. Before the event you will find a mobile-friendly version here."
+  },
+  "rules": {
+    "title": "Rules and documents",
+    "lead": "Documents related to participation in Orientation Days 2026.",
+    "docName": "Orientation Days 2026 Regulations",
+    "docNote": "The PDF will appear here once the regulations are approved.",
+    "download": "Download PDF"
+  },
+  "search": {
+    "open": "Search",
+    "placeholder": "Search: schedule, USOS, class rep…",
+    "empty": "No results for",
+    "hint": "You are searching pages, links, FAQ and news.",
+    "label": "Search"
+  },
+  "footer": {
+    "organizer": "Organiser: Student Union of the Wroclaw University of Economics and Business",
+    "contact": "Contact",
+    "navTitle": "Shortcuts",
+    "legal": "© 2026 UEW Student Union"
+  },
+  "langSwitcher": {
+    "label": "Change language"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "Check the address or go back to the home page.",
+    "cta": "Back to home"
+  }
+}

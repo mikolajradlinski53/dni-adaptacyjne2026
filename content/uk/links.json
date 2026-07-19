@@ -1,0 +1,33 @@
+[
+  {
+    "category": "Адаптаційні дні",
+    "items": [
+      { "label": "Словничок студента", "href": null, "icon": "book" },
+      { "label": "Тест з охорони праці (BHP)", "href": null, "icon": "shield" },
+      { "label": "Вибори старости", "href": null, "icon": "users" },
+      { "label": "FAQ", "href": "/faq", "icon": "question", "internal": true },
+      { "label": "Групи напрямів у Facebook", "href": null, "icon": "facebook", "note": "Веде Студентське самоврядування" }
+    ]
+  },
+  {
+    "category": "Організація навчання",
+    "items": [
+      { "label": "Календар академічного року", "href": null, "icon": "calendar", "note": "PDF університету" },
+      { "label": "Розклад занять", "href": "https://plan.ue.wroc.pl", "icon": "clock" },
+      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl", "icon": "student", "note": "адреса потребує перевірки" },
+      { "label": "Інтранет UEW", "href": null, "icon": "globe" },
+      { "label": "Eportal", "href": null, "icon": "monitor", "note": "посилання змінюється" }
+    ]
+  },
+  {
+    "category": "Підтримка студентів",
+    "items": [
+      { "label": "Зона студента (SSUEW)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
+      { "label": "Сайт університету", "href": "https://www.ue.wroc.pl", "icon": "buildings" },
+      { "label": "Матеріальна допомога та стипендії", "href": null, "icon": "coins" },
+      { "label": "Психологічна підтримка", "href": null, "icon": "heart" },
+      { "label": "Дидактичні опитування", "href": null, "icon": "chart", "note": "посилання потребує перевірки" },
+      { "label": "Підтримка осіб з інвалідністю", "href": null, "icon": "wheelchair", "note": "посилання після запуску сторінки" }
+    ]
+  }
+]

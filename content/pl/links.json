@@ -1,0 +1,33 @@
+[
+  {
+    "category": "Dni Adaptacyjne",
+    "items": [
+      { "label": "Słowniczek studenta", "href": null, "icon": "book" },
+      { "label": "Test BHP", "href": null, "icon": "shield" },
+      { "label": "Wybór starosty", "href": null, "icon": "users" },
+      { "label": "FAQ", "href": "/faq", "icon": "question", "internal": true },
+      { "label": "Grupy kierunkowe na Facebooku", "href": null, "icon": "facebook", "note": "Prowadzone przez Samorząd Studentów" }
+    ]
+  },
+  {
+    "category": "Organizacja studiów",
+    "items": [
+      { "label": "Harmonogram roku akademickiego", "href": null, "icon": "calendar", "note": "PDF uczelni" },
+      { "label": "Plan zajęć", "href": "https://plan.ue.wroc.pl", "icon": "clock" },
+      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl", "icon": "student", "note": "adres do weryfikacji" },
+      { "label": "Intranet UEW", "href": null, "icon": "globe" },
+      { "label": "Eportal", "href": null, "icon": "monitor", "note": "link w trakcie zmiany" }
+    ]
+  },
+  {
+    "category": "Wsparcie studenckie",
+    "items": [
+      { "label": "Strefa Studenta (SSUEW)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
+      { "label": "Strona uczelni", "href": "https://www.ue.wroc.pl", "icon": "buildings" },
+      { "label": "Pomoc materialna i stypendia", "href": null, "icon": "coins" },
+      { "label": "Pomoc psychologiczna", "href": null, "icon": "heart" },
+      { "label": "Ankiety dydaktyczne", "href": null, "icon": "chart", "note": "link do weryfikacji" },
+      { "label": "Obsługa osób z niepełnosprawnościami", "href": null, "icon": "wheelchair", "note": "link po uruchomieniu strony" }
+    ]
+  }
+]

@@ -1,0 +1,53 @@
+[
+  {
+    "id": "full1",
+    "label": "Full-time · Bachelor's",
+    "short": "2 event days: Thursday and Friday, 1–2 October.",
+    "days": [
+      {
+        "title": "Day 1 · Thursday, 1 October",
+        "items": [
+          "Campus walk: get to know the buildings and key places",
+          "Stands of student organisations and science clubs",
+          "Integration at Zaprzegubie"
+        ]
+      },
+      {
+        "title": "Day 2 · Friday, 2 October",
+        "items": [
+          "Talks: student rights and duties, rules of studying",
+          "In the evening: UE Party x DA"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "full2",
+    "label": "Full-time · Master's",
+    "short": "1 event day: Thursday, 1 October. On Friday you already have classes.",
+    "days": [
+      {
+        "title": "Day 1 · Thursday, 1 October",
+        "items": [
+          "Talks for Master's students: rights and duties, study organisation",
+          "Optional: join the common part with stands and integration"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "part",
+    "label": "Part-time",
+    "short": "Saturday, 3 October, online broadcast. No need to come to campus.",
+    "days": [
+      {
+        "title": "Saturday, 3 October · online",
+        "items": [
+          "Online broadcast: key information on student rights and duties",
+          "Organisation of part-time studies",
+          "The stream link will appear here and in News"
+        ]
+      }
+    ]
+  }
+]

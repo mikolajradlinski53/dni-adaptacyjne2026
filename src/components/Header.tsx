@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { List, X } from "@phosphor-icons/react";
+import { List, X, MapPinLine } from "@phosphor-icons/react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
 import type { SearchEntry } from "@/lib/search";
@@ -23,17 +23,16 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
   const primary = [
     { href: "/o-wydarzeniu", label: t("nav.about") },
     { href: "/harmonogram", label: t("nav.schedule") },
-    { href: "/newsy", label: t("nav.news") },
+    { href: "/partnerzy", label: t("nav.partners") },
     { href: "/linki", label: t("nav.links") },
     { href: "/faq", label: t("nav.faq") },
     { href: "/kontakt", label: t("nav.contact") },
   ];
 
-  const secondary = [
-    { href: "/partnerzy", label: t("nav.partners") },
-    { href: "/mapa-kampusu", label: t("nav.map") },
-    { href: "/regulamin", label: t("nav.rules") },
-  ];
+  const mapItem = { href: "/mapa-kampusu", label: t("nav.map") };
+  const mapActive = pathname.startsWith(mapItem.href);
+
+  const secondary = [{ href: "/regulamin", label: t("nav.rules") }];
 
   const searchLabels = {
     open: t("search.open"),
@@ -74,6 +73,28 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
               </Link>
             );
           })}
+
+          {/* Wyróżniona zakładka: Mapa kampusu */}
+          <Link
+            href={mapItem.href}
+            aria-current={mapActive ? "page" : undefined}
+            className={`group ml-1.5 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-sm font-bold shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${
+              mapActive
+                ? "grad-brand border-transparent text-white"
+                : "border-violet/40 bg-gradient-to-r from-blue-soft via-violet-soft to-magenta-soft text-ink"
+            }`}
+          >
+            <MapPinLine
+              size={17}
+              weight="bold"
+              className={
+                mapActive
+                  ? "text-white"
+                  : "text-violet transition-transform group-hover:scale-110"
+              }
+            />
+            {mapItem.label}
+          </Link>
         </nav>
 
         <div className="flex items-center gap-2">
@@ -119,7 +140,28 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
         <div className="border-t border-line bg-bg lg:hidden">
           <nav className="mx-auto max-w-6xl px-4 py-4 sm:px-6" aria-label="mobile">
             <ul className="grid gap-1">
-              {[...primary, ...secondary].map((item) => (
+              {primary.map((item) => (
+                <li key={item.href}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setMenuOpen(false)}
+                    className="block rounded-xl px-3 py-2.5 text-base font-medium hover:bg-violet-soft"
+                  >
+                    {item.label}
+                  </Link>
+                </li>
+              ))}
+              <li>
+                <Link
+                  href={mapItem.href}
+                  onClick={() => setMenuOpen(false)}
+                  className="flex items-center gap-2 rounded-xl border border-violet/40 bg-gradient-to-r from-blue-soft via-violet-soft to-magenta-soft px-3 py-2.5 text-base font-bold"
+                >
+                  <MapPinLine size={19} weight="bold" className="text-violet" />
+                  {mapItem.label}
+                </Link>
+              </li>
+              {secondary.map((item) => (
                 <li key={item.href}>
                   <Link
                     href={item.href}

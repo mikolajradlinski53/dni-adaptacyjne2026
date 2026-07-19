@@ -7,7 +7,6 @@
     "home": "Start",
     "about": "O wydarzeniu",
     "schedule": "Harmonogram",
-    "news": "Newsy",
     "links": "Ważne linki",
     "faq": "FAQ",
     "contact": "Kontakt",
@@ -55,7 +54,13 @@
     "teamLead": "Za Dni Adaptacyjne odpowiada zespół Samorządu Studentów UEW. Podczas wydarzenia poznacie nas po koszulkach i identyfikatorach.",
     "teamCta": "Zobacz cały zespół",
     "aboutTitle": "Czym są Dni Adaptacyjne?",
-    "aboutTeaser": "To obowiązkowe wydarzenie organizacyjno-integracyjne dla studentów I roku. W dwa dni przeprowadzimy Was przez kampus, prawa i obowiązki studenta oraz pierwszą wspólną integrację."
+    "aboutTeaser": "To obowiązkowe wydarzenie organizacyjno-integracyjne dla studentów I roku. W dwa dni przeprowadzimy Was przez kampus, prawa i obowiązki studenta oraz pierwszą wspólną integrację.",
+    "factWhenLabel": "Kiedy",
+    "factWhenValue": "1–3 października 2026",
+    "factWhereLabel": "Gdzie",
+    "factWhereValue": "Kampus UEW, Wrocław",
+    "factWhoLabel": "Dla kogo",
+    "factWhoValue": "Studenci I roku"
   },
   "about": {
     "title": "O Dniach Adaptacyjnych",
@@ -72,15 +77,8 @@
   "schedule": {
     "title": "Harmonogram",
     "lead": "Wybierz tryb studiów, żeby zobaczyć plan, który Cię dotyczy.",
-    "note": "Harmonogram roboczy: godziny i miejsca mogą się zmienić. Zmiany ogłaszamy w Newsach i na Facebooku.",
+    "note": "Harmonogram roboczy: godziny i miejsca mogą się zmienić. Zmiany ogłaszamy na Facebooku.",
     "empty": "Harmonogram dla tego trybu pojawi się wkrótce."
-  },
-  "news": {
-    "title": "Newsy",
-    "lead": "Komunikaty i aktualizacje, także na żywo w trakcie wydarzenia.",
-    "readMore": "Czytaj dalej",
-    "back": "Wróć do newsów",
-    "empty": "Na razie brak komunikatów. Zajrzyjcie tu bliżej października."
   },
   "links": {
     "title": "Ważne linki",
@@ -106,7 +104,20 @@
   "partners": {
     "title": "Partnerzy",
     "lead": "Dni Adaptacyjne wspierają partnerzy Samorządu Studentów UEW.",
-    "placeholder": "Logotypy partnerów pojawią się wkrótce."
+    "placeholder": "Logotypy partnerów pojawią się wkrótce.",
+    "intro": "Dni Adaptacyjne to pierwszy kontakt kilkuset studentów I roku z uczelnią i Wrocławiem. Partnerzy wydarzenia docierają do nich w wyjątkowym momencie — na samym starcie studenckiego życia.",
+    "benefitsTitle": "Dlaczego warto zostać partnerem?",
+    "benefit1Title": "Bezpośredni kontakt z I rokiem",
+    "benefit1Body": "Twoja marka jest obecna tam, gdzie studenci podejmują pierwsze decyzje — od konta w banku po ulubione miejsca w mieście.",
+    "benefit2Title": "Widoczność na kampusie",
+    "benefit2Body": "Logo, stoisko i materiały w trakcie wydarzenia oraz obecność na tej stronie przez cały sezon rekrutacyjny.",
+    "benefit3Title": "Realne wsparcie społeczności",
+    "benefit3Body": "Wspierasz integrację i dobry start setek osób, budując wizerunek marki przyjaznej studentom.",
+    "showcaseTitle": "Zaufali nam",
+    "comingSoon": "Logo wkrótce",
+    "ctaTitle": "Zostań partnerem Dni Adaptacyjnych 2026",
+    "ctaBody": "Chcesz dotrzeć do studentów I roku UEW? Napisz do nas — przygotujemy ofertę dopasowaną do Twojej marki.",
+    "ctaButton": "Napisz do nas"
   },
   "map": {
     "title": "Mapa kampusu",
@@ -124,7 +135,7 @@
     "open": "Szukaj",
     "placeholder": "Szukaj: harmonogram, USOS, starosta…",
     "empty": "Brak wyników dla",
-    "hint": "Przeszukujesz podstrony, linki, FAQ i newsy.",
+    "hint": "Przeszukujesz podstrony, linki i FAQ.",
     "label": "Wyszukiwarka"
   },
   "footer": {

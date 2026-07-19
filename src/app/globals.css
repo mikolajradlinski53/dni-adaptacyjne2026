@@ -76,6 +76,105 @@ p {
     radial-gradient(40rem 26rem at 55% 110%, oklch(90% 0.08 296 / 0.55), transparent 62%);
 }
 
+/* Powolny, żywy dryf aurory — dodaje głębi bez rozpraszania */
+.aurora::before {
+  content: "";
+  position: absolute;
+  inset: -20%;
+  z-index: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(30rem 20rem at 20% 20%, oklch(88% 0.09 262 / 0.5), transparent 60%),
+    radial-gradient(28rem 20rem at 80% 30%, oklch(88% 0.1 350 / 0.45), transparent 60%),
+    radial-gradient(34rem 24rem at 50% 90%, oklch(88% 0.1 296 / 0.5), transparent 62%);
+  filter: blur(6px);
+  animation: aurora-drift 22s ease-in-out infinite alternate;
+}
+.aurora > * {
+  position: relative;
+  z-index: 1;
+}
+
+@keyframes aurora-drift {
+  0% {
+    transform: translate3d(-3%, -2%, 0) scale(1.05) rotate(0deg);
+    opacity: 0.85;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translate3d(4%, 3%, 0) scale(1.12) rotate(4deg);
+    opacity: 0.9;
+  }
+}
+
+/* Animowany przelew gradientu marki (subtelny) */
+.grad-brand {
+  background-size: 160% 160%;
+  animation: grad-pan 14s ease infinite;
+}
+@keyframes grad-pan {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Wejście na mount: delikatny rise-up (odpalany przez klasę) */
+@keyframes rise-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.rise {
+  animation: rise-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.rise-1 {
+  animation-delay: 0.06s;
+}
+.rise-2 {
+  animation-delay: 0.14s;
+}
+.rise-3 {
+  animation-delay: 0.24s;
+}
+.rise-4 {
+  animation-delay: 0.34s;
+}
+
+/* Shimmer dla slotów logotypów partnerów (stan „wkrótce") */
+.shimmer {
+  position: relative;
+  overflow: hidden;
+}
+.shimmer::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  transform: translateX(-100%);
+  background: linear-gradient(
+    90deg,
+    transparent,
+    oklch(85% 0.06 296 / 0.35),
+    transparent
+  );
+  animation: shimmer-move 2.8s ease-in-out infinite;
+}
+@keyframes shimmer-move {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
 /* Widoczny fokus klawiaturowy — wymóg dostępności */
 :focus-visible {
   outline: 3px solid var(--color-violet);

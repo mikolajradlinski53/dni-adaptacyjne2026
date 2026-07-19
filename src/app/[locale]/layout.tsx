@@ -53,7 +53,6 @@ export default async function LocaleLayout({
     home: t("nav.home"),
     about: t("nav.about"),
     schedule: t("nav.schedule"),
-    news: t("nav.news"),
     links: t("nav.links"),
     faq: t("nav.faq"),
     contact: t("nav.contact"),

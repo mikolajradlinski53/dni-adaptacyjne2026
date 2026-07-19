@@ -1,5 +1,5 @@
 import type { Locale } from "@/i18n/routing";
-import { getFaq, getLinks, getNews } from "./content";
+import { getFaq, getLinks } from "./content";
 
 export type SearchEntry = {
   title: string;
@@ -22,7 +22,6 @@ export async function buildSearchIndex(
     { title: nav.home, href: "/", group: nav.home },
     { title: nav.about, href: "/o-wydarzeniu", group: nav.home },
     { title: nav.schedule, href: "/harmonogram", group: nav.home },
-    { title: nav.news, href: "/newsy", group: nav.home },
     { title: nav.links, href: "/linki", group: nav.home },
     { title: nav.faq, href: "/faq", group: nav.home },
     { title: nav.contact, href: "/kontakt", group: nav.home },
@@ -31,11 +30,7 @@ export async function buildSearchIndex(
     { title: nav.rules, href: "/regulamin", group: nav.home },
   ];
 
-  const [links, faq, news] = await Promise.all([
-    getLinks(locale),
-    getFaq(locale),
-    getNews(locale),
-  ]);
+  const [links, faq] = await Promise.all([getLinks(locale), getFaq(locale)]);
 
   const linkEntries: SearchEntry[] = links.flatMap((cat) =>
     cat.items.map((item) => ({
@@ -53,12 +48,5 @@ export async function buildSearchIndex(
     group: nav.faq,
   }));
 
-  const newsEntries: SearchEntry[] = news.map((n) => ({
-    title: n.title,
-    description: n.excerpt,
-    href: `/newsy/${n.slug}`,
-    group: nav.news,
-  }));
-
-  return [...pages, ...linkEntries, ...faqEntries, ...newsEntries];
+  return [...pages, ...linkEntries, ...faqEntries];
 }

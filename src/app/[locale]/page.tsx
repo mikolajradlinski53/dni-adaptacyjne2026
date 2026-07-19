@@ -3,16 +3,18 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import {
   ArrowRight,
   CalendarCheck,
+  CalendarDots,
   Confetti,
   DownloadSimple,
   FacebookLogo,
+  MapPin,
   UsersThree,
 } from "@phosphor-icons/react/dist/ssr";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import Countdown from "@/components/Countdown";
-import Reveal from "@/components/Reveal";
+import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -50,19 +52,19 @@ export default async function HomePage({ params }: Props) {
       {/* HERO: teza strony to odpowiedź na pytanie "kiedy i czy mnie to dotyczy" */}
       <section className="aurora relative overflow-hidden border-b border-line">
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
-          <p className="inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-sm font-semibold backdrop-blur">
+          <p className="rise rise-1 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-sm font-semibold backdrop-blur">
             <span className="grad-brand inline-block size-2 rounded-full" />
             {t("hero.badge")}
           </p>
 
-          <h1 className="mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] sm:text-6xl md:text-7xl">
+          <h1 className="rise rise-2 mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] sm:text-6xl md:text-7xl">
             {t("hero.title")}
           </h1>
-          <p className="mt-5 max-w-xl text-base text-ink-soft sm:text-lg">
+          <p className="rise rise-3 mt-5 max-w-xl text-base text-ink-soft sm:text-lg">
             {t("hero.lead")}
           </p>
 
-          <div className="mt-10">
+          <div className="rise rise-4 mt-10">
             <Countdown
               labels={{
                 heading: t("countdown.heading"),
@@ -93,6 +95,42 @@ export default async function HomePage({ params }: Props) {
               {t("common.mandatory")}
             </p>
           </div>
+
+          {/* Pasek szybkich faktów: kiedy / gdzie / dla kogo */}
+          <div className="mt-12 grid gap-3 sm:grid-cols-3">
+            {[
+              {
+                icon: <CalendarDots size={22} weight="duotone" />,
+                label: t("home.factWhenLabel"),
+                value: t("home.factWhenValue"),
+              },
+              {
+                icon: <MapPin size={22} weight="duotone" />,
+                label: t("home.factWhereLabel"),
+                value: t("home.factWhereValue"),
+              },
+              {
+                icon: <UsersThree size={22} weight="duotone" />,
+                label: t("home.factWhoLabel"),
+                value: t("home.factWhoValue"),
+              },
+            ].map((fact, i) => (
+              <div
+                key={fact.label}
+                className={`rise rise-${i + 2} flex items-center gap-3 rounded-tile border border-line bg-surface/80 p-4 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-violet hover:shadow-md`}
+              >
+                <span className="grad-brand inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white">
+                  {fact.icon}
+                </span>
+                <div className="min-w-0">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
+                    {fact.label}
+                  </p>
+                  <p className="truncate font-bold">{fact.value}</p>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -103,7 +141,7 @@ export default async function HomePage({ params }: Props) {
             {t("home.socialTitle")}
           </h2>
           <p className="mt-2 max-w-xl text-ink-soft">{t("home.socialLead")}</p>
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
+          <Stagger className="mt-6 grid gap-4 sm:grid-cols-3">
             {socials.map((item) => {
               const inner = (
                 <>
@@ -116,24 +154,27 @@ export default async function HomePage({ params }: Props) {
                 </>
               );
               const cls =
-                "flex min-h-32 flex-col gap-2 rounded-tile border border-line bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-violet hover:shadow-md";
-              return item.href ? (
-                <a
-                  key={item.label}
-                  href={item.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={cls}
-                >
-                  {inner}
-                </a>
-              ) : (
-                <div key={item.label} className={cls} aria-disabled>
-                  {inner}
-                </div>
+                "flex h-full min-h-32 flex-col gap-2 rounded-tile border border-line bg-surface p-5 transition-all hover:-translate-y-0.5 hover:border-violet hover:shadow-md";
+              return (
+                <RevealItem key={item.label}>
+                  {item.href ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={cls}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <div className={cls} aria-disabled>
+                      {inner}
+                    </div>
+                  )}
+                </RevealItem>
               );
             })}
-          </div>
+          </Stagger>
         </section>
       </Reveal>
 

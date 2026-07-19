@@ -8,11 +8,10 @@ export default async function Footer() {
   const nav = [
     { href: "/o-wydarzeniu", label: t("nav.about") },
     { href: "/harmonogram", label: t("nav.schedule") },
-    { href: "/newsy", label: t("nav.news") },
+    { href: "/partnerzy", label: t("nav.partners") },
     { href: "/linki", label: t("nav.links") },
     { href: "/faq", label: t("nav.faq") },
     { href: "/kontakt", label: t("nav.contact") },
-    { href: "/partnerzy", label: t("nav.partners") },
     { href: "/mapa-kampusu", label: t("nav.map") },
     { href: "/regulamin", label: t("nav.rules") },
   ];

@@ -14,6 +14,7 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import Countdown from "@/components/Countdown";
+import HeroPhotos from "@/components/HeroPhotos";
 import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 
 type Props = { params: Promise<{ locale: Locale }> };
@@ -52,19 +53,49 @@ export default async function HomePage({ params }: Props) {
       {/* HERO: teza strony to odpowiedź na pytanie "kiedy i czy mnie to dotyczy" */}
       <section className="aurora relative overflow-hidden border-b border-line">
         <div className="mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
-          <p className="rise rise-1 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-sm font-semibold backdrop-blur">
-            <span className="grad-brand inline-block size-2 rounded-full" />
-            {t("hero.badge")}
-          </p>
+          <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
+            {/* Lewa kolumna: treść */}
+            <div>
+              <p className="rise rise-1 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-sm font-semibold backdrop-blur">
+                <span className="grad-brand inline-block size-2 rounded-full" />
+                {t("hero.badge")}
+              </p>
 
-          <h1 className="rise rise-2 mt-6 max-w-3xl text-4xl font-extrabold leading-[1.05] sm:text-6xl md:text-7xl">
-            {t("hero.title")}
-          </h1>
-          <p className="rise rise-3 mt-5 max-w-xl text-base text-ink-soft sm:text-lg">
-            {t("hero.lead")}
-          </p>
+              <h1 className="rise rise-2 mt-6 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+                {t("hero.title")}
+              </h1>
+              <p className="rise rise-3 mt-5 max-w-xl text-base text-ink-soft sm:text-lg">
+                {t("hero.lead")}
+              </p>
 
-          <div className="rise rise-4 mt-10">
+              <div className="rise rise-4 mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
+                <Link
+                  href="/o-wydarzeniu"
+                  className="grad-brand inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.02] active:scale-[0.99]"
+                >
+                  {t("hero.ctaPrimary")}
+                  <ArrowRight size={18} weight="bold" />
+                </Link>
+                <Link
+                  href="/harmonogram"
+                  className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-surface px-6 py-3.5 text-sm font-bold transition-colors hover:border-violet"
+                >
+                  {t("hero.ctaSecondary")}
+                </Link>
+              </div>
+              <p className="mt-4 text-sm font-medium text-ink-soft">
+                {t("common.mandatory")}
+              </p>
+            </div>
+
+            {/* Prawa kolumna: kolaż zdjęć z wydarzenia */}
+            <div className="rise rise-3">
+              <HeroPhotos />
+            </div>
+          </div>
+
+          {/* Odliczanie — pełna szerokość */}
+          <div className="mt-14">
             <Countdown
               labels={{
                 heading: t("countdown.heading"),
@@ -75,25 +106,6 @@ export default async function HomePage({ params }: Props) {
                 after: t("countdown.after"),
               }}
             />
-          </div>
-
-          <div className="mt-10 flex flex-col gap-3 sm:flex-row sm:items-center">
-            <Link
-              href="/o-wydarzeniu"
-              className="grad-brand inline-flex items-center justify-center gap-2 rounded-full px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-violet/25 transition-transform hover:scale-[1.02] active:scale-[0.99]"
-            >
-              {t("hero.ctaPrimary")}
-              <ArrowRight size={18} weight="bold" />
-            </Link>
-            <Link
-              href="/harmonogram"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-line bg-surface px-6 py-3.5 text-sm font-bold transition-colors hover:border-violet"
-            >
-              {t("hero.ctaSecondary")}
-            </Link>
-            <p className="text-sm font-medium text-ink-soft sm:ml-2">
-              {t("common.mandatory")}
-            </p>
           </div>
 
           {/* Pasek szybkich faktów: kiedy / gdzie / dla kogo */}
@@ -214,11 +226,15 @@ export default async function HomePage({ params }: Props) {
                 <ArrowRight size={16} weight="bold" />
               </Link>
             </div>
-            {/* Placeholder na zdjęcie grupowe zespołu */}
-            <div className="grad-brand flex aspect-[16/9] items-center justify-center rounded-tile opacity-90">
-              <p className="rounded-full bg-white/90 px-4 py-2 text-sm font-semibold text-ink">
-                {t("common.photoSoon")}
-              </p>
+            {/* Zdjęcie z wydarzenia */}
+            <div className="overflow-hidden rounded-tile shadow-lg ring-1 ring-black/5">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/web/about1.webp"
+                alt=""
+                className="aspect-[16/10] w-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </section>

@@ -17,17 +17,21 @@ export default async function Footer() {
   ];
 
   return (
-    <footer className="mt-24 border-t border-line bg-surface">
+    <footer className="relative mt-24 overflow-hidden border-t border-line bg-surface">
       <div className="grad-line h-1 w-full" />
+      {/* Easter egg: czapka studencka spaceruje po krawędzi stopki */}
+      <span className="footer-cap" aria-hidden>
+        🎓
+      </span>
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          <div className="flex items-center gap-2.5">
-            <span className="grad-brand inline-block size-3.5 rounded-full" />
-            <span className="font-display text-base font-bold">
-              Dni Adaptacyjne 2026
-            </span>
-          </div>
-          <p className="mt-3 max-w-sm text-sm text-ink-soft">
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/DA_LOGO.png"
+            alt="Dni Adaptacyjne 2026"
+            className="h-14 w-auto"
+          />
+          <p className="mt-4 max-w-sm text-sm text-ink-soft">
             {t("footer.organizer")}
           </p>
         </div>

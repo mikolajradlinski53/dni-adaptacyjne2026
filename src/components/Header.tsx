@@ -47,13 +47,16 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between gap-3 px-4 sm:px-6">
         <Link
           href="/"
-          className="flex items-center gap-2.5"
+          className="flex items-center"
+          aria-label="Dni Adaptacyjne 2026"
           onClick={() => setMenuOpen(false)}
         >
-          <span className="grad-brand inline-block size-3.5 rounded-full" />
-          <span className="font-display text-base font-bold tracking-tight">
-            DA 2026
-          </span>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/DA_LOGO.png"
+            alt="Dni Adaptacyjne 2026"
+            className="h-9 w-auto sm:h-10"
+          />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="main">

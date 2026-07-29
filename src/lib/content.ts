@@ -69,5 +69,5 @@ export const CONTACT_EMAIL = "dni.adaptacyjne@samorzad.ue.wroc.pl";
 export const PARTNERS_CONTACT = {
   name: "Ida Majewska",
   email: "ida.majewska@samorzad.ue.wroc.pl",
-  photo: null as string | null,
+  photo: "/images/web/ida.webp" as string | null,
 };

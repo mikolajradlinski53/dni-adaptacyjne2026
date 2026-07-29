@@ -52,8 +52,18 @@ export default async function PartnersPage({ params }: Props) {
     },
   ];
 
-  // Elegancki stan „wkrótce" — sloty pod logotypy, dopóki nie dostaniemy danych
-  const slots = partners.length > 0 ? partners : Array.from({ length: 8 });
+  // Realni partnerzy najpierw, resztę siatki wypełniamy slotami „wkrótce".
+  const placeholderCount = Math.max(0, 8 - partners.length);
+
+  // Zdjęcia z wydarzenia pokazujące obecność partnerów.
+  const gallery = [
+    "partnerzy6",
+    "partnerzy9",
+    "partnerzy8",
+    "partnerzy10",
+    "partnerzy7",
+    "partnerzy11",
+  ];
 
   return (
     <>
@@ -110,49 +120,79 @@ export default async function PartnersPage({ params }: Props) {
           </div>
 
           <Stagger className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {slots.map((partner, i) => {
-              const p = partner as
-                | { name: string; logo: string | null; href: string | null }
-                | undefined;
-
-              if (p?.name) {
-                const tile = (
-                  <div className="flex aspect-[3/2] items-center justify-center rounded-tile border border-line bg-surface p-6 transition-all hover:-translate-y-1 hover:border-violet hover:shadow-md">
+            {partners.map((p) => {
+              const tile = (
+                <div className="flex aspect-[3/2] items-center justify-center rounded-tile border border-line bg-surface p-6 transition-all hover:-translate-y-1 hover:border-violet hover:shadow-md">
+                  {p.logo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={p.logo}
+                      alt={p.name}
+                      className="max-h-10 w-auto max-w-[80%] object-contain"
+                    />
+                  ) : (
                     <span className="text-center font-semibold text-ink">
                       {p.name}
                     </span>
-                  </div>
-                );
-                return (
-                  <RevealItem key={p.name}>
-                    {p.href ? (
-                      <a
-                        href={p.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        aria-label={p.name}
-                      >
-                        {tile}
-                      </a>
-                    ) : (
-                      tile
-                    )}
-                  </RevealItem>
-                );
-              }
-
-              // Slot „wkrótce"
+                  )}
+                </div>
+              );
               return (
-                <RevealItem key={i}>
-                  <div className="shimmer flex aspect-[3/2] flex-col items-center justify-center gap-2 rounded-tile border border-dashed border-line bg-surface">
-                    <span className="grad-brand size-8 rounded-full opacity-25" />
-                    <span className="text-xs font-medium text-ink-soft/70">
-                      {t("partners.comingSoon")}
-                    </span>
-                  </div>
+                <RevealItem key={p.name}>
+                  {p.href ? (
+                    <a
+                      href={p.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={p.name}
+                    >
+                      {tile}
+                    </a>
+                  ) : (
+                    tile
+                  )}
                 </RevealItem>
               );
             })}
+
+            {Array.from({ length: placeholderCount }).map((_, i) => (
+              <RevealItem key={`ph-${i}`}>
+                <div className="shimmer flex aspect-[3/2] flex-col items-center justify-center gap-2 rounded-tile border border-dashed border-line bg-surface">
+                  <span className="grad-brand size-8 rounded-full opacity-25" />
+                  <span className="text-xs font-medium text-ink-soft/70">
+                    {t("partners.comingSoon")}
+                  </span>
+                </div>
+              </RevealItem>
+            ))}
+          </Stagger>
+        </section>
+      </Reveal>
+
+      {/* GALERIA: partnerzy w akcji */}
+      <Reveal>
+        <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-20">
+          <div className="flex items-center gap-3">
+            <h2 className="text-2xl font-bold sm:text-3xl">
+              {t("partners.galleryTitle")}
+            </h2>
+            <span className="grad-line h-px flex-1 rounded-full opacity-60" />
+          </div>
+          <Stagger className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+            {gallery.map((name) => (
+              <RevealItem
+                key={name}
+                className="overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
+              >
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={`/images/web/${name}.webp`}
+                  alt=""
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105"
+                  loading="lazy"
+                />
+              </RevealItem>
+            ))}
           </Stagger>
         </section>
       </Reveal>

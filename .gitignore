@@ -6,3 +6,12 @@ install.log
 next-env.d.ts
 .env*
 .vercel
+
+# Surowe zdjęcia (oryginały z telefonu) — w repo trzymamy tylko zoptymalizowane
+# wersje w public/images/web/. Logotypy PNG (DA_LOGO, bny_logo*) zostają.
+public/images/*.JPG
+public/images/*.jpg
+public/images/*.jpeg
+public/images/*.HEIC
+public/images/*.heic
+public/images/niestacjo_harmo1.png

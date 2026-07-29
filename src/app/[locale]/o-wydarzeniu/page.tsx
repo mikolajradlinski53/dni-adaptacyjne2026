@@ -31,9 +31,30 @@ export default async function AboutPage({ params }: Props) {
     <div className="mx-auto max-w-6xl px-4 pt-14 sm:px-6 sm:pt-20">
       <h1 className="text-3xl font-extrabold sm:text-5xl">{t("about.title")}</h1>
 
-      <div className="mt-6 max-w-2xl space-y-4 text-base text-ink-soft sm:text-lg">
-        <p>{t("about.intro1")}</p>
-        <p>{t("about.intro2")}</p>
+      <div className="mt-6 grid gap-8 lg:grid-cols-2 lg:items-center">
+        <div className="space-y-4 text-base text-ink-soft sm:text-lg">
+          <p>{t("about.intro1")}</p>
+          <p>{t("about.intro2")}</p>
+        </div>
+        {/* Zdjęcia z Dni Adaptacyjnych */}
+        <div className="grid grid-cols-2 gap-3">
+          {["about2", "about4", "about5", "about3"].map((name, i) => (
+            <div
+              key={name}
+              className={`overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5 ${
+                i % 2 === 0 ? "translate-y-2" : "-translate-y-2"
+              }`}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src={`/images/web/${name}.webp`}
+                alt=""
+                className="aspect-square w-full object-cover"
+                loading="lazy"
+              />
+            </div>
+          ))}
+        </div>
       </div>
 
       {/* Dla kogo obowiązkowe — pełny zakres */}
@@ -65,16 +86,27 @@ export default async function AboutPage({ params }: Props) {
       </section>
 
       <section className="mt-16">
-        <div className="rounded-tile bg-magenta-soft p-6 sm:p-10">
-          <h2 className="text-2xl font-bold">{t("about.sideTitle")}</h2>
-          <p className="mt-2 max-w-2xl text-ink-soft">{t("about.sideBody")}</p>
-          <Link
-            href="/harmonogram"
-            className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-violet underline-offset-4 hover:underline"
-          >
-            {t("about.sideCta")}
-            <ArrowRight size={16} weight="bold" />
-          </Link>
+        <div className="grid items-center gap-6 rounded-tile bg-magenta-soft p-6 sm:p-10 md:grid-cols-2">
+          <div>
+            <h2 className="text-2xl font-bold">{t("about.sideTitle")}</h2>
+            <p className="mt-2 text-ink-soft">{t("about.sideBody")}</p>
+            <Link
+              href="/harmonogram"
+              className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-violet underline-offset-4 hover:underline"
+            >
+              {t("about.sideCta")}
+              <ArrowRight size={16} weight="bold" />
+            </Link>
+          </div>
+          <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5">
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src="/images/web/ueparty1.webp"
+              alt=""
+              className="aspect-[4/3] w-full object-cover"
+              loading="lazy"
+            />
+          </div>
         </div>
       </section>
     </div>

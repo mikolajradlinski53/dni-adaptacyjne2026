@@ -14,6 +14,7 @@ import { getPartners, PARTNERS_CONTACT } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 import PartnersShowcase from "@/components/PartnersShowcase";
+import HeroDoodles from "@/components/HeroDoodles";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -68,7 +69,8 @@ export default async function PartnersPage({ params }: Props) {
     <>
       {/* HERO */}
       <section className="aurora relative overflow-hidden border-b border-line">
-        <div className="mx-auto max-w-6xl px-4 pb-14 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
+        <HeroDoodles />
+        <div className="relative mx-auto max-w-6xl px-4 pb-14 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
           <p className="rise rise-1 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-sm font-semibold backdrop-blur">
             <Handshake size={17} weight="duotone" className="text-violet" />
             {t("nav.partners")}

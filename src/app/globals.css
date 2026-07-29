@@ -10,18 +10,29 @@
     - "blue" = jaśniejszy błękit (gradient, tła)
 */
 @theme {
-  --color-ink: oklch(24% 0.03 255);
-  --color-ink-soft: oklch(45% 0.025 255);
-  --color-bg: oklch(99% 0.004 320);
+  --color-ink: oklch(25% 0.045 350);
+  --color-ink-soft: oklch(46% 0.035 350);
+  --color-bg: oklch(99% 0.007 340);
   --color-surface: oklch(100% 0 0);
-  --color-line: oklch(92% 0.012 300);
+  --color-line: oklch(91% 0.02 342);
 
-  --color-violet: oklch(55% 0.15 255);
-  --color-magenta: oklch(72% 0.11 350);
-  --color-blue: oklch(64% 0.13 245);
-  --color-violet-soft: oklch(96% 0.018 255);
-  --color-magenta-soft: oklch(96% 0.022 350);
-  --color-blue-soft: oklch(96% 0.02 245);
+  /* Motyw DA: magenta/róż (primary), mięta i złoto jako akcenty.
+     Nazwy zmiennych zostają dla kompatybilności:
+       violet  = magenta/róż (linki, przyciski, aktywne stany)
+       magenta = jaśniejszy róż (gradient)
+       blue    = MIĘTA (miękkie tła, akcenty) */
+  --color-violet: oklch(49% 0.19 353);
+  --color-magenta: oklch(62% 0.2 350);
+  --color-blue: oklch(72% 0.12 150);
+  --color-violet-soft: oklch(96% 0.03 350);
+  --color-magenta-soft: oklch(96% 0.03 348);
+  --color-blue-soft: oklch(95% 0.05 150);
+
+  /* Nowe akcenty motywu */
+  --color-gold: oklch(83% 0.14 88);
+  --color-gold-soft: oklch(96% 0.06 90);
+  --color-mint: oklch(72% 0.12 150);
+  --color-mint-soft: oklch(95% 0.05 150);
 
   --font-display: "Unbounded Variable", system-ui, sans-serif;
   --font-sans: "Inter Variable", system-ui, sans-serif;
@@ -59,28 +70,27 @@ p {
 /* Marka: gradient jako wypełnienie elementów (nigdy jako tekst) */
 .grad-brand {
   background-image: linear-gradient(
-    115deg,
-    var(--color-blue) 0%,
-    var(--color-violet) 45%,
-    var(--color-magenta) 100%
+    120deg,
+    var(--color-magenta) 0%,
+    var(--color-violet) 100%
   );
 }
 
 .grad-line {
   background-image: linear-gradient(
     90deg,
-    var(--color-blue),
+    var(--color-magenta),
     var(--color-violet),
-    var(--color-magenta)
+    var(--color-gold)
   );
 }
 
 /* Aurora w hero: warstwowe radial-gradienty, subtelne, na jasnym tle */
 .aurora {
   background:
-    radial-gradient(38rem 22rem at 12% 8%, oklch(91% 0.06 245 / 0.6), transparent 62%),
-    radial-gradient(34rem 22rem at 88% 4%, oklch(92% 0.055 350 / 0.6), transparent 60%),
-    radial-gradient(40rem 26rem at 55% 110%, oklch(92% 0.05 350 / 0.5), transparent 62%);
+    radial-gradient(38rem 22rem at 12% 8%, oklch(93% 0.06 350 / 0.7), transparent 62%),
+    radial-gradient(34rem 22rem at 88% 4%, oklch(93% 0.06 150 / 0.6), transparent 60%),
+    radial-gradient(40rem 26rem at 60% 112%, oklch(94% 0.09 90 / 0.55), transparent 62%);
 }
 
 /* Powolny, żywy dryf aurory — dodaje głębi bez rozpraszania */
@@ -91,9 +101,9 @@ p {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(30rem 20rem at 20% 20%, oklch(89% 0.07 245 / 0.55), transparent 60%),
-    radial-gradient(28rem 20rem at 80% 30%, oklch(90% 0.07 350 / 0.5), transparent 60%),
-    radial-gradient(34rem 24rem at 50% 90%, oklch(89% 0.06 245 / 0.5), transparent 62%);
+    radial-gradient(30rem 20rem at 20% 20%, oklch(91% 0.07 350 / 0.6), transparent 60%),
+    radial-gradient(28rem 20rem at 80% 30%, oklch(92% 0.07 150 / 0.55), transparent 60%),
+    radial-gradient(34rem 24rem at 50% 90%, oklch(93% 0.09 90 / 0.5), transparent 62%);
   filter: blur(6px);
   animation: aurora-drift 22s ease-in-out infinite alternate;
 }
@@ -232,7 +242,7 @@ p {
   background: linear-gradient(
     90deg,
     transparent,
-    oklch(88% 0.05 350 / 0.4),
+    oklch(90% 0.06 350 / 0.45),
     transparent
   );
   animation: shimmer-move 2.8s ease-in-out infinite;

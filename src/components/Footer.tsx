@@ -30,9 +30,9 @@ export default async function Footer() {
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/DA_LOGO.png"
+            src="/images/web/logo.webp"
             alt="Dni Adaptacyjne 2026"
-            className="h-14 w-auto"
+            className="h-16 w-auto"
           />
           <p className="mt-4 max-w-sm text-sm text-ink-soft">
             {t("footer.organizer")}

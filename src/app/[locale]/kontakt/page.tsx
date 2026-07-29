@@ -37,26 +37,26 @@ export default async function ContactPage({ params }: Props) {
         {t("contact.title")}
       </h1>
 
-      <div className="mt-8 max-w-2xl rounded-tile border border-line bg-surface p-6 sm:p-8">
+      <div className="mt-8 rounded-tile border border-line bg-surface p-6 sm:p-8">
         <p className="text-sm font-bold uppercase tracking-wide text-violet">
           {t("contact.emailLabel")}
         </p>
         <a
           href={`mailto:${CONTACT_EMAIL}`}
-          className="mt-3 flex items-center gap-2.5 font-display text-sm font-bold underline-offset-4 hover:underline sm:text-lg md:text-2xl"
+          className="mt-3 flex flex-wrap items-center gap-2.5 font-display text-lg font-bold underline-offset-4 hover:underline sm:text-2xl md:text-3xl"
         >
           <EnvelopeSimple
-            size={26}
+            size={28}
             weight="duotone"
             className="shrink-0 text-violet"
           />
-          <span className="truncate">{CONTACT_EMAIL}</span>
+          <span className="break-all">{CONTACT_EMAIL}</span>
         </a>
         <p className="mt-3 text-sm text-ink-soft">{t("contact.emailNote")}</p>
       </div>
 
       {/* Formularz — napisz do nas */}
-      <section className="mt-8 max-w-2xl rounded-tile border border-line bg-surface p-6 sm:p-8">
+      <section className="mt-8 rounded-tile border border-line bg-surface p-6 sm:p-8">
         <h2 className="text-xl font-bold sm:text-2xl">
           {t("contact.formTitle")}
         </h2>

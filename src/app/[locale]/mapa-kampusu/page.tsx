@@ -33,18 +33,22 @@ export default async function MapPage({ params }: Props) {
         Komandorska 118/120, 53-345 Wrocław
       </p>
 
-      <p className="mt-6 max-w-2xl text-sm text-ink-soft">{t("map.placeholder")}</p>
+      <p className="mt-6 text-sm text-ink-soft">{t("map.placeholder")}</p>
 
-      {/* Interaktywna mapa Google z lokalizacją kampusu */}
-      <div className="mt-6 max-w-4xl overflow-hidden rounded-tile border border-line shadow-sm">
-        <iframe
-          title="Mapa kampusu UEW"
-          src="https://www.google.com/maps?q=Uniwersytet+Ekonomiczny+we+Wroc%C5%82awiu,+Komandorska+118%2F120,+Wroc%C5%82aw&output=embed"
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-          className="block h-[320px] w-full sm:h-[440px]"
+      {/* Autorska mapa kampusu (klik → pełny rozmiar) */}
+      <a
+        href="/images/web/mapa.webp"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="mt-4 block overflow-hidden rounded-tile border border-line shadow-sm transition-shadow hover:shadow-md"
+      >
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/web/mapa.webp"
+          alt="Mapa kampusu UEW"
+          className="w-full"
         />
-      </div>
+      </a>
 
       <div className="mt-6 flex flex-wrap gap-3">
         <a

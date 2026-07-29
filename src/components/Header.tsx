@@ -53,9 +53,9 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src="/images/DA_LOGO.png"
+            src="/images/web/logo.webp"
             alt="Dni Adaptacyjne 2026"
-            className="h-9 w-auto sm:h-10"
+            className="h-11 w-auto shrink-0 sm:h-12"
           />
         </Link>
 

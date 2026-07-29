@@ -138,7 +138,7 @@
   "map": {
     "title": "Mapa kampusu",
     "lead": "Kampus UEW mieści się przy ul. Komandorskiej 118/120 we Wrocławiu. Mapa pomoże Wam trafić do właściwych budynków.",
-    "placeholder": "Szczegółowa mapa budynków w przygotowaniu. Poniżej lokalizacja kampusu na mapie Google.",
+    "placeholder": "Kliknij mapę, aby otworzyć ją w pełnym rozmiarze.",
     "openInMaps": "Otwórz w Google Maps",
     "samorzad": "Strona Samorządu Studentów"
   },

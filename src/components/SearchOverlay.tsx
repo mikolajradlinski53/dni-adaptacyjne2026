@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useMemo, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import Fuse from "fuse.js";
 import { MagnifyingGlass, X } from "@phosphor-icons/react";
 import { Link } from "@/i18n/navigation";
@@ -23,7 +24,10 @@ export default function SearchOverlay({
 }) {
   const [open, setOpen] = useState(false);
   const [query, setQuery] = useState("");
+  const [mounted, setMounted] = useState(false);
   const inputRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => setMounted(true), []);
 
   const fuse = useMemo(
     () =>
@@ -82,14 +86,15 @@ export default function SearchOverlay({
         </kbd>
       </button>
 
-      {open ? (
-        <div
-          role="dialog"
-          aria-modal="true"
-          aria-label={labels.label}
-          className="fixed inset-0 z-50 flex items-start justify-center bg-ink/40 px-4 pt-[12vh] backdrop-blur-sm"
-          onClick={() => setOpen(false)}
-        >
+      {open && mounted
+        ? createPortal(
+            <div
+              role="dialog"
+              aria-modal="true"
+              aria-label={labels.label}
+              className="fixed inset-0 z-50 flex items-start justify-center bg-ink/40 px-4 pt-[12vh] backdrop-blur-sm"
+              onClick={() => setOpen(false)}
+            >
           <div
             className="w-full max-w-xl overflow-hidden rounded-2xl border border-line bg-surface shadow-2xl"
             onClick={(e) => e.stopPropagation()}
@@ -145,9 +150,11 @@ export default function SearchOverlay({
                 </ul>
               )}
             </div>
-          </div>
-        </div>
-      ) : null}
+              </div>
+            </div>,
+            document.body
+          )
+        : null}
     </>
   );
 }

@@ -57,12 +57,18 @@ export default async function PartnersPage({ params }: Props) {
   // Zdjęcia z wydarzenia pokazujące obecność partnerów.
   const gallery = [
     "partnerzy6",
+    "partnerzy13",
     "partnerzy12",
+    "partnerzy14",
     "partnerzy9",
     "partnerzy8",
+    "partnerzy15",
     "partnerzy7",
+    "partnerzy16",
     "partnerzy10",
+    "partnerzy17",
     "partnerzy11",
+    "partnerzy18",
   ];
 
   return (

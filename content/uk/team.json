@@ -1,16 +1,72 @@
 [
-  { "name": "Karolina Smereczniak", "role": "Координаторка", "photo": null },
-  { "name": "Zofia Palus", "role": "Віцекоординаторка", "photo": null },
-  { "name": "Emilia Ćwiklińska", "role": "Член правління з питань розкладу", "photo": null },
-  { "name": "Marta Lisowska", "role": "Член правління з питань адміністрації та логістики", "photo": null },
-  { "name": "Bartosz Bakalarz", "role": "Член правління з питань фінансів", "photo": null },
-  { "name": "Ewelina Kaźmierczak", "role": "Член команди з питань адміністрації, логістики та фінансів", "photo": null },
-  { "name": "Jakub Buchta", "role": "Член команди з питань адміністрації, логістики та фінансів", "photo": null },
-  { "name": "Ida Majewska", "role": "Член правління із зовнішніх зв'язків", "photo": "/images/web/ida.webp" },
-  { "name": "Maja Gabinowska", "role": "Член команди із зовнішніх зв'язків", "photo": null },
-  { "name": "Alicja Gabryszak", "role": "Член команди із зовнішніх зв'язків", "photo": null },
-  { "name": "Maja Łońska", "role": "Член правління з питань промоції", "photo": null },
-  { "name": "Kornelia Wojtasik", "role": "Член команди з питань промоції", "photo": null },
-  { "name": "Katarzyna Korysławska", "role": "Член команди з питань промоції", "photo": null },
-  { "name": "Karolina Kniaziuk", "role": "Графік-дизайнер", "photo": null }
+  {
+    "name": "Karolina Smereczniak",
+    "role": "Координаторка",
+    "photo": "/images/web/team_karolina_s.webp"
+  },
+  {
+    "name": "Zofia Palus",
+    "role": "Віцекоординаторка",
+    "photo": "/images/web/team_zosia.webp"
+  },
+  {
+    "name": "Emilia Ćwiklińska",
+    "role": "Член правління з питань розкладу",
+    "photo": null
+  },
+  {
+    "name": "Marta Lisowska",
+    "role": "Член правління з питань адміністрації та логістики",
+    "photo": null
+  },
+  {
+    "name": "Bartosz Bakalarz",
+    "role": "Член правління з питань фінансів",
+    "photo": null
+  },
+  {
+    "name": "Ewelina Kaźmierczak",
+    "role": "Член команди з питань адміністрації, логістики та фінансів",
+    "photo": null
+  },
+  {
+    "name": "Jakub Buchta",
+    "role": "Член команди з питань адміністрації, логістики та фінансів",
+    "photo": null
+  },
+  {
+    "name": "Ida Majewska",
+    "role": "Член правління із зовнішніх зв'язків",
+    "photo": "/images/web/ida.webp"
+  },
+  {
+    "name": "Maja Gabinowska",
+    "role": "Член команди із зовнішніх зв'язків",
+    "photo": null
+  },
+  {
+    "name": "Alicja Gabryszak",
+    "role": "Член команди із зовнішніх зв'язків",
+    "photo": "/images/web/team_ala.webp"
+  },
+  {
+    "name": "Maja Łońska",
+    "role": "Член правління з питань промоції",
+    "photo": null
+  },
+  {
+    "name": "Kornelia Wojtasik",
+    "role": "Член команди з питань промоції",
+    "photo": "/images/web/team_kornelia.webp"
+  },
+  {
+    "name": "Katarzyna Korysławska",
+    "role": "Член команди з питань промоції",
+    "photo": "/images/web/team_kasia.webp"
+  },
+  {
+    "name": "Karolina Kniaziuk",
+    "role": "Графік-дизайнер",
+    "photo": "/images/web/team_karolina_k.webp"
+  }
 ]

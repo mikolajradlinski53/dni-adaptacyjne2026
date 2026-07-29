@@ -58,12 +58,7 @@ export default async function HomePage({ params }: Props) {
           <div className="grid items-center gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12">
             {/* Lewa kolumna: treść */}
             <div>
-              <p className="rise rise-1 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-sm font-semibold backdrop-blur">
-                <span className="grad-brand inline-block size-2 rounded-full" />
-                {t("hero.badge")}
-              </p>
-
-              <h1 className="rise rise-2 mt-6 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
+              <h1 className="rise rise-1 text-4xl font-extrabold leading-[1.05] sm:text-5xl lg:text-6xl">
                 {t("hero.title")}
               </h1>
               <p className="rise rise-3 mt-5 max-w-xl text-base text-ink-soft sm:text-lg">

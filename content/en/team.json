@@ -1,16 +1,72 @@
 [
-  { "name": "Karolina Smereczniak", "role": "Coordinator", "photo": null },
-  { "name": "Zofia Palus", "role": "Deputy Coordinator", "photo": null },
-  { "name": "Emilia Ćwiklińska", "role": "Board Member for Scheduling", "photo": null },
-  { "name": "Marta Lisowska", "role": "Board Member for Administration and Logistics", "photo": null },
-  { "name": "Bartosz Bakalarz", "role": "Board Member for Finance", "photo": null },
-  { "name": "Ewelina Kaźmierczak", "role": "Team Member for Administration, Logistics and Finance", "photo": null },
-  { "name": "Jakub Buchta", "role": "Team Member for Administration, Logistics and Finance", "photo": null },
-  { "name": "Ida Majewska", "role": "Board Member for External Relations", "photo": "/images/web/ida.webp" },
-  { "name": "Maja Gabinowska", "role": "Team Member for External Relations", "photo": null },
-  { "name": "Alicja Gabryszak", "role": "Team Member for External Relations", "photo": null },
-  { "name": "Maja Łońska", "role": "Board Member for Promotion", "photo": null },
-  { "name": "Kornelia Wojtasik", "role": "Team Member for Promotion", "photo": null },
-  { "name": "Katarzyna Korysławska", "role": "Team Member for Promotion", "photo": null },
-  { "name": "Karolina Kniaziuk", "role": "Graphic Designer", "photo": null }
+  {
+    "name": "Karolina Smereczniak",
+    "role": "Coordinator",
+    "photo": "/images/web/team_karolina_s.webp"
+  },
+  {
+    "name": "Zofia Palus",
+    "role": "Deputy Coordinator",
+    "photo": "/images/web/team_zosia.webp"
+  },
+  {
+    "name": "Emilia Ćwiklińska",
+    "role": "Board Member for Scheduling",
+    "photo": null
+  },
+  {
+    "name": "Marta Lisowska",
+    "role": "Board Member for Administration and Logistics",
+    "photo": null
+  },
+  {
+    "name": "Bartosz Bakalarz",
+    "role": "Board Member for Finance",
+    "photo": null
+  },
+  {
+    "name": "Ewelina Kaźmierczak",
+    "role": "Team Member for Administration, Logistics and Finance",
+    "photo": null
+  },
+  {
+    "name": "Jakub Buchta",
+    "role": "Team Member for Administration, Logistics and Finance",
+    "photo": null
+  },
+  {
+    "name": "Ida Majewska",
+    "role": "Board Member for External Relations",
+    "photo": "/images/web/ida.webp"
+  },
+  {
+    "name": "Maja Gabinowska",
+    "role": "Team Member for External Relations",
+    "photo": null
+  },
+  {
+    "name": "Alicja Gabryszak",
+    "role": "Team Member for External Relations",
+    "photo": "/images/web/team_ala.webp"
+  },
+  {
+    "name": "Maja Łońska",
+    "role": "Board Member for Promotion",
+    "photo": null
+  },
+  {
+    "name": "Kornelia Wojtasik",
+    "role": "Team Member for Promotion",
+    "photo": "/images/web/team_kornelia.webp"
+  },
+  {
+    "name": "Katarzyna Korysławska",
+    "role": "Team Member for Promotion",
+    "photo": "/images/web/team_kasia.webp"
+  },
+  {
+    "name": "Karolina Kniaziuk",
+    "role": "Graphic Designer",
+    "photo": "/images/web/team_karolina_k.webp"
+  }
 ]

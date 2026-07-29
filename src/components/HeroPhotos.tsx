@@ -16,21 +16,21 @@ type Slot = {
   interval: number;
 };
 
-// Trzy kadry, każdy rotuje inny zestaw zdjęć - dzięki różnym interwałom
+// Cztery kadry, każdy rotuje inny zestaw zdjęć - dzięki różnym interwałom
 // zmieniają się pojedynczo, tworząc wciąż nowe kombinacje.
 const SLOTS: Slot[] = [
   {
-    images: ["main3", "main4", "main9", "main13"].map(web),
-    className: "left-0 top-[6%] w-[68%] aspect-[4/3] z-20",
+    images: ["main3", "main31", "main36", "main41", "main50", "main9"].map(web),
+    className: "left-0 top-[2%] w-[56%] aspect-[4/3] z-20",
     rotate: -3,
     float: 10,
     duration: 5.2,
     delay: 0.1,
-    interval: 4200,
+    interval: 4300,
   },
   {
-    images: ["main12", "main5", "main8", "main2"].map(web),
-    className: "right-0 top-0 w-[42%] aspect-[3/4] z-30",
+    images: ["main12", "main33", "main44", "main52", "main5", "main38"].map(web),
+    className: "right-0 top-0 w-[40%] aspect-[3/4] z-30",
     rotate: 4,
     float: -12,
     duration: 6,
@@ -38,13 +38,22 @@ const SLOTS: Slot[] = [
     interval: 5300,
   },
   {
-    images: ["main10", "main6", "main11", "main7"].map(web),
-    className: "bottom-0 right-[8%] w-[58%] aspect-[4/3] z-10",
+    images: ["main10", "main34", "main46", "main53", "main7", "main40"].map(web),
+    className: "bottom-0 left-[4%] w-[44%] aspect-[3/4] z-10",
     rotate: 3,
     float: 9,
     duration: 5.6,
     delay: 0.34,
     interval: 4700,
+  },
+  {
+    images: ["main13", "main32", "main48", "main55", "main4", "main45"].map(web),
+    className: "bottom-[6%] right-[3%] w-[50%] aspect-[4/3] z-20",
+    rotate: -4,
+    float: 11,
+    duration: 6.4,
+    delay: 0.46,
+    interval: 5000,
   },
 ];
 

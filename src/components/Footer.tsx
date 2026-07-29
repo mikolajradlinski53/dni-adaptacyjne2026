@@ -1,6 +1,7 @@
 import { getTranslations } from "next-intl/server";
 import { Link } from "@/i18n/navigation";
 import { CONTACT_EMAIL } from "@/lib/content";
+import AnimatedLogo from "./AnimatedLogo";
 
 export default async function Footer() {
   const t = await getTranslations();
@@ -22,18 +23,17 @@ export default async function Footer() {
       {/* Easter egg: czapka studencka spaceruje po górnej krawędzi stopki.
           Pasek przycina tylko w poziomie, więc czapka jest w pełni widoczna. */}
       <div className="pointer-events-none absolute inset-x-0 -top-7 h-10 overflow-hidden">
-        <span className="footer-cap" aria-hidden>
-          🎓
-        </span>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img
+          src="/images/DA_LOGO_tylko_czapka1.svg"
+          alt=""
+          aria-hidden
+          className="footer-cap"
+        />
       </div>
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/web/logo.webp"
-            alt="Dni Adaptacyjne 2026"
-            className="h-16 w-auto"
-          />
+          <AnimatedLogo className="h-16" />
           <p className="mt-4 max-w-sm text-sm text-ink-soft">
             {t("footer.organizer")}
           </p>

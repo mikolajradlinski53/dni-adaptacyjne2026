@@ -24,7 +24,7 @@
     "verify": "do weryfikacji",
     "photoSoon": "Zdjęcie wkrótce",
     "mandatory": "Udział obowiązkowy dla I roku",
-    "mandatoryFull": "Udział jest obowiązkowy dla wszystkich studentów I roku studiów licencjackich, inżynierskich i magisterskich — wszystkich kierunków, w tym anglojęzycznych, w formie stacjonarnej i niestacjonarnej.",
+    "mandatoryFull": "Udział jest obowiązkowy dla wszystkich studentów I roku studiów licencjackich, inżynierskich i magisterskich - wszystkich kierunków, w tym anglojęzycznych, w formie stacjonarnej i niestacjonarnej.",
     "external": "link zewnętrzny"
   },
   "hero": {
@@ -61,7 +61,7 @@
     "factWhereLabel": "Gdzie",
     "factWhereValue": "Kampus UEW, Wrocław",
     "factWhoLabel": "Dla kogo",
-    "factWhoValue": "Studenci I roku"
+    "factWhoValue": "Studenci I roku (I i II stopnia)"
   },
   "about": {
     "title": "O Dniach Adaptacyjnych",
@@ -78,7 +78,7 @@
   "schedule": {
     "title": "Harmonogram",
     "lead": "Wybierz tryb studiów, żeby zobaczyć plan, który Cię dotyczy.",
-    "note": "Poniżej schemat wydarzenia. Dokładne godziny i miejsca zostaną udostępnione wkrótce — zmiany ogłaszamy na Facebooku.",
+    "note": "Poniżej schemat wydarzenia. Dokładne godziny i miejsca zostaną udostępnione wkrótce - zmiany ogłaszamy na Facebooku.",
     "empty": "Harmonogram dla tego trybu pojawi się wkrótce."
   },
   "links": {
@@ -89,7 +89,7 @@
     "title": "FAQ",
     "lead": "Odpowiedzi na pytania, które pierwszoroczni zadają najczęściej.",
     "formTitle": "Nie ma Twojego pytania?",
-    "formLead": "Zadaj je nam — odpowiemy najszybciej, jak się da."
+    "formLead": "Zadaj je nam - odpowiemy najszybciej, jak się da."
   },
   "contact": {
     "title": "Kontakt",
@@ -117,10 +117,10 @@
     "title": "Partnerzy",
     "lead": "Dni Adaptacyjne wspierają partnerzy Samorządu Studentów UEW.",
     "placeholder": "Logotypy partnerów pojawią się wkrótce.",
-    "intro": "Dni Adaptacyjne to pierwszy kontakt kilkuset studentów I roku z uczelnią i Wrocławiem. Partnerzy wydarzenia docierają do nich w wyjątkowym momencie — na samym starcie studenckiego życia.",
+    "intro": "Dni Adaptacyjne to pierwszy kontakt kilkuset studentów I roku z uczelnią i Wrocławiem. Partnerzy wydarzenia docierają do nich w wyjątkowym momencie - na samym starcie studenckiego życia.",
     "benefitsTitle": "Dlaczego warto zostać partnerem?",
     "benefit1Title": "Bezpośredni kontakt z I rokiem",
-    "benefit1Body": "Twoja marka jest obecna tam, gdzie studenci podejmują pierwsze decyzje — od konta w banku po ulubione miejsca w mieście.",
+    "benefit1Body": "Twoja marka jest obecna tam, gdzie studenci podejmują pierwsze decyzje - od konta w banku po ulubione miejsca w mieście.",
     "benefit2Title": "Widoczność na kampusie",
     "benefit2Body": "Logo, stoisko i materiały w trakcie wydarzenia oraz obecność na tej stronie przez cały sezon rekrutacyjny.",
     "benefit3Title": "Realne wsparcie społeczności",
@@ -130,7 +130,7 @@
     "comingSoon": "Logo wkrótce",
     "visitSite": "Odwiedź stronę",
     "ctaTitle": "Zostań partnerem Dni Adaptacyjnych 2026",
-    "ctaBody": "Chcesz dotrzeć do studentów I roku UEW? Napisz do nas — przygotujemy ofertę dopasowaną do Twojej marki.",
+    "ctaBody": "Chcesz dotrzeć do studentów I roku UEW? Napisz do nas - przygotujemy ofertę dopasowaną do Twojej marki.",
     "ctaButton": "Napisz do nas",
     "contactLabel": "Kontakt dla partnerów",
     "contactRole": "Członek Zarządu ds. Kontaktów Zewnętrznych"

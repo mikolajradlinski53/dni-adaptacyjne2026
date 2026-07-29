@@ -7,7 +7,7 @@
 
   { "mode": "full2", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "title": "Prelekcje dla II stopnia", "desc": "Prawa i obowiązki studenta oraz organizacja studiów II stopnia." },
   { "mode": "full2", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "title": "Część ogólna: stoiska i integracja", "place": "Teren kampusu", "desc": "Dołączcie do części wspólnej z I stopniem, jeśli macie ochotę." },
-  { "mode": "full2", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "title": "Tego dnia zajęcia odbywają się według planu", "desc": "Dla II stopnia piątek to zwykły dzień zajęć — bierzecie w nich udział zgodnie ze swoim planem." },
+  { "mode": "full2", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "title": "Tego dnia zajęcia odbywają się według planu", "desc": "Dla II stopnia piątek to zwykły dzień zajęć - bierzecie w nich udział zgodnie ze swoim planem." },
   { "mode": "full2", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "title": "UE Party x DA", "desc": "Wieczorem impreza otwarta także dla II stopnia.", "highlight": true },
 
   { "mode": "part", "date": "2026-10-03", "dayLabel": "Sobota, 3 października · online", "title": "Transmisja online", "desc": "Najważniejsze informacje o prawach i obowiązkach studenta oraz organizacji studiów niestacjonarnych. Link do transmisji pojawi się tutaj." },

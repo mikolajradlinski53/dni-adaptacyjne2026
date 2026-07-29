@@ -139,7 +139,7 @@ export default async function PartnersPage({ params }: Props) {
             </h2>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          {/* Masonry — pełne kadry bez przycinania */}
+          {/* Masonry - pełne kadry bez przycinania */}
           <div className="mt-8 columns-2 gap-3 sm:columns-3 lg:columns-4 [&>*]:mb-3">
             {gallery.map((name) => (
               <div

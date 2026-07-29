@@ -18,7 +18,7 @@ export default function PartnersShowcase({
   const regular = partners.filter((p) => p.tier !== "strategic");
   const placeholderCount = Math.max(0, 8 - regular.length);
 
-  // Delikatne „skakanie" kafli — różne fazy, żeby ruszały się niezależnie.
+  // Delikatne „skakanie" kafli - różne fazy, żeby ruszały się niezależnie.
   const bob = (i: number) =>
     reduce
       ? {}

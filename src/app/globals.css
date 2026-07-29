@@ -3,7 +3,7 @@
 /*
   Tymczasowy system kolorów (do podmiany po dostarczeniu finalnego motywu DA).
   Kierunek zlecony: pudrowy róż + niebieski na jasnym tle.
-  Nazwy zmiennych (violet/magenta/blue) zostają — wskazują teraz nowe barwy,
+  Nazwy zmiennych (violet/magenta/blue) zostają - wskazują teraz nowe barwy,
   żeby cały istniejący kod działał bez zmian:
     - "violet" = niebieski (główny akcent: linki, aktywne stany, obwódki)
     - "magenta" = pudrowy róż (druga barwa marki)
@@ -42,7 +42,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* Rezerwuje miejsce na pasek przewijania — brak skoku layoutu przy
+  /* Rezerwuje miejsce na pasek przewijania - brak skoku layoutu przy
      otwieraniu wyszukiwarki (blokada scrolla body). */
   scrollbar-gutter: stable;
 }
@@ -93,7 +93,7 @@ p {
     radial-gradient(40rem 26rem at 60% 112%, oklch(94% 0.09 90 / 0.55), transparent 62%);
 }
 
-/* Powolny, żywy dryf aurory — dodaje głębi bez rozpraszania */
+/* Powolny, żywy dryf aurory - dodaje głębi bez rozpraszania */
 .aurora::before {
   content: "";
   position: absolute;
@@ -169,14 +169,14 @@ p {
 }
 
 /* Easter egg: czapka studencka spaceruje po górnej krawędzi stopki.
-   Interim na emoji — do podmiany na klatki grafiki czapki (jak koza w Adapciaku). */
+   Interim na emoji - do podmiany na klatki grafiki czapki (jak koza w Adapciaku). */
 .footer-cap {
   position: absolute;
   bottom: 0.15rem;
   left: 0;
   z-index: 10;
-  font-size: 2rem;
-  line-height: 1;
+  width: 2.4rem;
+  height: auto;
   pointer-events: none;
   filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.18));
   animation:
@@ -253,7 +253,7 @@ p {
   }
 }
 
-/* Widoczny fokus klawiaturowy — wymóg dostępności */
+/* Widoczny fokus klawiaturowy - wymóg dostępności */
 :focus-visible {
   outline: 3px solid var(--color-violet);
   outline-offset: 2px;

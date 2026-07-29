@@ -16,7 +16,7 @@ type Slot = {
   interval: number;
 };
 
-// Trzy kadry, każdy rotuje inny zestaw zdjęć — dzięki różnym interwałom
+// Trzy kadry, każdy rotuje inny zestaw zdjęć - dzięki różnym interwałom
 // zmieniają się pojedynczo, tworząc wciąż nowe kombinacje.
 const SLOTS: Slot[] = [
   {

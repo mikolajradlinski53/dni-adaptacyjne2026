@@ -24,7 +24,7 @@
     "verify": "to be verified",
     "photoSoon": "Photo coming soon",
     "mandatory": "Mandatory for first-year students",
-    "mandatoryFull": "Attendance is mandatory for all first-year students of bachelor's, engineering and master's programmes — all fields of study, including English-language ones, in both full-time and part-time modes.",
+    "mandatoryFull": "Attendance is mandatory for all first-year students of bachelor's, engineering and master's programmes - all fields of study, including English-language ones, in both full-time and part-time modes.",
     "external": "external link"
   },
   "hero": {
@@ -61,7 +61,7 @@
     "factWhereLabel": "Where",
     "factWhereValue": "UEW campus, Wroclaw",
     "factWhoLabel": "For whom",
-    "factWhoValue": "First-year students"
+    "factWhoValue": "First-year students (BA & MA)"
   },
   "about": {
     "title": "About Orientation Days",
@@ -78,7 +78,7 @@
   "schedule": {
     "title": "Schedule",
     "lead": "Choose your study mode to see the plan that applies to you.",
-    "note": "Below is the outline of the event. Exact times and locations will be shared soon — updates are posted on Facebook.",
+    "note": "Below is the outline of the event. Exact times and locations will be shared soon - updates are posted on Facebook.",
     "empty": "The schedule for this mode will appear soon."
   },
   "links": {
@@ -89,7 +89,7 @@
     "title": "FAQ",
     "lead": "Answers to the questions first-year students ask most often.",
     "formTitle": "Can't find your question?",
-    "formLead": "Ask us — we'll answer as soon as we can."
+    "formLead": "Ask us - we'll answer as soon as we can."
   },
   "contact": {
     "title": "Contact",
@@ -117,10 +117,10 @@
     "title": "Partners",
     "lead": "Orientation Days are supported by the partners of the UEW Student Union.",
     "placeholder": "Partner logos will appear soon.",
-    "intro": "Orientation Days are the first contact between several hundred first-year students and the university and the city of Wroclaw. Event partners reach them at a unique moment — the very start of student life.",
+    "intro": "Orientation Days are the first contact between several hundred first-year students and the university and the city of Wroclaw. Event partners reach them at a unique moment - the very start of student life.",
     "benefitsTitle": "Why become a partner?",
     "benefit1Title": "Direct reach to first-years",
-    "benefit1Body": "Your brand is present where students make their first decisions — from a bank account to their favourite spots in the city.",
+    "benefit1Body": "Your brand is present where students make their first decisions - from a bank account to their favourite spots in the city.",
     "benefit2Title": "Visibility on campus",
     "benefit2Body": "Your logo, a stand and materials during the event, plus presence on this page throughout the admissions season.",
     "benefit3Title": "Real community support",
@@ -130,7 +130,7 @@
     "comingSoon": "Logo coming soon",
     "visitSite": "Visit website",
     "ctaTitle": "Become a partner of Orientation Days 2026",
-    "ctaBody": "Want to reach first-year UEW students? Write to us — we will prepare an offer tailored to your brand.",
+    "ctaBody": "Want to reach first-year UEW students? Write to us - we will prepare an offer tailored to your brand.",
     "ctaButton": "Write to us",
     "contactLabel": "Partnership contact",
     "contactRole": "Board Member for External Relations"

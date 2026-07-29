@@ -16,7 +16,7 @@ export type ScheduleEntry = {
   title: string;
   place?: string;
   desc?: string;
-  /** Wyróżniony krok (np. UE Party) — mocniejsza wizualnie karta. */
+  /** Wyróżniony krok (np. UE Party) - mocniejsza wizualnie karta. */
   highlight?: boolean;
 };
 
@@ -73,7 +73,7 @@ export const EVENT_START = "2026-10-01T00:00:00+02:00";
 export const CONTACT_EMAIL = "dni.adaptacyjne@samorzad.ue.wroc.pl";
 
 /**
- * Formspree — formularz pytań (FAQ) i kontakt.
+ * Formspree - formularz pytań (FAQ) i kontakt.
  * ZMIEŃ na własny identyfikator z panelu Formspree (https://formspree.io).
  * Do czasu podmiany formularz wyśle na testowy endpoint (nie dotrze do skrzynki).
  */

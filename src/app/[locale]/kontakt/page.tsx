@@ -55,7 +55,7 @@ export default async function ContactPage({ params }: Props) {
         <p className="mt-3 text-sm text-ink-soft">{t("contact.emailNote")}</p>
       </div>
 
-      {/* Formularz — napisz do nas */}
+      {/* Formularz - napisz do nas */}
       <section className="mt-8 rounded-tile border border-line bg-surface p-6 sm:p-8">
         <h2 className="text-xl font-bold sm:text-2xl">
           {t("contact.formTitle")}

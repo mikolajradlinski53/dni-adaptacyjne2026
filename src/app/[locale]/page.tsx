@@ -96,7 +96,7 @@ export default async function HomePage({ params }: Props) {
             </div>
           </div>
 
-          {/* Odliczanie — pełna szerokość */}
+          {/* Odliczanie - pełna szerokość */}
           <div className="mt-14">
             <Countdown
               labels={{

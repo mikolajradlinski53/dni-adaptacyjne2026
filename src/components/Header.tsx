@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { List, X, MapPinLine } from "@phosphor-icons/react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import AnimatedLogo from "./AnimatedLogo";
 import type { SearchEntry } from "@/lib/search";
 import SearchOverlay from "./SearchOverlay";
 
@@ -51,12 +52,7 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
           aria-label="Dni Adaptacyjne 2026"
           onClick={() => setMenuOpen(false)}
         >
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img
-            src="/images/web/logo.webp"
-            alt="Dni Adaptacyjne 2026"
-            className="h-11 w-auto shrink-0 sm:h-12"
-          />
+          <AnimatedLogo className="h-11 shrink-0 sm:h-12" />
         </Link>
 
         <nav

@@ -49,7 +49,7 @@ export default async function AboutPage({ params }: Props) {
         />
       </div>
 
-      {/* Dla kogo obowiązkowe — pełny zakres */}
+      {/* Dla kogo obowiązkowe - pełny zakres */}
       <div className="mt-8 flex max-w-3xl items-start gap-4 rounded-tile bg-violet-soft p-6 sm:p-7">
         <SealCheck size={30} weight="duotone" className="mt-0.5 shrink-0 text-violet" />
         <p className="font-medium text-ink sm:text-lg">

@@ -21,6 +21,36 @@ export default function HeroDoodles() {
       <span className="absolute -right-12 -top-10 size-56 rounded-full bg-blue-soft/50 blur-3xl" />
       <span className="absolute bottom-[-4rem] left-1/3 size-56 rounded-full bg-gold-soft/50 blur-3xl" />
 
+      {/* Charakterystyczne kreski (koncentryczne łuki) - jak w motywie */}
+      <svg
+        className="absolute -right-16 -top-20 size-80 text-magenta/15 sm:size-96"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+      >
+        {Array.from({ length: 9 }).map((_, i) => {
+          const r = 16 + i * 8;
+          return (
+            <path key={i} d={`M ${100 - r} 0 A ${r} ${r} 0 0 0 100 ${r}`} />
+          );
+        })}
+      </svg>
+      <svg
+        className="absolute -bottom-24 -left-16 size-72 text-mint/25"
+        viewBox="0 0 100 100"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.4"
+      >
+        {Array.from({ length: 7 }).map((_, i) => {
+          const r = 14 + i * 9;
+          return (
+            <path key={i} d={`M 0 ${100 - r} A ${r} ${r} 0 0 0 ${r} 100`} />
+          );
+        })}
+      </svg>
+
       {/* Akademickie doodle */}
       <BookOpen
         weight="duotone"

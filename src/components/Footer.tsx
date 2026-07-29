@@ -17,12 +17,15 @@ export default async function Footer() {
   ];
 
   return (
-    <footer className="relative mt-24 overflow-hidden border-t border-line bg-surface">
+    <footer className="relative mt-24 border-t border-line bg-surface">
       <div className="grad-line h-1 w-full" />
-      {/* Easter egg: czapka studencka spaceruje po krawędzi stopki */}
-      <span className="footer-cap" aria-hidden>
-        🎓
-      </span>
+      {/* Easter egg: czapka studencka spaceruje po górnej krawędzi stopki.
+          Pasek przycina tylko w poziomie, więc czapka jest w pełni widoczna. */}
+      <div className="pointer-events-none absolute inset-x-0 -top-7 h-10 overflow-hidden">
+        <span className="footer-cap" aria-hidden>
+          🎓
+        </span>
+      </div>
       <div className="mx-auto grid max-w-6xl gap-10 px-4 py-12 sm:px-6 md:grid-cols-[1.4fr_1fr_1fr]">
         <div>
           {/* eslint-disable-next-line @next/next/no-img-element */}

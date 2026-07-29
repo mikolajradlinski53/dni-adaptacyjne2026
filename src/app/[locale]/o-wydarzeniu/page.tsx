@@ -6,6 +6,9 @@ import type { Locale } from "@/i18n/routing";
 import { getModes } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import AboutModes from "@/components/AboutModes";
+import CyclingImage from "@/components/CyclingImage";
+
+const web = (n: string) => `/images/web/${n}.webp`;
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -36,25 +39,14 @@ export default async function AboutPage({ params }: Props) {
           <p>{t("about.intro1")}</p>
           <p>{t("about.intro2")}</p>
         </div>
-        {/* Zdjęcia z Dni Adaptacyjnych */}
-        <div className="grid grid-cols-2 gap-3">
-          {["about2", "about4", "about5", "about3"].map((name, i) => (
-            <div
-              key={name}
-              className={`overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5 ${
-                i % 2 === 0 ? "translate-y-2" : "-translate-y-2"
-              }`}
-            >
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src={`/images/web/${name}.webp`}
-                alt=""
-                className="aspect-square w-full object-cover"
-                loading="lazy"
-              />
-            </div>
-          ))}
-        </div>
+        {/* Rotujące zdjęcia z Dni Adaptacyjnych */}
+        <CyclingImage
+          images={["about1", "about4", "about2", "about3", "about6", "about5"].map(
+            web
+          )}
+          interval={4000}
+          className="aspect-[4/3] rounded-2xl shadow-lg ring-1 ring-black/5"
+        />
       </div>
 
       {/* Dla kogo obowiązkowe — pełny zakres */}
@@ -98,15 +90,11 @@ export default async function AboutPage({ params }: Props) {
               <ArrowRight size={16} weight="bold" />
             </Link>
           </div>
-          <div className="overflow-hidden rounded-2xl shadow-lg ring-1 ring-black/5">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img
-              src="/images/web/ueparty1.webp"
-              alt=""
-              className="aspect-[4/3] w-full object-cover"
-              loading="lazy"
-            />
-          </div>
+          <CyclingImage
+            images={["ueparty1", "ueparty2", "ueparty3"].map(web)}
+            interval={3600}
+            className="aspect-[4/3] rounded-2xl shadow-lg ring-1 ring-black/5"
+          />
         </div>
       </section>
     </div>

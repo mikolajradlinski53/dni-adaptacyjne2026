@@ -88,7 +88,8 @@
   "faq": {
     "title": "FAQ",
     "lead": "Odpowiedzi na pytania, które pierwszoroczni zadają najczęściej.",
-    "note": "Lista robocza. Ostateczne pytania i odpowiedzi dostarczy zespół Dni Adaptacyjnych."
+    "formTitle": "Nie ma Twojego pytania?",
+    "formLead": "Zadaj je nam — odpowiemy najszybciej, jak się da."
   },
   "contact": {
     "title": "Kontakt",
@@ -100,7 +101,17 @@
     "teamRoleBody": "Odpowiada za sprawy organizacyjne i techniczne oraz reaguje na bieżąco. Do Teamu zgłaszajcie problemy i pytania organizacyjne.",
     "volunteersTitle": "Wolontariusze",
     "volunteersBody": "Prowadzą prelekcje, oprowadzają po kampusie i pilnują stoisk. To ich pytajcie o drogę i przebieg dnia.",
-    "outfitNote": "Rozpoznacie nas po koszulkach i identyfikatorach. Zdjęcia pojawią się tutaj przed wydarzeniem."
+    "outfitNote": "Rozpoznacie nas po koszulkach i identyfikatorach. Zdjęcia pojawią się tutaj przed wydarzeniem.",
+    "formTitle": "Napisz do nas",
+    "formLead": "Masz pytanie? Wyślij wiadomość, a odezwiemy się na podany adres."
+  },
+  "form": {
+    "email": "Twój e-mail",
+    "message": "Twoje pytanie",
+    "send": "Wyślij",
+    "sending": "Wysyłanie…",
+    "success": "Dziękujemy! Odezwiemy się na podany e-mail.",
+    "error": "Coś poszło nie tak. Spróbuj ponownie lub napisz na nasz e-mail."
   },
   "partners": {
     "title": "Partnerzy",
@@ -117,6 +128,7 @@
     "showcaseTitle": "Zaufali nam",
     "galleryTitle": "Partnerzy w akcji",
     "comingSoon": "Logo wkrótce",
+    "visitSite": "Odwiedź stronę",
     "ctaTitle": "Zostań partnerem Dni Adaptacyjnych 2026",
     "ctaBody": "Chcesz dotrzeć do studentów I roku UEW? Napisz do nas — przygotujemy ofertę dopasowaną do Twojej marki.",
     "ctaButton": "Napisz do nas",

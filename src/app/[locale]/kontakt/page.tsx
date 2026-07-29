@@ -7,8 +7,9 @@ import {
   User,
 } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/i18n/routing";
-import { CONTACT_EMAIL, getTeam } from "@/lib/content";
+import { CONTACT_EMAIL, FORMSPREE_ID, getTeam } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
+import FormspreeForm from "@/components/FormspreeForm";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -40,17 +41,40 @@ export default async function ContactPage({ params }: Props) {
         <p className="text-sm font-bold uppercase tracking-wide text-violet">
           {t("contact.emailLabel")}
         </p>
-        <div className="mt-3 max-w-full overflow-x-auto">
-          <a
-            href={`mailto:${CONTACT_EMAIL}`}
-            className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-base font-bold underline-offset-4 hover:underline sm:text-2xl"
-          >
-            <EnvelopeSimple size={26} weight="duotone" className="shrink-0 text-violet" />
-            {CONTACT_EMAIL}
-          </a>
-        </div>
+        <a
+          href={`mailto:${CONTACT_EMAIL}`}
+          className="mt-3 flex items-center gap-2.5 font-display text-sm font-bold underline-offset-4 hover:underline sm:text-lg md:text-2xl"
+        >
+          <EnvelopeSimple
+            size={26}
+            weight="duotone"
+            className="shrink-0 text-violet"
+          />
+          <span className="truncate">{CONTACT_EMAIL}</span>
+        </a>
         <p className="mt-3 text-sm text-ink-soft">{t("contact.emailNote")}</p>
       </div>
+
+      {/* Formularz — napisz do nas */}
+      <section className="mt-8 max-w-2xl rounded-tile border border-line bg-surface p-6 sm:p-8">
+        <h2 className="text-xl font-bold sm:text-2xl">
+          {t("contact.formTitle")}
+        </h2>
+        <p className="mt-1.5 text-ink-soft">{t("contact.formLead")}</p>
+        <div className="mt-5">
+          <FormspreeForm
+            endpoint={`https://formspree.io/f/${FORMSPREE_ID}`}
+            labels={{
+              email: t("form.email"),
+              message: t("form.message"),
+              send: t("form.send"),
+              sending: t("form.sending"),
+              success: t("form.success"),
+              error: t("form.error"),
+            }}
+          />
+        </div>
+      </section>
 
       <section className="mt-16">
         <h2 className="text-2xl font-bold sm:text-3xl">
@@ -63,16 +87,16 @@ export default async function ContactPage({ params }: Props) {
               className="flex items-center gap-4 rounded-tile border border-line bg-surface p-4 transition-all hover:-translate-y-0.5 hover:border-violet hover:shadow-md"
             >
               <div className="relative shrink-0">
-                <div className="grad-brand flex size-16 items-center justify-center overflow-hidden rounded-2xl text-white">
+                <div className="grad-brand flex size-20 items-center justify-center overflow-hidden rounded-2xl text-white sm:size-24">
                   {member.photo ? (
                     // eslint-disable-next-line @next/next/no-img-element
                     <img
                       src={member.photo}
                       alt={member.name}
-                      className="size-full object-cover"
+                      className="size-full object-cover object-top"
                     />
                   ) : (
-                    <User size={30} weight="duotone" />
+                    <User size={38} weight="duotone" />
                   )}
                 </div>
                 {/* Emotka czapki studenckiej w rogu zdjęcia */}

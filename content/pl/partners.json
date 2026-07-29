@@ -1,3 +1,3 @@
 [
-  { "name": "BNY", "logo": "/images/bny_logo.png", "href": "https://www.bny.com" }
+  { "name": "BNY", "logo": "/images/bny_logo.png", "href": "https://www.bny.com", "tier": "strategic", "desc": "Globalna instytucja finansowa z biurem we Wrocławiu i partner Dni Adaptacyjnych. Poznaj możliwości rozwoju, staży i praktyk dla studentów UEW." }
 ]

@@ -31,6 +31,9 @@
 
 html {
   scroll-behavior: smooth;
+  /* Rezerwuje miejsce na pasek przewijania — brak skoku layoutu przy
+     otwieraniu wyszukiwarki (blokada scrolla body). */
+  scrollbar-gutter: stable;
 }
 
 body {
@@ -159,12 +162,13 @@ p {
    Interim na emoji — do podmiany na klatki grafiki czapki (jak koza w Adapciaku). */
 .footer-cap {
   position: absolute;
-  top: -0.7rem;
+  bottom: 0.15rem;
   left: 0;
   z-index: 10;
-  font-size: 1.7rem;
+  font-size: 2rem;
   line-height: 1;
   pointer-events: none;
+  filter: drop-shadow(0 2px 3px rgb(0 0 0 / 0.18));
   animation:
     cap-walk 18s linear infinite,
     cap-hop 1.15s ease-in-out infinite;
@@ -174,7 +178,7 @@ p {
     left: 1%;
   }
   100% {
-    left: 99%;
+    left: 95%;
   }
 }
 @keyframes cap-hop {
@@ -199,6 +203,20 @@ p {
 }
 .link-icon {
   animation: icon-float 3.6s ease-in-out infinite;
+}
+
+/* Pulsująca poświata pod wyróżnionym partnerem */
+.partner-glow {
+  animation: partner-glow 3.2s ease-in-out infinite;
+}
+@keyframes partner-glow {
+  0%,
+  100% {
+    opacity: 0.45;
+  }
+  50% {
+    opacity: 0.8;
+  }
 }
 
 /* Shimmer dla slotów logotypów partnerów (stan „wkrótce") */

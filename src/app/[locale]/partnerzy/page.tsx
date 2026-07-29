@@ -13,6 +13,7 @@ import type { Locale } from "@/i18n/routing";
 import { getPartners, PARTNERS_CONTACT } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
+import PartnersShowcase from "@/components/PartnersShowcase";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -52,16 +53,14 @@ export default async function PartnersPage({ params }: Props) {
     },
   ];
 
-  // Realni partnerzy najpierw, resztę siatki wypełniamy slotami „wkrótce".
-  const placeholderCount = Math.max(0, 8 - partners.length);
-
   // Zdjęcia z wydarzenia pokazujące obecność partnerów.
   const gallery = [
     "partnerzy6",
+    "partnerzy12",
     "partnerzy9",
     "partnerzy8",
-    "partnerzy10",
     "partnerzy7",
+    "partnerzy10",
     "partnerzy11",
   ];
 
@@ -119,53 +118,13 @@ export default async function PartnersPage({ params }: Props) {
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
 
-          <Stagger className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-            {partners.map((p) => {
-              const tile = (
-                <div className="flex aspect-[3/2] items-center justify-center rounded-tile border border-line bg-surface p-6 transition-all hover:-translate-y-1 hover:border-violet hover:shadow-md">
-                  {p.logo ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={p.logo}
-                      alt={p.name}
-                      className="max-h-10 w-auto max-w-[80%] object-contain"
-                    />
-                  ) : (
-                    <span className="text-center font-semibold text-ink">
-                      {p.name}
-                    </span>
-                  )}
-                </div>
-              );
-              return (
-                <RevealItem key={p.name}>
-                  {p.href ? (
-                    <a
-                      href={p.href}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      aria-label={p.name}
-                    >
-                      {tile}
-                    </a>
-                  ) : (
-                    tile
-                  )}
-                </RevealItem>
-              );
-            })}
-
-            {Array.from({ length: placeholderCount }).map((_, i) => (
-              <RevealItem key={`ph-${i}`}>
-                <div className="shimmer flex aspect-[3/2] flex-col items-center justify-center gap-2 rounded-tile border border-dashed border-line bg-surface">
-                  <span className="grad-brand size-8 rounded-full opacity-25" />
-                  <span className="text-xs font-medium text-ink-soft/70">
-                    {t("partners.comingSoon")}
-                  </span>
-                </div>
-              </RevealItem>
-            ))}
-          </Stagger>
+          <div className="mt-8">
+            <PartnersShowcase
+              partners={partners}
+              comingSoon={t("partners.comingSoon")}
+              visitSite={t("partners.visitSite")}
+            />
+          </div>
         </section>
       </Reveal>
 
@@ -178,22 +137,23 @@ export default async function PartnersPage({ params }: Props) {
             </h2>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          <Stagger className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3">
+          {/* Masonry — pełne kadry bez przycinania */}
+          <div className="mt-8 columns-2 gap-3 sm:columns-3 lg:columns-4 [&>*]:mb-3">
             {gallery.map((name) => (
-              <RevealItem
+              <div
                 key={name}
-                className="overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
+                className="group break-inside-avoid overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/images/web/${name}.webp`}
                   alt=""
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 hover:scale-105"
+                  className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
-              </RevealItem>
+              </div>
             ))}
-          </Stagger>
+          </div>
         </section>
       </Reveal>
 
@@ -224,36 +184,32 @@ export default async function PartnersPage({ params }: Props) {
                 <p className="text-xs font-bold uppercase tracking-wide text-white/80">
                   {t("partners.contactLabel")}
                 </p>
-                <div className="mt-3 flex items-center gap-3">
-                  <div className="relative shrink-0">
-                    <div className="flex size-14 items-center justify-center overflow-hidden rounded-2xl bg-white/20">
-                      {PARTNERS_CONTACT.photo ? (
-                        // eslint-disable-next-line @next/next/no-img-element
-                        <img
-                          src={PARTNERS_CONTACT.photo}
-                          alt={PARTNERS_CONTACT.name}
-                          className="size-full object-cover"
-                        />
-                      ) : (
-                        <User size={26} weight="duotone" className="text-white" />
-                      )}
+                <div className="relative mt-3 overflow-hidden rounded-2xl bg-white/20">
+                  {PARTNERS_CONTACT.photo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={PARTNERS_CONTACT.photo}
+                      alt={PARTNERS_CONTACT.name}
+                      className="aspect-[4/3] w-full object-cover object-top"
+                    />
+                  ) : (
+                    <div className="flex aspect-[4/3] items-center justify-center">
+                      <User size={44} weight="duotone" className="text-white" />
                     </div>
-                    <span
-                      aria-hidden
-                      className="absolute -right-2 -top-2 flex size-6 items-center justify-center rounded-full bg-white text-xs shadow"
-                    >
-                      🎓
-                    </span>
-                  </div>
-                  <div className="min-w-0">
-                    <p className="font-bold leading-tight">
-                      {PARTNERS_CONTACT.name}
-                    </p>
-                    <p className="text-xs text-white/85">
-                      {t("partners.contactRole")}
-                    </p>
-                  </div>
+                  )}
+                  <span
+                    aria-hidden
+                    className="absolute right-2 top-2 flex size-8 items-center justify-center rounded-full bg-white text-base shadow"
+                  >
+                    🎓
+                  </span>
                 </div>
+                <p className="mt-3 font-bold leading-tight">
+                  {PARTNERS_CONTACT.name}
+                </p>
+                <p className="text-xs text-white/85">
+                  {t("partners.contactRole")}
+                </p>
                 <a
                   href={`mailto:${PARTNERS_CONTACT.email}`}
                   className="mt-4 block break-all text-sm font-semibold text-white underline-offset-4 hover:underline"

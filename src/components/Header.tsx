@@ -59,14 +59,17 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
           />
         </Link>
 
-        <nav className="hidden items-center gap-1 lg:flex" aria-label="main">
+        <nav
+          className="hidden items-center gap-0.5 lg:flex xl:gap-1"
+          aria-label="main"
+        >
           {primary.map((item) => {
             const active = pathname.startsWith(item.href);
             return (
               <Link
                 key={item.href}
                 href={item.href}
-                className={`rounded-full px-3.5 py-2 text-sm font-medium transition-colors ${
+                className={`whitespace-nowrap rounded-full px-2.5 py-2 text-sm font-medium transition-colors xl:px-3.5 ${
                   active
                     ? "bg-violet-soft text-ink"
                     : "text-ink-soft hover:bg-violet-soft/60 hover:text-ink"
@@ -81,7 +84,7 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
           <Link
             href={mapItem.href}
             aria-current={mapActive ? "page" : undefined}
-            className={`group ml-1.5 inline-flex items-center gap-1.5 rounded-full border px-3.5 py-2 text-sm font-bold shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md ${
+            className={`group ml-1 inline-flex items-center gap-1.5 whitespace-nowrap rounded-full border px-3 py-2 text-sm font-bold shadow-sm transition-all hover:-translate-y-0.5 hover:shadow-md xl:px-3.5 ${
               mapActive
                 ? "grad-brand border-transparent text-white"
                 : "border-violet/40 bg-gradient-to-r from-blue-soft via-violet-soft to-magenta-soft text-ink"

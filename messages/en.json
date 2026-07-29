@@ -88,7 +88,8 @@
   "faq": {
     "title": "FAQ",
     "lead": "Answers to the questions first-year students ask most often.",
-    "note": "Working list. The final questions and answers will come from the Orientation Days team."
+    "formTitle": "Can't find your question?",
+    "formLead": "Ask us — we'll answer as soon as we can."
   },
   "contact": {
     "title": "Contact",
@@ -100,7 +101,17 @@
     "teamRoleBody": "Responsible for organisational and technical matters and reacting on the spot. Bring problems and organisational questions to the Team.",
     "volunteersTitle": "Volunteers",
     "volunteersBody": "They run the talks, guide campus tours and staff the stands. Ask them for directions and the plan of the day.",
-    "outfitNote": "You will recognise us by our T-shirts and badges. Photos will appear here before the event."
+    "outfitNote": "You will recognise us by our T-shirts and badges. Photos will appear here before the event.",
+    "formTitle": "Write to us",
+    "formLead": "Have a question? Send a message and we'll reply to the address you provide."
+  },
+  "form": {
+    "email": "Your email",
+    "message": "Your question",
+    "send": "Send",
+    "sending": "Sending…",
+    "success": "Thank you! We'll reply to the email you provided.",
+    "error": "Something went wrong. Please try again or write to our email."
   },
   "partners": {
     "title": "Partners",
@@ -117,6 +128,7 @@
     "showcaseTitle": "They trust us",
     "galleryTitle": "Partners in action",
     "comingSoon": "Logo coming soon",
+    "visitSite": "Visit website",
     "ctaTitle": "Become a partner of Orientation Days 2026",
     "ctaBody": "Want to reach first-year UEW students? Write to us — we will prepare an offer tailored to your brand.",
     "ctaButton": "Write to us",

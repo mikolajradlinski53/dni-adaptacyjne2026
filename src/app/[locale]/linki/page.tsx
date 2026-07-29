@@ -8,12 +8,15 @@ import {
   ChartBar,
   Clock,
   Coins,
+  Confetti,
   FacebookLogo,
   GlobeHemisphereEast,
   GraduationCap,
   Heart,
+  MicrosoftTeamsLogo,
   Monitor,
   Question,
+  Scroll,
   ShieldCheck,
   Star,
   UsersThree,
@@ -31,11 +34,14 @@ const ICONS: Record<string, Icon> = {
   users: UsersThree,
   question: Question,
   facebook: FacebookLogo,
+  confetti: Confetti,
   calendar: Calendar,
   clock: Clock,
   student: GraduationCap,
   globe: GlobeHemisphereEast,
   monitor: Monitor,
+  teams: MicrosoftTeamsLogo,
+  scroll: Scroll,
   star: Star,
   buildings: Buildings,
   coins: Coins,
@@ -74,11 +80,14 @@ export default async function LinksPage({ params }: Props) {
           <section key={cat.category}>
             <h2 className="text-xl font-bold sm:text-2xl">{cat.category}</h2>
             <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {cat.items.map((item) => {
+              {cat.items.map((item, i) => {
                 const IconComponent = ICONS[item.icon] ?? Star;
                 const inner = (
                   <>
-                    <span className="flex size-11 shrink-0 items-center justify-center rounded-xl bg-violet-soft text-violet">
+                    <span
+                      className="link-icon flex size-11 shrink-0 items-center justify-center rounded-xl bg-violet-soft text-violet transition-transform duration-300 group-hover:-rotate-6 group-hover:scale-110"
+                      style={{ animationDelay: `${(i % 5) * 0.35}s` }}
+                    >
                       <IconComponent size={22} weight="duotone" />
                     </span>
                     <span className="min-w-0">
@@ -102,7 +111,7 @@ export default async function LinksPage({ params }: Props) {
                   </>
                 );
                 const base =
-                  "flex h-full items-start gap-4 rounded-tile border border-line bg-surface p-5 transition-all";
+                  "group flex h-full items-start gap-4 rounded-tile border border-line bg-surface p-5 transition-all";
                 const activeCls = `${base} hover:-translate-y-0.5 hover:border-violet hover:shadow-md`;
                 const disabledCls = `${base} opacity-70`;
 

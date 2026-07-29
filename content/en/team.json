@@ -1,5 +1,16 @@
 [
-  { "name": "Name Surname", "role": "Orientation Days 2026 Coordinator", "phone": "+48 000 000 000", "photo": null },
-  { "name": "Name Surname", "role": "Orientation Days 2026 Deputy Coordinator", "phone": "+48 000 000 000", "photo": null },
-  { "name": "Name Surname", "role": "Board Member for the Orientation Days 2026 Schedule", "phone": "+48 000 000 000", "photo": null }
+  { "name": "Karolina Smereczniak", "role": "Coordinator", "photo": null },
+  { "name": "Zofia Palus", "role": "Deputy Coordinator", "photo": null },
+  { "name": "Emilia Ćwiklińska", "role": "Board Member for Scheduling", "photo": null },
+  { "name": "Marta Lisowska", "role": "Board Member for Administration and Logistics", "photo": null },
+  { "name": "Bartosz Bakalarz", "role": "Board Member for Finance", "photo": null },
+  { "name": "Ewelina Kaźmierczak", "role": "Team Member for Administration, Logistics and Finance", "photo": null },
+  { "name": "Jakub Buchta", "role": "Team Member for Administration, Logistics and Finance", "photo": null },
+  { "name": "Ida Majewska", "role": "Board Member for External Relations", "photo": null },
+  { "name": "Maja Gabinowska", "role": "Team Member for External Relations", "photo": null },
+  { "name": "Alicja Gabryszak", "role": "Team Member for External Relations", "photo": null },
+  { "name": "Maja Łońska", "role": "Board Member for Promotion", "photo": null },
+  { "name": "Kornelia Wojtasik", "role": "Team Member for Promotion", "photo": null },
+  { "name": "Katarzyna Korysławska", "role": "Team Member for Promotion", "photo": null },
+  { "name": "Karolina Kniaziuk", "role": "Graphic Designer", "photo": null }
 ]

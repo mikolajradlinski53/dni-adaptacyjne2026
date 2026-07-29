@@ -24,11 +24,12 @@
     "verify": "do weryfikacji",
     "photoSoon": "Zdjęcie wkrótce",
     "mandatory": "Udział obowiązkowy dla I roku",
+    "mandatoryFull": "Udział jest obowiązkowy dla wszystkich studentów I roku studiów licencjackich, inżynierskich i magisterskich — wszystkich kierunków, w tym anglojęzycznych, w formie stacjonarnej i niestacjonarnej.",
     "external": "link zewnętrzny"
   },
   "hero": {
     "badge": "1–3 października 2026 · kampus UEW, Wrocław",
-    "title": "Witajcie na UEW!",
+    "title": "Witajcie na Uniwersytecie Ekonomicznym we Wrocławiu!",
     "lead": "Przed Wami początek akademickiej przygody. Podczas Dni Adaptacyjnych poznacie kampus, ludzi i wszystko, co warto wiedzieć przed pierwszymi zajęciami.",
     "ctaPrimary": "Sprawdź, co Cię dotyczy",
     "ctaSecondary": "Zobacz harmonogram"
@@ -77,7 +78,7 @@
   "schedule": {
     "title": "Harmonogram",
     "lead": "Wybierz tryb studiów, żeby zobaczyć plan, który Cię dotyczy.",
-    "note": "Harmonogram roboczy: godziny i miejsca mogą się zmienić. Zmiany ogłaszamy na Facebooku.",
+    "note": "Poniżej schemat wydarzenia. Dokładne godziny i miejsca zostaną udostępnione wkrótce — zmiany ogłaszamy na Facebooku.",
     "empty": "Harmonogram dla tego trybu pojawi się wkrótce."
   },
   "links": {
@@ -117,12 +118,16 @@
     "comingSoon": "Logo wkrótce",
     "ctaTitle": "Zostań partnerem Dni Adaptacyjnych 2026",
     "ctaBody": "Chcesz dotrzeć do studentów I roku UEW? Napisz do nas — przygotujemy ofertę dopasowaną do Twojej marki.",
-    "ctaButton": "Napisz do nas"
+    "ctaButton": "Napisz do nas",
+    "contactLabel": "Kontakt dla partnerów",
+    "contactRole": "Członek Zarządu ds. Kontaktów Zewnętrznych"
   },
   "map": {
     "title": "Mapa kampusu",
     "lead": "Kampus UEW mieści się przy ul. Komandorskiej 118/120 we Wrocławiu. Mapa pomoże Wam trafić do właściwych budynków.",
-    "placeholder": "Mapa kampusu w przygotowaniu. Przed wydarzeniem znajdziecie tu wersję do przeglądania na telefonie."
+    "placeholder": "Szczegółowa mapa budynków w przygotowaniu. Poniżej lokalizacja kampusu na mapie Google.",
+    "openInMaps": "Otwórz w Google Maps",
+    "samorzad": "Strona Samorządu Studentów"
   },
   "rules": {
     "title": "Regulamin i dokumenty",

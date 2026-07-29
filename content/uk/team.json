@@ -1,5 +1,16 @@
 [
-  { "name": "Ім'я Прізвище", "role": "Координаторка Адаптаційних днів 2026", "phone": "+48 000 000 000", "photo": null },
-  { "name": "Ім'я Прізвище", "role": "Віцекоординатор Адаптаційних днів 2026", "phone": "+48 000 000 000", "photo": null },
-  { "name": "Ім'я Прізвище", "role": "Член правління з питань розкладу Адаптаційних днів 2026", "phone": "+48 000 000 000", "photo": null }
+  { "name": "Karolina Smereczniak", "role": "Координаторка", "photo": null },
+  { "name": "Zofia Palus", "role": "Віцекоординаторка", "photo": null },
+  { "name": "Emilia Ćwiklińska", "role": "Член правління з питань розкладу", "photo": null },
+  { "name": "Marta Lisowska", "role": "Член правління з питань адміністрації та логістики", "photo": null },
+  { "name": "Bartosz Bakalarz", "role": "Член правління з питань фінансів", "photo": null },
+  { "name": "Ewelina Kaźmierczak", "role": "Член команди з питань адміністрації, логістики та фінансів", "photo": null },
+  { "name": "Jakub Buchta", "role": "Член команди з питань адміністрації, логістики та фінансів", "photo": null },
+  { "name": "Ida Majewska", "role": "Член правління із зовнішніх зв'язків", "photo": null },
+  { "name": "Maja Gabinowska", "role": "Член команди із зовнішніх зв'язків", "photo": null },
+  { "name": "Alicja Gabryszak", "role": "Член команди із зовнішніх зв'язків", "photo": null },
+  { "name": "Maja Łońska", "role": "Член правління з питань промоції", "photo": null },
+  { "name": "Kornelia Wojtasik", "role": "Член команди з питань промоції", "photo": null },
+  { "name": "Katarzyna Korysławska", "role": "Член команди з питань промоції", "photo": null },
+  { "name": "Karolina Kniaziuk", "role": "Графік-дизайнер", "photo": null }
 ]

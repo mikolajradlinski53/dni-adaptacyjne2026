@@ -7,9 +7,10 @@ import {
   HandHeart,
   EnvelopeSimple,
   ArrowRight,
+  User,
 } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/i18n/routing";
-import { getPartners, CONTACT_EMAIL } from "@/lib/content";
+import { getPartners, PARTNERS_CONTACT } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 
@@ -160,20 +161,68 @@ export default async function PartnersPage({ params }: Props) {
       <Reveal>
         <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-20">
           <div className="grad-brand relative overflow-hidden rounded-tile p-8 text-white sm:p-12">
-            <div className="relative max-w-2xl">
-              <h2 className="text-2xl font-extrabold sm:text-3xl">
-                {t("partners.ctaTitle")}
-              </h2>
-              <p className="mt-3 text-white/90">{t("partners.ctaBody")}</p>
-              <a
-                href={`mailto:${CONTACT_EMAIL}`}
-                className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-violet shadow-lg transition-transform hover:scale-[1.03] active:scale-[0.99]"
-              >
-                <EnvelopeSimple size={18} weight="bold" />
-                {t("partners.ctaButton")}
-                <ArrowRight size={16} weight="bold" />
-              </a>
+            <div className="relative grid items-center gap-8 md:grid-cols-[1.5fr_1fr]">
+              <div>
+                <h2 className="text-2xl font-extrabold sm:text-3xl">
+                  {t("partners.ctaTitle")}
+                </h2>
+                <p className="mt-3 max-w-xl text-white/90">
+                  {t("partners.ctaBody")}
+                </p>
+                <a
+                  href={`mailto:${PARTNERS_CONTACT.email}`}
+                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-violet shadow-lg transition-transform hover:scale-[1.03] active:scale-[0.99]"
+                >
+                  <EnvelopeSimple size={18} weight="bold" />
+                  {t("partners.ctaButton")}
+                  <ArrowRight size={16} weight="bold" />
+                </a>
+              </div>
+
+              {/* Kontakt dla partnerów: Ida Majewska */}
+              <div className="rounded-tile border border-white/25 bg-white/10 p-5 backdrop-blur-sm">
+                <p className="text-xs font-bold uppercase tracking-wide text-white/80">
+                  {t("partners.contactLabel")}
+                </p>
+                <div className="mt-3 flex items-center gap-3">
+                  <div className="relative shrink-0">
+                    <div className="flex size-14 items-center justify-center overflow-hidden rounded-2xl bg-white/20">
+                      {PARTNERS_CONTACT.photo ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={PARTNERS_CONTACT.photo}
+                          alt={PARTNERS_CONTACT.name}
+                          className="size-full object-cover"
+                        />
+                      ) : (
+                        <User size={26} weight="duotone" className="text-white" />
+                      )}
+                    </div>
+                    <span
+                      aria-hidden
+                      className="absolute -right-2 -top-2 flex size-6 items-center justify-center rounded-full bg-white text-xs shadow"
+                    >
+                      🎓
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="font-bold leading-tight">
+                      {PARTNERS_CONTACT.name}
+                    </p>
+                    <p className="text-xs text-white/85">
+                      {t("partners.contactRole")}
+                    </p>
+                  </div>
+                </div>
+                <a
+                  href={`mailto:${PARTNERS_CONTACT.email}`}
+                  className="mt-4 block break-all text-sm font-semibold text-white underline-offset-4 hover:underline"
+                >
+                  {PARTNERS_CONTACT.email}
+                </a>
+              </div>
             </div>
+
             {/* Dekoracyjne kręgi */}
             <span
               aria-hidden

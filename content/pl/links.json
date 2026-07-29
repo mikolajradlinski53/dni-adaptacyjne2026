@@ -1,33 +1,35 @@
 [
   {
-    "category": "Dni Adaptacyjne",
+    "category": "Na start",
     "items": [
-      { "label": "Słowniczek studenta", "href": null, "icon": "book" },
-      { "label": "Test BHP", "href": null, "icon": "shield" },
-      { "label": "Wybór starosty", "href": null, "icon": "users" },
-      { "label": "FAQ", "href": "/faq", "icon": "question", "internal": true },
-      { "label": "Grupy kierunkowe na Facebooku", "href": null, "icon": "facebook", "note": "Prowadzone przez Samorząd Studentów" }
+      { "label": "Wydarzenie FB: Dni Adaptacyjne", "href": null, "icon": "facebook" },
+      { "label": "Wydarzenie FB: UE Party x DA", "href": null, "icon": "confetti" },
+      { "label": "Strefa Studenta (Samorząd)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
+      { "label": "Strona UEW", "href": "https://www.ue.wroc.pl", "icon": "buildings" }
     ]
   },
   {
     "category": "Organizacja studiów",
     "items": [
-      { "label": "Harmonogram roku akademickiego", "href": null, "icon": "calendar", "note": "PDF uczelni" },
-      { "label": "Plan zajęć", "href": "https://plan.ue.wroc.pl", "icon": "clock" },
-      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl", "icon": "student", "note": "adres do weryfikacji" },
-      { "label": "Intranet UEW", "href": null, "icon": "globe" },
-      { "label": "Eportal", "href": null, "icon": "monitor", "note": "link w trakcie zmiany" }
+      { "label": "Harmonogram roku akademickiego 2026/27", "href": "https://uew.pl/wp-content/uploads/2026/06/Harmonogram-roku-akademickiego-2026-27-1.pdf", "icon": "calendar", "note": "PDF uczelni" },
+      { "label": "Plan zajęć", "href": "https://plan.ue.wroc.pl/", "icon": "clock" },
+      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl/kontroler.php?_action=news/default", "icon": "student" },
+      { "label": "Intranet UEW", "href": "https://uewrc.sharepoint.com/sites/IntranetUEW", "icon": "globe" },
+      { "label": "Eportal", "href": "https://eportal.ue.wroc.pl/", "icon": "monitor", "note": "wersja tymczasowa" },
+      { "label": "Microsoft 365 / Teams", "href": "https://www.microsoft.com/pl-pl/microsoft-teams/log-in", "icon": "teams" }
     ]
   },
   {
     "category": "Wsparcie studenckie",
     "items": [
-      { "label": "Strefa Studenta (SSUEW)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
-      { "label": "Strona uczelni", "href": "https://www.ue.wroc.pl", "icon": "buildings" },
-      { "label": "Pomoc materialna i stypendia", "href": null, "icon": "coins" },
+      { "label": "Prawa studenta", "href": null, "icon": "shield" },
+      { "label": "Przepisy prawne", "href": null, "icon": "scroll" },
+      { "label": "Władze rektorskie", "href": null, "icon": "buildings" },
+      { "label": "Władze dziekańskie", "href": null, "icon": "buildings" },
+      { "label": "Pomoc materialna i stypendia", "href": "https://samorzad.ue.wroc.pl", "icon": "coins", "note": "Strefa Studenta" },
+      { "label": "Obsługa osób z niepełnosprawnościami", "href": "https://www.ue.wroc.pl", "icon": "wheelchair", "note": "strona uczelni" },
       { "label": "Pomoc psychologiczna", "href": null, "icon": "heart" },
-      { "label": "Ankiety dydaktyczne", "href": null, "icon": "chart", "note": "link do weryfikacji" },
-      { "label": "Obsługa osób z niepełnosprawnościami", "href": null, "icon": "wheelchair", "note": "link po uruchomieniu strony" }
+      { "label": "Ankiety dydaktyczne", "href": null, "icon": "chart" }
     ]
   }
 ]

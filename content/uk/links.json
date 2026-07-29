@@ -1,33 +1,35 @@
 [
   {
-    "category": "Адаптаційні дні",
+    "category": "На старт",
     "items": [
-      { "label": "Словничок студента", "href": null, "icon": "book" },
-      { "label": "Тест з охорони праці (BHP)", "href": null, "icon": "shield" },
-      { "label": "Вибори старости", "href": null, "icon": "users" },
-      { "label": "FAQ", "href": "/faq", "icon": "question", "internal": true },
-      { "label": "Групи напрямів у Facebook", "href": null, "icon": "facebook", "note": "Веде Студентське самоврядування" }
+      { "label": "Подія FB: Адаптаційні дні", "href": null, "icon": "facebook" },
+      { "label": "Подія FB: UE Party x DA", "href": null, "icon": "confetti" },
+      { "label": "Зона студента (Самоврядування)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
+      { "label": "Сайт UEW", "href": "https://www.ue.wroc.pl", "icon": "buildings" }
     ]
   },
   {
     "category": "Організація навчання",
     "items": [
-      { "label": "Календар академічного року", "href": null, "icon": "calendar", "note": "PDF університету" },
-      { "label": "Розклад занять", "href": "https://plan.ue.wroc.pl", "icon": "clock" },
-      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl", "icon": "student", "note": "адреса потребує перевірки" },
-      { "label": "Інтранет UEW", "href": null, "icon": "globe" },
-      { "label": "Eportal", "href": null, "icon": "monitor", "note": "посилання змінюється" }
+      { "label": "Календар академічного року 2026/27", "href": "https://uew.pl/wp-content/uploads/2026/06/Harmonogram-roku-akademickiego-2026-27-1.pdf", "icon": "calendar", "note": "PDF університету" },
+      { "label": "Розклад занять", "href": "https://plan.ue.wroc.pl/", "icon": "clock" },
+      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl/kontroler.php?_action=news/default", "icon": "student" },
+      { "label": "Інтранет UEW", "href": "https://uewrc.sharepoint.com/sites/IntranetUEW", "icon": "globe" },
+      { "label": "Eportal", "href": "https://eportal.ue.wroc.pl/", "icon": "monitor", "note": "тимчасова версія" },
+      { "label": "Microsoft 365 / Teams", "href": "https://www.microsoft.com/pl-pl/microsoft-teams/log-in", "icon": "teams" }
     ]
   },
   {
     "category": "Підтримка студентів",
     "items": [
-      { "label": "Зона студента (SSUEW)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
-      { "label": "Сайт університету", "href": "https://www.ue.wroc.pl", "icon": "buildings" },
-      { "label": "Матеріальна допомога та стипендії", "href": null, "icon": "coins" },
+      { "label": "Права студента", "href": null, "icon": "shield" },
+      { "label": "Правові норми", "href": null, "icon": "scroll" },
+      { "label": "Ректорська влада", "href": null, "icon": "buildings" },
+      { "label": "Деканська влада", "href": null, "icon": "buildings" },
+      { "label": "Матеріальна допомога та стипендії", "href": "https://samorzad.ue.wroc.pl", "icon": "coins", "note": "Зона студента" },
+      { "label": "Підтримка осіб з інвалідністю", "href": "https://www.ue.wroc.pl", "icon": "wheelchair", "note": "сайт університету" },
       { "label": "Психологічна підтримка", "href": null, "icon": "heart" },
-      { "label": "Дидактичні опитування", "href": null, "icon": "chart", "note": "посилання потребує перевірки" },
-      { "label": "Підтримка осіб з інвалідністю", "href": null, "icon": "wheelchair", "note": "посилання після запуску сторінки" }
+      { "label": "Дидактичні опитування", "href": null, "icon": "chart" }
     ]
   }
 ]

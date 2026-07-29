@@ -40,13 +40,15 @@ export default async function ContactPage({ params }: Props) {
         <p className="text-sm font-bold uppercase tracking-wide text-violet">
           {t("contact.emailLabel")}
         </p>
-        <a
-          href={`mailto:${CONTACT_EMAIL}`}
-          className="mt-3 inline-flex items-center gap-2.5 break-all font-display text-lg font-bold underline-offset-4 hover:underline sm:text-2xl"
-        >
-          <EnvelopeSimple size={26} weight="duotone" className="shrink-0 text-violet" />
-          {CONTACT_EMAIL}
-        </a>
+        <div className="mt-3 max-w-full overflow-x-auto">
+          <a
+            href={`mailto:${CONTACT_EMAIL}`}
+            className="inline-flex items-center gap-2.5 whitespace-nowrap font-display text-base font-bold underline-offset-4 hover:underline sm:text-2xl"
+          >
+            <EnvelopeSimple size={26} weight="duotone" className="shrink-0 text-violet" />
+            {CONTACT_EMAIL}
+          </a>
+        </div>
         <p className="mt-3 text-sm text-ink-soft">{t("contact.emailNote")}</p>
       </div>
 
@@ -54,20 +56,37 @@ export default async function ContactPage({ params }: Props) {
         <h2 className="text-2xl font-bold sm:text-3xl">
           {t("contact.teamTitle")}
         </h2>
-        <ul className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+        <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {team.map((member, i) => (
             <li
-              key={`${member.role}-${i}`}
-              className="rounded-tile border border-line bg-surface p-6"
+              key={`${member.name}-${i}`}
+              className="flex items-center gap-4 rounded-tile border border-line bg-surface p-4 transition-all hover:-translate-y-0.5 hover:border-violet hover:shadow-md"
             >
-              <div className="grad-brand flex aspect-square w-20 items-center justify-center rounded-2xl text-white">
-                <User size={34} weight="duotone" />
+              <div className="relative shrink-0">
+                <div className="grad-brand flex size-16 items-center justify-center overflow-hidden rounded-2xl text-white">
+                  {member.photo ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={member.photo}
+                      alt={member.name}
+                      className="size-full object-cover"
+                    />
+                  ) : (
+                    <User size={30} weight="duotone" />
+                  )}
+                </div>
+                {/* Emotka czapki studenckiej w rogu zdjęcia */}
+                <span
+                  aria-hidden
+                  className="absolute -right-2 -top-2 flex size-7 items-center justify-center rounded-full border border-line bg-surface text-sm shadow-sm"
+                >
+                  🎓
+                </span>
               </div>
-              <h3 className="mt-4 font-bold">{member.name}</h3>
-              <p className="mt-1 text-sm text-ink-soft">{member.role}</p>
-              <p className="mt-2 text-sm font-medium text-violet">
-                {member.phone}
-              </p>
+              <div className="min-w-0">
+                <h3 className="font-bold leading-tight">{member.name}</h3>
+                <p className="mt-1 text-sm text-ink-soft">{member.role}</p>
+              </div>
             </li>
           ))}
         </ul>

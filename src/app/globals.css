@@ -1,23 +1,27 @@
 @import "tailwindcss";
 
 /*
-  Tymczasowy system kolorów (do podmiany po dostarczeniu logo DA).
-  Kierunek: żywy gradient fiolet / róż / niebieski na jasnym tle.
-  Gradient jest "committed" akcentem (hero, interakcje), reszta cicha.
+  Tymczasowy system kolorów (do podmiany po dostarczeniu finalnego motywu DA).
+  Kierunek zlecony: pudrowy róż + niebieski na jasnym tle.
+  Nazwy zmiennych (violet/magenta/blue) zostają — wskazują teraz nowe barwy,
+  żeby cały istniejący kod działał bez zmian:
+    - "violet" = niebieski (główny akcent: linki, aktywne stany, obwódki)
+    - "magenta" = pudrowy róż (druga barwa marki)
+    - "blue" = jaśniejszy błękit (gradient, tła)
 */
 @theme {
-  --color-ink: oklch(22% 0.04 292);
-  --color-ink-soft: oklch(42% 0.035 292);
-  --color-bg: oklch(99% 0.005 300);
+  --color-ink: oklch(24% 0.03 255);
+  --color-ink-soft: oklch(45% 0.025 255);
+  --color-bg: oklch(99% 0.004 320);
   --color-surface: oklch(100% 0 0);
-  --color-line: oklch(91% 0.015 295);
+  --color-line: oklch(92% 0.012 300);
 
-  --color-violet: oklch(53% 0.25 296);
-  --color-magenta: oklch(62% 0.24 350);
-  --color-blue: oklch(57% 0.19 262);
-  --color-violet-soft: oklch(96% 0.025 296);
-  --color-magenta-soft: oklch(96.5% 0.02 350);
-  --color-blue-soft: oklch(96% 0.02 262);
+  --color-violet: oklch(55% 0.15 255);
+  --color-magenta: oklch(72% 0.11 350);
+  --color-blue: oklch(64% 0.13 245);
+  --color-violet-soft: oklch(96% 0.018 255);
+  --color-magenta-soft: oklch(96% 0.022 350);
+  --color-blue-soft: oklch(96% 0.02 245);
 
   --font-display: "Unbounded Variable", system-ui, sans-serif;
   --font-sans: "Inter Variable", system-ui, sans-serif;
@@ -71,9 +75,9 @@ p {
 /* Aurora w hero: warstwowe radial-gradienty, subtelne, na jasnym tle */
 .aurora {
   background:
-    radial-gradient(38rem 22rem at 12% 8%, oklch(90% 0.07 262 / 0.55), transparent 62%),
-    radial-gradient(34rem 22rem at 88% 4%, oklch(90% 0.08 350 / 0.5), transparent 60%),
-    radial-gradient(40rem 26rem at 55% 110%, oklch(90% 0.08 296 / 0.55), transparent 62%);
+    radial-gradient(38rem 22rem at 12% 8%, oklch(91% 0.06 245 / 0.6), transparent 62%),
+    radial-gradient(34rem 22rem at 88% 4%, oklch(92% 0.055 350 / 0.6), transparent 60%),
+    radial-gradient(40rem 26rem at 55% 110%, oklch(92% 0.05 350 / 0.5), transparent 62%);
 }
 
 /* Powolny, żywy dryf aurory — dodaje głębi bez rozpraszania */
@@ -84,9 +88,9 @@ p {
   z-index: 0;
   pointer-events: none;
   background:
-    radial-gradient(30rem 20rem at 20% 20%, oklch(88% 0.09 262 / 0.5), transparent 60%),
-    radial-gradient(28rem 20rem at 80% 30%, oklch(88% 0.1 350 / 0.45), transparent 60%),
-    radial-gradient(34rem 24rem at 50% 90%, oklch(88% 0.1 296 / 0.5), transparent 62%);
+    radial-gradient(30rem 20rem at 20% 20%, oklch(89% 0.07 245 / 0.55), transparent 60%),
+    radial-gradient(28rem 20rem at 80% 30%, oklch(90% 0.07 350 / 0.5), transparent 60%),
+    radial-gradient(34rem 24rem at 50% 90%, oklch(89% 0.06 245 / 0.5), transparent 62%);
   filter: blur(6px);
   animation: aurora-drift 22s ease-in-out infinite alternate;
 }
@@ -151,6 +155,20 @@ p {
   animation-delay: 0.34s;
 }
 
+/* Delikatny, ciągły ruch ikon (np. na stronie Ważnych linków) */
+@keyframes icon-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+.link-icon {
+  animation: icon-float 3.6s ease-in-out infinite;
+}
+
 /* Shimmer dla slotów logotypów partnerów (stan „wkrótce") */
 .shimmer {
   position: relative;
@@ -164,7 +182,7 @@ p {
   background: linear-gradient(
     90deg,
     transparent,
-    oklch(85% 0.06 296 / 0.35),
+    oklch(88% 0.05 350 / 0.4),
     transparent
   );
   animation: shimmer-move 2.8s ease-in-out infinite;

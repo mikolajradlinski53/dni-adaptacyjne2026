@@ -13,10 +13,11 @@ export type ScheduleEntry = {
   mode: StudyMode;
   date: string;
   dayLabel: string;
-  time: string;
   title: string;
-  place: string;
+  place?: string;
   desc?: string;
+  /** Wyróżniony krok (np. UE Party) — mocniejsza wizualnie karta. */
+  highlight?: boolean;
 };
 
 export type LinkItem = {
@@ -32,7 +33,7 @@ export type FaqItem = { q: string; a: string };
 export type TeamMember = {
   name: string;
   role: string;
-  phone: string;
+  phone?: string;
   photo: string | null;
 };
 export type Partner = { name: string; logo: string | null; href: string | null };
@@ -63,3 +64,10 @@ export async function getPartners(locale: Locale): Promise<Partner[]> {
 
 export const EVENT_START = "2026-10-01T00:00:00+02:00";
 export const CONTACT_EMAIL = "dni.adaptacyjne@samorzad.ue.wroc.pl";
+
+/** Kontakt ds. partnerstw (Członek Zarządu ds. Kontaktów Zewnętrznych). */
+export const PARTNERS_CONTACT = {
+  name: "Ida Majewska",
+  email: "ida.majewska@samorzad.ue.wroc.pl",
+  photo: null as string | null,
+};

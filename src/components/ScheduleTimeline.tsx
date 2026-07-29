@@ -1,6 +1,7 @@
 "use client";
 
-import { MapPin } from "@phosphor-icons/react";
+import { MapPin, Confetti } from "@phosphor-icons/react";
+import { motion, useReducedMotion } from "motion/react";
 import type { ModeInfo, ScheduleEntry } from "@/lib/content";
 import ModeSwitcher from "./ModeSwitcher";
 import { useStudyMode } from "./StudyModeContext";
@@ -15,6 +16,7 @@ export default function ScheduleTimeline({
   emptyLabel: string;
 }) {
   const { mode } = useStudyMode();
+  const reduce = useReducedMotion();
   const filtered = entries.filter((e) => e.mode === mode);
 
   const days = new Map<string, ScheduleEntry[]>();
@@ -26,9 +28,7 @@ export default function ScheduleTimeline({
 
   return (
     <div>
-      <ModeSwitcher
-        options={modes.map((m) => ({ id: m.id, label: m.label }))}
-      />
+      <ModeSwitcher options={modes.map((m) => ({ id: m.id, label: m.label }))} />
 
       {filtered.length === 0 ? (
         <p className="mt-8 text-ink-soft">{emptyLabel}</p>
@@ -39,43 +39,68 @@ export default function ScheduleTimeline({
               <h2 className="font-display text-xl font-bold sm:text-2xl">
                 {dayLabel}
               </h2>
-              <ol className="mt-6 space-y-0">
+
+              <ol className="mt-6 space-y-3">
                 {items.map((item, i) => (
-                  <li
-                    key={`${item.time}-${item.title}`}
-                    className="relative grid grid-cols-[4.5rem_1fr] gap-4 sm:grid-cols-[6rem_1fr] sm:gap-6"
+                  <motion.li
+                    key={`${dayLabel}-${item.title}`}
+                    initial={reduce ? false : { opacity: 0, x: -14 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: "-40px" }}
+                    transition={{
+                      duration: 0.45,
+                      delay: reduce ? 0 : i * 0.07,
+                      ease: [0.22, 1, 0.36, 1],
+                    }}
+                    className={`group flex items-start gap-4 rounded-tile border p-4 transition-all hover:-translate-y-0.5 hover:shadow-md sm:p-5 ${
+                      item.highlight
+                        ? "grad-brand border-transparent text-white shadow-lg shadow-magenta/20"
+                        : "border-line bg-surface hover:border-violet"
+                    }`}
                   >
-                    {/* Pionowa linia osi czasu */}
                     <span
-                      aria-hidden
-                      className={`absolute left-[4.5rem] top-2 ml-[-5px] h-full w-px bg-line sm:left-[6rem] ${
-                        i === items.length - 1 ? "hidden" : ""
+                      className={`mt-0.5 inline-flex size-8 shrink-0 items-center justify-center rounded-full text-sm font-bold ${
+                        item.highlight
+                          ? "bg-white/20 text-white"
+                          : "grad-brand text-white"
                       }`}
-                    />
-                    <time className="pt-0.5 text-right font-display text-sm font-bold tabular-nums text-violet sm:text-base">
-                      {item.time}
-                    </time>
-                    <div className="relative pb-8">
-                      <span
-                        aria-hidden
-                        className="grad-brand absolute -left-[9px] top-[7px] size-2.5 rounded-full ring-4 ring-bg sm:-left-[10px]"
-                      />
-                      <div className="pl-4 sm:pl-5">
-                        <h3 className="text-base font-semibold sm:text-lg">
-                          {item.title}
-                        </h3>
-                        <p className="mt-1 flex items-center gap-1.5 text-sm text-ink-soft">
+                    >
+                      {item.highlight ? (
+                        <Confetti size={17} weight="fill" />
+                      ) : (
+                        i + 1
+                      )}
+                    </span>
+
+                    <div className="min-w-0">
+                      <h3
+                        className={`text-base font-semibold sm:text-lg ${
+                          item.highlight ? "text-white" : ""
+                        }`}
+                      >
+                        {item.title}
+                      </h3>
+                      {item.place ? (
+                        <p
+                          className={`mt-1 flex items-center gap-1.5 text-sm ${
+                            item.highlight ? "text-white/90" : "text-ink-soft"
+                          }`}
+                        >
                           <MapPin size={15} weight="bold" />
                           {item.place}
                         </p>
-                        {item.desc ? (
-                          <p className="mt-1.5 max-w-prose text-sm text-ink-soft">
-                            {item.desc}
-                          </p>
-                        ) : null}
-                      </div>
+                      ) : null}
+                      {item.desc ? (
+                        <p
+                          className={`mt-1.5 max-w-prose text-sm ${
+                            item.highlight ? "text-white/90" : "text-ink-soft"
+                          }`}
+                        >
+                          {item.desc}
+                        </p>
+                      ) : null}
                     </div>
-                  </li>
+                  </motion.li>
                 ))}
               </ol>
             </section>

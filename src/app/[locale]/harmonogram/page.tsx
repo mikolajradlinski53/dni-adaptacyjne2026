@@ -37,17 +37,17 @@ export default async function SchedulePage({ params }: Props) {
         {t("schedule.lead")}
       </p>
 
-      <div className="mt-8">
+      <p className="mt-6 max-w-2xl rounded-tile bg-blue-soft p-5 text-sm font-medium text-ink-soft">
+        {t("schedule.note")}
+      </p>
+
+      <div className="mt-10">
         <ScheduleTimeline
           entries={entries}
           modes={modes}
           emptyLabel={t("schedule.empty")}
         />
       </div>
-
-      <p className="mt-12 max-w-2xl rounded-tile bg-blue-soft p-5 text-sm text-ink-soft">
-        {t("schedule.note")}
-      </p>
     </div>
   );
 }

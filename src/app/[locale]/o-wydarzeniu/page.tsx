@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ArrowRight, Scales } from "@phosphor-icons/react/dist/ssr";
+import { ArrowRight, Scales, SealCheck } from "@phosphor-icons/react/dist/ssr";
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { getModes } from "@/lib/content";
@@ -34,6 +34,14 @@ export default async function AboutPage({ params }: Props) {
       <div className="mt-6 max-w-2xl space-y-4 text-base text-ink-soft sm:text-lg">
         <p>{t("about.intro1")}</p>
         <p>{t("about.intro2")}</p>
+      </div>
+
+      {/* Dla kogo obowiązkowe — pełny zakres */}
+      <div className="mt-8 flex max-w-3xl items-start gap-4 rounded-tile bg-violet-soft p-6 sm:p-7">
+        <SealCheck size={30} weight="duotone" className="mt-0.5 shrink-0 text-violet" />
+        <p className="font-medium text-ink sm:text-lg">
+          {t("common.mandatoryFull")}
+        </p>
       </div>
 
       {/* Podstawa prawna obowiązku */}

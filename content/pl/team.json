@@ -1,5 +1,16 @@
 [
-  { "name": "Imię Nazwisko", "role": "Koordynatorka Dni Adaptacyjnych 2026", "phone": "+48 000 000 000", "photo": null },
-  { "name": "Imię Nazwisko", "role": "Wicekoordynator Dni Adaptacyjnych 2026", "phone": "+48 000 000 000", "photo": null },
-  { "name": "Imię Nazwisko", "role": "Członek Zarządu ds. Harmonogramu Dni Adaptacyjnych 2026", "phone": "+48 000 000 000", "photo": null }
+  { "name": "Karolina Smereczniak", "role": "Koordynatorka", "photo": null },
+  { "name": "Zofia Palus", "role": "Wicekoordynatorka", "photo": null },
+  { "name": "Emilia Ćwiklińska", "role": "Członek Zarządu ds. Harmonogramu", "photo": null },
+  { "name": "Marta Lisowska", "role": "Członek Zarządu ds. Administracji i Logistyki", "photo": null },
+  { "name": "Bartosz Bakalarz", "role": "Członek Zarządu ds. Finansów", "photo": null },
+  { "name": "Ewelina Kaźmierczak", "role": "Członek Teamu ds. Administracji, Logistyki i Finansów", "photo": null },
+  { "name": "Jakub Buchta", "role": "Członek Teamu ds. Administracji, Logistyki i Finansów", "photo": null },
+  { "name": "Ida Majewska", "role": "Członek Zarządu ds. Kontaktów Zewnętrznych", "photo": null },
+  { "name": "Maja Gabinowska", "role": "Członek Teamu ds. Kontaktów Zewnętrznych", "photo": null },
+  { "name": "Alicja Gabryszak", "role": "Członek Teamu ds. Kontaktów Zewnętrznych", "photo": null },
+  { "name": "Maja Łońska", "role": "Członek Zarządu ds. Promocji", "photo": null },
+  { "name": "Kornelia Wojtasik", "role": "Członek Teamu ds. Promocji", "photo": null },
+  { "name": "Katarzyna Korysławska", "role": "Członek Teamu ds. Promocji", "photo": null },
+  { "name": "Karolina Kniaziuk", "role": "Grafik", "photo": null }
 ]

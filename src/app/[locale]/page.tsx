@@ -227,7 +227,7 @@ export default async function HomePage({ params }: Props) {
             <div className="overflow-hidden rounded-tile shadow-lg ring-1 ring-black/5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/web/about1.webp"
+                src="/images/web/poznajcie.webp"
                 alt=""
                 className="aspect-[16/10] w-full object-cover"
                 loading="lazy"

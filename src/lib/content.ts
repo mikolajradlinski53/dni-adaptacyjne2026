@@ -35,6 +35,8 @@ export type TeamMember = {
   role: string;
   phone?: string;
   photo: string | null;
+  /** Kadrowanie zdjęcia w kafelku (CSS object-position, np. "center 62%"). */
+  photoPos?: string;
 };
 export type Partner = {
   name: string;
@@ -43,6 +45,8 @@ export type Partner = {
   desc?: string;
   /** "strategic" = wyróżniony partner (większa, animowana karta). */
   tier?: "strategic";
+  /** true = ukryty na stronie (np. przed akceptacją). */
+  hidden?: boolean;
 };
 
 export async function getModes(locale: Locale): Promise<ModeInfo[]> {

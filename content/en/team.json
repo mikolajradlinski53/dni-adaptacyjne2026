@@ -7,7 +7,8 @@
   {
     "name": "Zofia Palus",
     "role": "Deputy Coordinator",
-    "photo": "/images/web/team_zosia.webp"
+    "photo": "/images/web/team_zosia.webp",
+    "photoPos": "center 62%"
   },
   {
     "name": "Emilia Ćwiklińska",
@@ -32,7 +33,8 @@
   {
     "name": "Jakub Buchta",
     "role": "Team Member for Administration, Logistics and Finance",
-    "photo": "/images/web/team_jakub.webp"
+    "photo": "/images/web/team_jakub.webp",
+    "photoPos": "62% center"
   },
   {
     "name": "Ida Majewska",

@@ -34,7 +34,7 @@ export default async function PartnersPage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
-  const partners = await getPartners(locale);
+  const partners = (await getPartners(locale)).filter((p) => !p.hidden);
 
   const benefits = [
     {

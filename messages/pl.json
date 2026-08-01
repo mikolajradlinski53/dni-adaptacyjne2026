@@ -79,7 +79,8 @@
     "title": "Harmonogram",
     "lead": "Wybierz tryb studiów, żeby zobaczyć plan, który Cię dotyczy.",
     "note": "Poniżej schemat wydarzenia. Dokładne godziny i miejsca zostaną udostępnione wkrótce - zmiany ogłaszamy na Facebooku.",
-    "empty": "Harmonogram dla tego trybu pojawi się wkrótce."
+    "empty": "Harmonogram dla tego trybu pojawi się wkrótce.",
+    "gallery": "Migawki z wydarzenia"
   },
   "links": {
     "title": "Ważne linki",

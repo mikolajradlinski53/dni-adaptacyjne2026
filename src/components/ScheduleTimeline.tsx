@@ -10,14 +10,19 @@ export default function ScheduleTimeline({
   entries,
   modes,
   emptyLabel,
+  photos,
+  galleryLabel,
 }: {
   entries: ScheduleEntry[];
   modes: ModeInfo[];
   emptyLabel: string;
+  photos?: Partial<Record<string, string[]>>;
+  galleryLabel: string;
 }) {
   const { mode } = useStudyMode();
   const reduce = useReducedMotion();
   const filtered = entries.filter((e) => e.mode === mode);
+  const modePhotos = photos?.[mode] ?? [];
 
   const days = new Map<string, ScheduleEntry[]>();
   for (const entry of filtered) {
@@ -107,6 +112,29 @@ export default function ScheduleTimeline({
           ))}
         </div>
       )}
+
+      {modePhotos.length > 0 ? (
+        <div className="mt-14">
+          <div className="flex items-center gap-3">
+            <h3 className="font-display text-lg font-bold sm:text-xl">
+              {galleryLabel}
+            </h3>
+            <span className="grad-line h-px flex-1 rounded-full opacity-60" />
+          </div>
+          <div className="mt-5 columns-2 gap-3 sm:columns-3 [&>*]:mb-3">
+            {modePhotos.map((src) => (
+              // eslint-disable-next-line @next/next/no-img-element
+              <img
+                key={src}
+                src={src}
+                alt=""
+                loading="lazy"
+                className="w-full break-inside-avoid rounded-2xl shadow-md ring-1 ring-black/5"
+              />
+            ))}
+          </div>
+        </div>
+      ) : null}
     </div>
   );
 }

@@ -28,6 +28,18 @@ export default async function SchedulePage({ params }: Props) {
     getModes(locale),
   ]);
 
+  const web = (n: string) => `/images/web/${n}.webp`;
+  const photos: Record<string, string[]> = {
+    full1: [
+      "harmo_full1_4",
+      "harmo_full1_1",
+      "harmo_full1_2",
+      "harmo_full1_3",
+    ].map(web),
+    full2: ["harmo_full2_1", "harmo_full2_2"].map(web),
+    part: ["harmo_part_1"].map(web),
+  };
+
   return (
     <div className="mx-auto max-w-6xl px-4 pt-14 sm:px-6 sm:pt-20">
       <h1 className="text-3xl font-extrabold sm:text-5xl">
@@ -46,6 +58,8 @@ export default async function SchedulePage({ params }: Props) {
           entries={entries}
           modes={modes}
           emptyLabel={t("schedule.empty")}
+          photos={photos}
+          galleryLabel={t("schedule.gallery")}
         />
       </div>
     </div>

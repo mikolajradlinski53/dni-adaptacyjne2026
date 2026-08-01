@@ -94,6 +94,11 @@ export default async function ContactPage({ params }: Props) {
                       src={member.photo}
                       alt={member.name}
                       className="size-full object-cover object-top"
+                      style={
+                        member.photoPos
+                          ? { objectPosition: member.photoPos }
+                          : undefined
+                      }
                     />
                   ) : (
                     <User size={38} weight="duotone" />

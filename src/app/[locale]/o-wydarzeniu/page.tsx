@@ -50,9 +50,9 @@ export default async function AboutPage({ params }: Props) {
       </div>
 
       {/* Dla kogo obowiązkowe - pełny zakres */}
-      <div className="mt-8 flex max-w-3xl items-start gap-4 rounded-tile bg-violet-soft p-6 sm:p-7">
-        <SealCheck size={30} weight="duotone" className="mt-0.5 shrink-0 text-violet" />
-        <p className="font-medium text-ink sm:text-lg">
+      <div className="mt-8 flex max-w-3xl items-start gap-4 rounded-tile bg-sky-soft p-6 sm:p-7">
+        <SealCheck size={30} weight="duotone" className="mt-0.5 shrink-0 text-sky" />
+        <p className="font-bold text-ink sm:text-lg">
           {t("common.mandatoryFull")}
         </p>
       </div>
@@ -78,7 +78,7 @@ export default async function AboutPage({ params }: Props) {
       </section>
 
       <section className="mt-16">
-        <div className="grid items-center gap-6 rounded-tile bg-magenta-soft p-6 sm:p-10 md:grid-cols-2">
+        <div className="grid items-center gap-6 rounded-tile bg-gold-soft p-6 sm:p-10 md:grid-cols-2">
           <div>
             <h2 className="text-2xl font-bold">{t("about.sideTitle")}</h2>
             <p className="mt-2 text-ink-soft">{t("about.sideBody")}</p>

@@ -100,12 +100,20 @@ export default async function PartnersPage({ params }: Props) {
             {t("partners.benefitsTitle")}
           </h2>
           <Stagger className="mt-8 grid gap-5 md:grid-cols-3">
-            {benefits.map((b) => (
+            {benefits.map((b, i) => (
               <RevealItem
                 key={b.title}
                 className="group flex flex-col gap-3 rounded-tile border border-line bg-surface p-6 transition-all hover:-translate-y-1 hover:border-violet hover:shadow-lg hover:shadow-violet/10"
               >
-                <span className="grad-brand inline-flex size-12 items-center justify-center rounded-2xl text-white transition-transform group-hover:scale-105">
+                <span
+                  className={`inline-flex size-12 items-center justify-center rounded-2xl transition-transform group-hover:scale-105 ${
+                    [
+                      "bg-sky-soft text-sky",
+                      "bg-mint-soft text-green",
+                      "bg-gold-soft text-amber",
+                    ][i]
+                  }`}
+                >
                   {b.icon}
                 </span>
                 <h3 className="text-lg font-bold">{b.title}</h3>

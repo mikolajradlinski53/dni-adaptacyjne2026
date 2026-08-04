@@ -28,11 +28,16 @@
   --color-magenta-soft: oklch(96% 0.03 348);
   --color-blue-soft: oklch(95% 0.05 150);
 
-  /* Nowe akcenty motywu */
+  /* Akcenty motywu: złoto (żółty), mięta (zielony), błękit.
+     Jasne warianty = tła; *-ink = ciemniejsze, czytelne pod ikony/tekst. */
   --color-gold: oklch(83% 0.14 88);
   --color-gold-soft: oklch(96% 0.06 90);
+  --color-amber: oklch(64% 0.15 72);
   --color-mint: oklch(72% 0.12 150);
   --color-mint-soft: oklch(95% 0.05 150);
+  --color-green: oklch(52% 0.13 155);
+  --color-sky: oklch(56% 0.15 240);
+  --color-sky-soft: oklch(95% 0.045 240);
 
   --font-display: "Unbounded Variable", system-ui, sans-serif;
   --font-sans: "Inter Variable", system-ui, sans-serif;

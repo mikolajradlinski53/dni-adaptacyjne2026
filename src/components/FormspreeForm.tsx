@@ -60,14 +60,14 @@ export default function FormspreeForm({
         name="email"
         required
         placeholder={labels.email}
-        className="w-full rounded-xl border border-line bg-surface px-4 py-3 text-sm outline-none transition-colors focus:border-violet"
+        className="w-full rounded-xl border-2 border-line bg-line/25 px-4 py-3 text-sm outline-none transition-colors focus:border-violet focus:bg-surface"
       />
       <textarea
         name="message"
         required
         rows={4}
         placeholder={labels.message}
-        className="w-full resize-y rounded-xl border border-line bg-surface px-4 py-3 text-sm outline-none transition-colors focus:border-violet"
+        className="w-full resize-y rounded-xl border-2 border-line bg-line/25 px-4 py-3 text-sm outline-none transition-colors focus:border-violet focus:bg-surface"
       />
       <div className="flex items-center gap-3">
         <button

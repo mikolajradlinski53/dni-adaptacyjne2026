@@ -128,7 +128,15 @@ export default async function HomePage({ params }: Props) {
                 key={fact.label}
                 className={`rise rise-${i + 2} flex items-center gap-3 rounded-tile border border-line bg-surface/80 p-4 backdrop-blur transition-all hover:-translate-y-0.5 hover:border-violet hover:shadow-md`}
               >
-                <span className="grad-brand inline-flex size-10 shrink-0 items-center justify-center rounded-xl text-white">
+                <span
+                  className={`inline-flex size-10 shrink-0 items-center justify-center rounded-xl ${
+                    [
+                      "bg-sky-soft text-sky",
+                      "bg-mint-soft text-green",
+                      "bg-gold-soft text-amber",
+                    ][i]
+                  }`}
+                >
                   {fact.icon}
                 </span>
                 <div className="min-w-0">
@@ -151,10 +159,20 @@ export default async function HomePage({ params }: Props) {
           </h2>
           <p className="mt-2 max-w-xl text-ink-soft">{t("home.socialLead")}</p>
           <Stagger className="mt-6 grid gap-4 sm:grid-cols-3">
-            {socials.map((item) => {
+            {socials.map((item, i) => {
               const inner = (
                 <>
-                  <span className="text-violet">{item.icon}</span>
+                  <span
+                    className={`inline-flex size-11 items-center justify-center rounded-xl ${
+                      [
+                        "bg-sky-soft text-sky",
+                        "bg-mint-soft text-green",
+                        "bg-gold-soft text-amber",
+                      ][i]
+                    }`}
+                  >
+                    {item.icon}
+                  </span>
                   <span className="font-semibold">{item.label}</span>
                   <span className="mt-auto inline-flex items-center gap-1.5 text-sm text-ink-soft">
                     <FacebookLogo size={16} weight="bold" />
@@ -240,7 +258,7 @@ export default async function HomePage({ params }: Props) {
       {/* Czym są DA */}
       <Reveal>
         <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-20">
-          <div className="rounded-tile bg-violet-soft p-6 sm:p-10">
+          <div className="rounded-tile bg-mint-soft p-6 sm:p-10">
             <h2 className="text-2xl font-bold sm:text-3xl">
               {t("home.aboutTitle")}
             </h2>

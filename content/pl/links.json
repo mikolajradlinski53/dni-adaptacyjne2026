@@ -2,34 +2,110 @@
   {
     "category": "Na start",
     "items": [
-      { "label": "Wydarzenie FB: Dni Adaptacyjne", "href": null, "icon": "facebook" },
-      { "label": "Wydarzenie FB: UE Party x DA", "href": null, "icon": "confetti" },
-      { "label": "Strefa Studenta (Samorząd)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
-      { "label": "Strona UEW", "href": "https://www.ue.wroc.pl", "icon": "buildings" }
+      {
+        "label": "Wydarzenie FB: Dni Adaptacyjne",
+        "href": null,
+        "icon": "facebook"
+      },
+      {
+        "label": "Wydarzenie FB: UE Party x DA",
+        "href": null,
+        "icon": "confetti"
+      },
+      {
+        "label": "Strefa Studenta (Samorząd)",
+        "href": "https://samorzad.ue.wroc.pl/dla-studenta",
+        "icon": "star"
+      },
+      {
+        "label": "Strona UEW",
+        "href": "https://uew.pl/",
+        "icon": "buildings"
+      }
     ]
   },
   {
     "category": "Organizacja studiów",
     "items": [
-      { "label": "Harmonogram roku akademickiego 2026/27", "href": "https://uew.pl/wp-content/uploads/2026/06/Harmonogram-roku-akademickiego-2026-27-1.pdf", "icon": "calendar", "note": "PDF uczelni" },
-      { "label": "Plan zajęć", "href": "https://plan.ue.wroc.pl/", "icon": "clock" },
-      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl/kontroler.php?_action=news/default", "icon": "student" },
-      { "label": "Intranet UEW", "href": "https://uewrc.sharepoint.com/sites/IntranetUEW", "icon": "globe" },
-      { "label": "Eportal", "href": "https://eportal.ue.wroc.pl/", "icon": "monitor", "note": "wersja tymczasowa" },
-      { "label": "Microsoft 365 / Teams", "href": "https://www.microsoft.com/pl-pl/microsoft-teams/log-in", "icon": "teams" }
+      {
+        "label": "Harmonogram roku akademickiego 2026/27",
+        "href": "https://uew.pl/wp-content/uploads/2026/06/Harmonogram-roku-akademickiego-2026-27-1.pdf",
+        "icon": "calendar",
+        "note": "PDF uczelni"
+      },
+      {
+        "label": "Plan zajęć",
+        "href": "https://plan.ue.wroc.pl/",
+        "icon": "clock"
+      },
+      {
+        "label": "USOSweb",
+        "href": "https://usosweb.ue.wroc.pl/kontroler.php?_action=news/default",
+        "icon": "student"
+      },
+      {
+        "label": "Intranet UEW",
+        "href": "https://uewrc.sharepoint.com/sites/IntranetUEW",
+        "icon": "globe"
+      },
+      {
+        "label": "Eportal",
+        "href": "https://eportal.ue.wroc.pl/",
+        "icon": "monitor",
+        "note": "wersja tymczasowa"
+      },
+      {
+        "label": "Microsoft 365 / Teams",
+        "href": "https://www.microsoft.com/pl-pl/microsoft-teams/log-in",
+        "icon": "teams"
+      }
     ]
   },
   {
     "category": "Wsparcie studenckie",
     "items": [
-      { "label": "Prawa studenta", "href": null, "icon": "shield" },
-      { "label": "Przepisy prawne", "href": null, "icon": "scroll" },
-      { "label": "Władze rektorskie", "href": null, "icon": "buildings" },
-      { "label": "Władze dziekańskie", "href": null, "icon": "buildings" },
-      { "label": "Pomoc materialna i stypendia", "href": "https://samorzad.ue.wroc.pl", "icon": "coins", "note": "Strefa Studenta" },
-      { "label": "Obsługa osób z niepełnosprawnościami", "href": "https://www.ue.wroc.pl", "icon": "wheelchair", "note": "strona uczelni" },
-      { "label": "Pomoc psychologiczna", "href": null, "icon": "heart" },
-      { "label": "Ankiety dydaktyczne", "href": null, "icon": "chart" }
+      {
+        "label": "Prawa studenta",
+        "href": null,
+        "icon": "shield"
+      },
+      {
+        "label": "Przepisy prawne",
+        "href": null,
+        "icon": "scroll"
+      },
+      {
+        "label": "Władze rektorskie",
+        "href": null,
+        "icon": "buildings"
+      },
+      {
+        "label": "Władze dziekańskie",
+        "href": null,
+        "icon": "buildings"
+      },
+      {
+        "label": "Pomoc materialna i stypendia",
+        "href": "https://samorzad.ue.wroc.pl/stypendia",
+        "icon": "coins",
+        "note": "Strefa Studenta"
+      },
+      {
+        "label": "Obsługa osób z niepełnosprawnościami",
+        "href": "https://uew.pl/",
+        "icon": "wheelchair",
+        "note": "strona uczelni"
+      },
+      {
+        "label": "Pomoc psychologiczna",
+        "href": "https://samorzad.ue.wroc.pl/pomoc-psychologiczna",
+        "icon": "heart"
+      },
+      {
+        "label": "Ankiety dydaktyczne",
+        "href": null,
+        "icon": "chart"
+      }
     ]
   }
 ]

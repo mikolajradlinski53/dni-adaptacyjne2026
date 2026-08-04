@@ -206,6 +206,35 @@ p {
   }
 }
 
+/* Pływające, kolorowe poświaty w tle całej strony (FloatingBackground) */
+@keyframes blob-a {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(6%, 5%, 0) scale(1.14);
+  }
+}
+@keyframes blob-b {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1.06);
+  }
+  50% {
+    transform: translate3d(-6%, 7%, 0) scale(1);
+  }
+}
+@keyframes blob-c {
+  0%,
+  100% {
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  50% {
+    transform: translate3d(5%, -6%, 0) scale(1.12);
+  }
+}
+
 /* Delikatny, ciągły ruch ikon (np. na stronie Ważnych linków) */
 @keyframes icon-float {
   0%,
@@ -218,6 +247,20 @@ p {
 }
 .link-icon {
   animation: icon-float 3.6s ease-in-out infinite;
+}
+
+/* Subtelny „oddech" całych kafli (Ważne linki) - staggered inline delay */
+@keyframes tile-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.tile-float {
+  animation: tile-float 5s ease-in-out infinite;
 }
 
 /* Pulsująca poświata pod wyróżnionym partnerem */

@@ -82,22 +82,39 @@ export default async function LinksPage({ params }: Props) {
             <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
               {cat.items.map((item, i) => {
                 const IconComponent = ICONS[item.icon] ?? Star;
-                const accent = [
-                  "bg-sky-soft text-sky",
-                  "bg-mint-soft text-green",
-                  "bg-gold-soft text-amber",
-                  "bg-violet-soft text-violet",
-                ][i % 4];
+                const accents = [
+                  {
+                    icon: "bg-sky-soft text-sky",
+                    ring: "hover:ring-sky/40",
+                    glow: "hover:shadow-sky/25",
+                  },
+                  {
+                    icon: "bg-mint-soft text-green",
+                    ring: "hover:ring-mint/40",
+                    glow: "hover:shadow-mint/25",
+                  },
+                  {
+                    icon: "bg-gold-soft text-amber",
+                    ring: "hover:ring-gold/50",
+                    glow: "hover:shadow-gold/30",
+                  },
+                  {
+                    icon: "bg-violet-soft text-violet",
+                    ring: "hover:ring-violet/40",
+                    glow: "hover:shadow-violet/25",
+                  },
+                ];
+                const accent = accents[i % 4];
                 const inner = (
                   <>
                     <span
-                      className={`link-icon flex size-12 shrink-0 items-center justify-center rounded-xl ${accent}`}
+                      className={`link-icon flex size-12 shrink-0 items-center justify-center rounded-xl transition-transform duration-300 group-hover:scale-110 ${accent.icon}`}
                       style={{ animationDelay: `${(i % 5) * 0.35}s` }}
                     >
                       <IconComponent
                         size={24}
                         weight="duotone"
-                        className="transition-transform duration-300 group-hover:-rotate-12 group-hover:scale-125"
+                        className="transition-transform duration-300 group-hover:-rotate-[18deg] group-hover:scale-125"
                       />
                     </span>
                     <span className="min-w-0">
@@ -121,12 +138,16 @@ export default async function LinksPage({ params }: Props) {
                   </>
                 );
                 const base =
-                  "group flex h-full items-start gap-4 rounded-tile border border-line bg-surface p-5 transition-all";
-                const activeCls = `${base} hover:-translate-y-1.5 hover:scale-[1.02] hover:border-violet hover:shadow-lg hover:shadow-violet/10`;
+                  "group flex h-full items-start gap-4 rounded-tile border border-line bg-surface p-5 ring-2 ring-transparent transition-all duration-300";
+                const activeCls = `${base} hover:-translate-y-1.5 hover:rotate-1 hover:scale-[1.03] hover:border-violet hover:shadow-xl ${accent.ring} ${accent.glow}`;
                 const disabledCls = `${base} opacity-70`;
 
                 return (
-                  <li key={item.label} className="h-full">
+                  <li
+                    key={item.label}
+                    className="tile-float h-full"
+                    style={{ animationDelay: `${(i % 6) * 0.4}s` }}
+                  >
                     {item.href && item.internal ? (
                       <Link href={item.href} className={activeCls}>
                         {inner}

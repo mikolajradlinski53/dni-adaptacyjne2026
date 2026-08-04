@@ -7,6 +7,7 @@ import { buildSearchIndex } from "@/lib/search";
 import { SITE_URL } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FloatingBackground from "@/components/FloatingBackground";
 import { StudyModeProvider } from "@/components/StudyModeContext";
 
 import "@fontsource-variable/inter";
@@ -64,6 +65,7 @@ export default async function LocaleLayout({
   return (
     <html lang={locale}>
       <body className="min-h-screen antialiased">
+        <FloatingBackground />
         <NextIntlClientProvider>
           <StudyModeProvider>
             <Header entries={searchEntries} />

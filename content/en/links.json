@@ -2,34 +2,110 @@
   {
     "category": "To start with",
     "items": [
-      { "label": "FB event: Orientation Days", "href": null, "icon": "facebook" },
-      { "label": "FB event: UE Party x DA", "href": null, "icon": "confetti" },
-      { "label": "Student Zone (Student Union)", "href": "https://samorzad.ue.wroc.pl", "icon": "star" },
-      { "label": "UEW website", "href": "https://www.ue.wroc.pl", "icon": "buildings" }
+      {
+        "label": "FB event: Orientation Days",
+        "href": null,
+        "icon": "facebook"
+      },
+      {
+        "label": "FB event: UE Party x DA",
+        "href": null,
+        "icon": "confetti"
+      },
+      {
+        "label": "Student Zone (Student Union)",
+        "href": "https://samorzad.ue.wroc.pl/dla-studenta",
+        "icon": "star"
+      },
+      {
+        "label": "UEW website",
+        "href": "https://uew.pl/",
+        "icon": "buildings"
+      }
     ]
   },
   {
     "category": "Study organisation",
     "items": [
-      { "label": "Academic year calendar 2026/27", "href": "https://uew.pl/wp-content/uploads/2026/06/Harmonogram-roku-akademickiego-2026-27-1.pdf", "icon": "calendar", "note": "university PDF" },
-      { "label": "Class timetable", "href": "https://plan.ue.wroc.pl/", "icon": "clock" },
-      { "label": "USOSweb", "href": "https://usosweb.ue.wroc.pl/kontroler.php?_action=news/default", "icon": "student" },
-      { "label": "UEW Intranet", "href": "https://uewrc.sharepoint.com/sites/IntranetUEW", "icon": "globe" },
-      { "label": "Eportal", "href": "https://eportal.ue.wroc.pl/", "icon": "monitor", "note": "temporary version" },
-      { "label": "Microsoft 365 / Teams", "href": "https://www.microsoft.com/pl-pl/microsoft-teams/log-in", "icon": "teams" }
+      {
+        "label": "Academic year calendar 2026/27",
+        "href": "https://uew.pl/wp-content/uploads/2026/06/Harmonogram-roku-akademickiego-2026-27-1.pdf",
+        "icon": "calendar",
+        "note": "university PDF"
+      },
+      {
+        "label": "Class timetable",
+        "href": "https://plan.ue.wroc.pl/",
+        "icon": "clock"
+      },
+      {
+        "label": "USOSweb",
+        "href": "https://usosweb.ue.wroc.pl/kontroler.php?_action=news/default",
+        "icon": "student"
+      },
+      {
+        "label": "UEW Intranet",
+        "href": "https://uewrc.sharepoint.com/sites/IntranetUEW",
+        "icon": "globe"
+      },
+      {
+        "label": "Eportal",
+        "href": "https://eportal.ue.wroc.pl/",
+        "icon": "monitor",
+        "note": "temporary version"
+      },
+      {
+        "label": "Microsoft 365 / Teams",
+        "href": "https://www.microsoft.com/pl-pl/microsoft-teams/log-in",
+        "icon": "teams"
+      }
     ]
   },
   {
     "category": "Student support",
     "items": [
-      { "label": "Student rights", "href": null, "icon": "shield" },
-      { "label": "Legal regulations", "href": null, "icon": "scroll" },
-      { "label": "Rector's authorities", "href": null, "icon": "buildings" },
-      { "label": "Dean's authorities", "href": null, "icon": "buildings" },
-      { "label": "Financial aid and scholarships", "href": "https://samorzad.ue.wroc.pl", "icon": "coins", "note": "Student Zone" },
-      { "label": "Accessibility support office", "href": "https://www.ue.wroc.pl", "icon": "wheelchair", "note": "university website" },
-      { "label": "Psychological support", "href": null, "icon": "heart" },
-      { "label": "Teaching surveys", "href": null, "icon": "chart" }
+      {
+        "label": "Student rights",
+        "href": null,
+        "icon": "shield"
+      },
+      {
+        "label": "Legal regulations",
+        "href": null,
+        "icon": "scroll"
+      },
+      {
+        "label": "Rector's authorities",
+        "href": null,
+        "icon": "buildings"
+      },
+      {
+        "label": "Dean's authorities",
+        "href": null,
+        "icon": "buildings"
+      },
+      {
+        "label": "Financial aid and scholarships",
+        "href": "https://samorzad.ue.wroc.pl/stypendia",
+        "icon": "coins",
+        "note": "Student Zone"
+      },
+      {
+        "label": "Accessibility support office",
+        "href": "https://uew.pl/",
+        "icon": "wheelchair",
+        "note": "university website"
+      },
+      {
+        "label": "Psychological support",
+        "href": "https://samorzad.ue.wroc.pl/pomoc-psychologiczna",
+        "icon": "heart"
+      },
+      {
+        "label": "Teaching surveys",
+        "href": null,
+        "icon": "chart"
+      }
     ]
   }
 ]

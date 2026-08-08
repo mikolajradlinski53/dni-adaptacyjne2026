@@ -4,12 +4,12 @@
     "items": [
       {
         "label": "Wydarzenie FB: Dni Adaptacyjne",
-        "href": null,
+        "href": "https://fb.me/e/8psHItxw2",
         "icon": "facebook"
       },
       {
         "label": "Wydarzenie FB: UE Party x DA",
-        "href": null,
+        "href": "https://www.facebook.com/ueparty",
         "icon": "confetti"
       },
       {
@@ -66,22 +66,22 @@
     "items": [
       {
         "label": "Prawa studenta",
-        "href": null,
+        "href": "https://samorzad.ue.wroc.pl/prawa-studenta",
         "icon": "shield"
       },
       {
         "label": "Przepisy prawne",
-        "href": null,
+        "href": "https://samorzad.ue.wroc.pl/prawo-dla-studenta",
         "icon": "scroll"
       },
       {
         "label": "Władze rektorskie",
-        "href": null,
+        "href": "https://samorzad.ue.wroc.pl/wladze-rektorskie",
         "icon": "buildings"
       },
       {
         "label": "Władze dziekańskie",
-        "href": null,
+        "href": "https://samorzad.ue.wroc.pl/dziekan-i-prodziekani",
         "icon": "buildings"
       },
       {
@@ -103,7 +103,7 @@
       },
       {
         "label": "Ankiety dydaktyczne",
-        "href": null,
+        "href": "https://samorzad.ue.wroc.pl/kopia-pomoc-psychologiczna",
         "icon": "chart"
       }
     ]

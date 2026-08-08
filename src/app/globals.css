@@ -263,6 +263,31 @@ p {
   animation: tile-float 5s ease-in-out infinite;
 }
 
+/* Żywa emotka w kaflu (np. czapka przy zdjęciu zespołu) - ciągły „poskok" */
+@keyframes emoji-pop {
+  0%,
+  100% {
+    transform: scale(1) rotate(-6deg);
+  }
+  15% {
+    transform: scale(1.28) rotate(8deg);
+  }
+  30% {
+    transform: scale(1.02) rotate(-5deg);
+  }
+  45% {
+    transform: scale(1.18) rotate(5deg);
+  }
+  60% {
+    transform: scale(1) rotate(-6deg);
+  }
+}
+.emoji-live {
+  display: inline-block;
+  transform-origin: center bottom;
+  animation: emoji-pop 2.6s ease-in-out infinite;
+}
+
 /* Pulsująca poświata pod wyróżnionym partnerem */
 .partner-glow {
   animation: partner-glow 3.2s ease-in-out infinite;

@@ -82,6 +82,7 @@ export default async function AboutPage({ params }: Props) {
           <div>
             <h2 className="text-2xl font-bold">{t("about.sideTitle")}</h2>
             <p className="mt-2 text-ink-soft">{t("about.sideBody")}</p>
+            <p className="mt-3 text-ink-soft">{t("about.sideBody2")}</p>
             <Link
               href="/harmonogram"
               className="mt-5 inline-flex items-center gap-2 text-sm font-bold text-violet underline-offset-4 hover:underline"

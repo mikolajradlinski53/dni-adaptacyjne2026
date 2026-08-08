@@ -109,7 +109,12 @@ export default async function ContactPage({ params }: Props) {
                   aria-hidden
                   className="absolute -right-2 -top-2 flex size-7 items-center justify-center rounded-full border border-line bg-surface text-sm shadow-sm"
                 >
-                  🎓
+                  <span
+                    className="emoji-live"
+                    style={{ animationDelay: `${(i % 5) * 0.35}s` }}
+                  >
+                    🎓
+                  </span>
                 </span>
               </div>
               <div className="min-w-0">

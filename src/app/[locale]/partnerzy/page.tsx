@@ -55,21 +55,23 @@ export default async function PartnersPage({ params }: Props) {
   ];
 
   // Zdjęcia z wydarzenia pokazujące obecność partnerów.
-  const gallery = [
-    "partnerzy19",
-    "partnerzy6",
-    "partnerzy13",
-    "partnerzy12",
-    "partnerzy14",
-    "partnerzy9",
-    "partnerzy8",
-    "partnerzy15",
-    "partnerzy7",
-    "partnerzy16",
-    "partnerzy10",
-    "partnerzy17",
-    "partnerzy11",
-    "partnerzy18",
+  // Galeria „justified": zdjęcia mają różne szerokości (wg proporcji), ale
+  // każdy rząd wypełnia całą szerokość - całość to prostokąt bez dziur.
+  const gallery: { n: string; ar: number }[] = [
+    { n: "partnerzy19", ar: 1.5 },
+    { n: "partnerzy6", ar: 0.667 },
+    { n: "partnerzy13", ar: 0.75 },
+    { n: "partnerzy12", ar: 0.667 },
+    { n: "partnerzy14", ar: 0.75 },
+    { n: "partnerzy9", ar: 1.5 },
+    { n: "partnerzy8", ar: 0.667 },
+    { n: "partnerzy15", ar: 0.75 },
+    { n: "partnerzy7", ar: 0.667 },
+    { n: "partnerzy16", ar: 0.75 },
+    { n: "partnerzy10", ar: 1.5 },
+    { n: "partnerzy17", ar: 0.75 },
+    { n: "partnerzy11", ar: 1.5 },
+    { n: "partnerzy18", ar: 0.75 },
   ];
 
   return (
@@ -154,18 +156,23 @@ export default async function PartnersPage({ params }: Props) {
             </h2>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          {/* Równa siatka - jednolity kadr, wyrównane doły */}
-          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-            {gallery.map((name) => (
+          {/* Układ justified: różne szerokości, pełne rzędy, bez dziur */}
+          <div className="mt-8 flex flex-wrap gap-3 [--gh:8rem] sm:[--gh:11rem] lg:[--gh:13rem]">
+            {gallery.map(({ n, ar }) => (
               <div
-                key={name}
+                key={n}
                 className="group overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
+                style={{
+                  height: "var(--gh)",
+                  flexGrow: ar,
+                  flexBasis: `calc(var(--gh) * ${ar})`,
+                }}
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
-                  src={`/images/web/${name}.webp`}
+                  src={`/images/web/${n}.webp`}
                   alt=""
-                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
               </div>

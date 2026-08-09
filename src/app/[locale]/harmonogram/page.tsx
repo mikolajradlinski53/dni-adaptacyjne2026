@@ -31,13 +31,13 @@ export default async function SchedulePage({ params }: Props) {
   const web = (n: string) => `/images/web/${n}.webp`;
   const photos: Record<string, string[]> = {
     full1: [
-      "harmo_full1_4",
+      "harmo_full1_bfk",
       "harmo_full1_1",
       "harmo_full1_2",
       "harmo_full1_3",
     ].map(web),
-    full2: ["harmo_full2_1", "harmo_full2_2"].map(web),
-    part: ["harmo_part_1"].map(web),
+    full2: ["harmo_full2_new", "harmo_full2_2"].map(web),
+    part: ["harmo_part_2", "harmo_part_3"].map(web),
   };
 
   return (

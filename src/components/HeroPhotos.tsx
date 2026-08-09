@@ -20,7 +20,7 @@ type Slot = {
 // zmieniają się pojedynczo, tworząc wciąż nowe kombinacje.
 const SLOTS: Slot[] = [
   {
-    images: ["main3", "main31", "main60", "main36", "main64", "main41", "main70", "main50", "main75", "main9"].map(web),
+    images: ["main3", "main31", "main60", "main36", "main64", "main41", "main70", "main50", "main75", "main91", "main9"].map(web),
     className: "left-0 top-[2%] w-[56%] aspect-[4/3] z-20",
     rotate: -3,
     float: 10,
@@ -29,7 +29,7 @@ const SLOTS: Slot[] = [
     interval: 4300,
   },
   {
-    images: ["main12", "main33", "main61", "main44", "main66", "main52", "main72", "main5", "main78", "main38", "main82"].map(web),
+    images: ["main12", "main33", "main61", "main44", "main90", "main66", "main52", "main72", "main5", "main78", "main38", "main82"].map(web),
     className: "right-0 top-0 w-[40%] aspect-[3/4] z-30",
     rotate: 4,
     float: -12,

@@ -15,6 +15,7 @@ import { pageMetadata } from "@/lib/seo";
 import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 import PartnersShowcase from "@/components/PartnersShowcase";
 import HeroDoodles from "@/components/HeroDoodles";
+import MasonryGallery from "@/components/MasonryGallery";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -55,24 +56,22 @@ export default async function PartnersPage({ params }: Props) {
   ];
 
   // Zdjęcia z wydarzenia pokazujące obecność partnerów.
-  // Galeria „masonry": zdjęcia zachowują proporcje (różne wysokości),
-  // kolumny są w miarę zbalansowane. Kolejność przeplata pion/poziom,
-  // żeby rozkład był równiejszy.
+  // Galeria „masonry" z równoważeniem kolumn (patrz MasonryGallery).
   const gallery = [
-    "partnerzy19",
-    "partnerzy6",
-    "partnerzy9",
-    "partnerzy13",
-    "partnerzy12",
-    "partnerzy10",
-    "partnerzy14",
-    "partnerzy8",
-    "partnerzy11",
-    "partnerzy15",
-    "partnerzy7",
-    "partnerzy17",
-    "partnerzy16",
-    "partnerzy18",
+    { n: "partnerzy19", ar: 1.5 },
+    { n: "partnerzy6", ar: 0.667 },
+    { n: "partnerzy9", ar: 1.5 },
+    { n: "partnerzy13", ar: 0.75 },
+    { n: "partnerzy12", ar: 0.667 },
+    { n: "partnerzy10", ar: 1.5 },
+    { n: "partnerzy14", ar: 0.75 },
+    { n: "partnerzy8", ar: 0.667 },
+    { n: "partnerzy11", ar: 1.5 },
+    { n: "partnerzy15", ar: 0.75 },
+    { n: "partnerzy7", ar: 0.667 },
+    { n: "partnerzy17", ar: 0.75 },
+    { n: "partnerzy16", ar: 0.75 },
+    { n: "partnerzy18", ar: 0.75 },
   ];
 
   return (
@@ -157,23 +156,7 @@ export default async function PartnersPage({ params }: Props) {
             </h2>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          {/* Masonry: zbalansowane kolumny, różne wysokości, bez przycinania */}
-          <div className="mt-8 columns-2 gap-3 sm:columns-3 lg:columns-4 [&>*]:mb-3">
-            {gallery.map((n) => (
-              <div
-                key={n}
-                className="group break-inside-avoid overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
-              >
-                {/* eslint-disable-next-line @next/next/no-img-element */}
-                <img
-                  src={`/images/web/${n}.webp`}
-                  alt=""
-                  className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
-                  loading="lazy"
-                />
-              </div>
-            ))}
-          </div>
+          <MasonryGallery items={gallery} />
         </section>
       </Reveal>
 

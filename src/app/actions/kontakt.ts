@@ -40,8 +40,8 @@ export async function wyslijZgloszenie(
         secret: process.env.APPS_SCRIPT_SECRET,
       }),
     });
-    const data = await res.json();
-    return data.ok ? { status: "ok" } : { status: "blad_serwera" };
+    const data = (await res.json().catch(() => null)) as { ok?: boolean } | null;
+    return data?.ok ? { status: "ok" } : { status: "blad_serwera" };
   } catch {
     return { status: "blad_serwera" };
   }

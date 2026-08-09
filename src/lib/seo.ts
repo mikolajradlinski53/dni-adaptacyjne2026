@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { routing, type Locale } from "@/i18n/routing";
 
+// Projekt i wykonanie: Mikołaj Radliński (Made by Mikołaj Radliński).
+export const SITE_AUTHOR = "Mikołaj Radliński";
+
 export const SITE_URL = "https://dni.adaptacyjne.uew.pl";
 
 const OG_LOCALES: Record<Locale, string> = {
@@ -25,6 +28,9 @@ export function pageMetadata(
   return {
     title,
     description,
+    authors: [{ name: SITE_AUTHOR }],
+    creator: SITE_AUTHOR,
+    other: { credit: `Made by ${SITE_AUTHOR}` },
     alternates: {
       canonical: `${SITE_URL}/${locale}${path}`,
       languages,

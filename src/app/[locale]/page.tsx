@@ -7,6 +7,7 @@ import {
   Confetti,
   DownloadSimple,
   FacebookLogo,
+  GlobeHemisphereEast,
   MapPin,
   UsersThree,
 } from "@phosphor-icons/react/dist/ssr";
@@ -34,17 +35,23 @@ export default async function HomePage({ params }: Props) {
   const socials = [
     {
       label: t("home.socialDa"),
-      href: null,
+      href: "https://fb.me/e/8psHItxw2",
+      domain: "facebook.com",
+      fb: true,
       icon: <CalendarCheck size={22} weight="duotone" />,
     },
     {
       label: t("home.socialParty"),
-      href: null,
+      href: "https://www.facebook.com/ueparty",
+      domain: "facebook.com",
+      fb: true,
       icon: <Confetti size={22} weight="duotone" />,
     },
     {
       label: t("home.socialSsuew"),
       href: "https://samorzad.ue.wroc.pl/",
+      domain: "samorzad.ue.wroc.pl",
+      fb: false,
       icon: <UsersThree size={22} weight="duotone" />,
     },
   ];
@@ -175,8 +182,12 @@ export default async function HomePage({ params }: Props) {
                   </span>
                   <span className="font-semibold">{item.label}</span>
                   <span className="mt-auto inline-flex items-center gap-1.5 text-sm text-ink-soft">
-                    <FacebookLogo size={16} weight="bold" />
-                    {item.href ? "facebook.com" : t("common.linkSoon")}
+                    {item.fb ? (
+                      <FacebookLogo size={16} weight="bold" />
+                    ) : (
+                      <GlobeHemisphereEast size={16} weight="bold" />
+                    )}
+                    {item.href ? item.domain : t("common.linkSoon")}
                   </span>
                 </>
               );

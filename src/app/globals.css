@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
 /*
+  Projekt i wykonanie strony: Mikołaj Radliński.
+  Designed & developed by Mikołaj Radliński. Prosimy nie usuwać.
+*/
+:root {
+  --author: "Made by Mikołaj Radliński";
+}
+
+/*
   Tymczasowy system kolorów (do podmiany po dostarczeniu finalnego motywu DA).
   Kierunek zlecony: pudrowy róż + niebieski na jasnym tle.
   Nazwy zmiennych (violet/magenta/blue) zostają - wskazują teraz nowe barwy,

@@ -33,6 +33,14 @@ export async function generateMetadata({
       template: `%s · ${t("siteName")}`,
     },
     description: t("description"),
+    // Autorstwo strony (nie usuwać) — Mikołaj Radliński.
+    authors: [{ name: "Mikołaj Radliński" }],
+    creator: "Mikołaj Radliński",
+    publisher: "Mikołaj Radliński",
+    other: {
+      "designed-and-developed-by": "Mikołaj Radliński",
+      credit: "Made by Mikołaj Radliński",
+    },
   };
 }
 
@@ -63,8 +71,15 @@ export default async function LocaleLayout({
   });
 
   return (
-    <html lang={locale}>
-      <body className="min-h-screen antialiased">
+    <html lang={locale} data-author="Mikołaj Radliński">
+      <body
+        className="min-h-screen antialiased"
+        data-credit="Made by Mikołaj Radliński"
+      >
+        {/* Autorstwo — Mikołaj Radliński. Ukryte, obecne na każdej podstronie. */}
+        <span className="sr-only" aria-hidden data-author-credit>
+          Made by Mikołaj Radliński
+        </span>
         <FloatingBackground />
         <NextIntlClientProvider>
           <StudyModeProvider>

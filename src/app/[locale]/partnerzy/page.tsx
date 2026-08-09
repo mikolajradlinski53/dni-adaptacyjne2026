@@ -173,9 +173,9 @@ export default async function PartnersPage({ params }: Props) {
                 </p>
 
                 {/* Wizytówka kontaktu dla partnerów: Ida Majewska */}
-                <div className="mt-6 flex items-center gap-3 rounded-tile border border-white/25 bg-white/10 p-4 backdrop-blur-sm">
+                <div className="mt-7 flex items-center gap-5 rounded-tile border border-white/25 bg-white/10 p-5 backdrop-blur-sm sm:p-6">
                   <div className="relative shrink-0">
-                    <div className="size-16 overflow-hidden rounded-2xl bg-white/20">
+                    <div className="size-28 overflow-hidden rounded-2xl bg-white/20 sm:size-32">
                       {PARTNERS_CONTACT.photo ? (
                         // eslint-disable-next-line @next/next/no-img-element
                         <img
@@ -185,25 +185,25 @@ export default async function PartnersPage({ params }: Props) {
                         />
                       ) : (
                         <div className="flex size-full items-center justify-center">
-                          <User size={30} weight="duotone" className="text-white" />
+                          <User size={52} weight="duotone" className="text-white" />
                         </div>
                       )}
                     </div>
                     <span
                       aria-hidden
-                      className="absolute -right-2 -top-2 flex size-6 items-center justify-center rounded-full bg-white text-xs shadow"
+                      className="absolute -right-2.5 -top-2.5 flex size-9 items-center justify-center rounded-full bg-white text-lg shadow"
                     >
                       🎓
                     </span>
                   </div>
                   <div className="min-w-0">
-                    <p className="text-[10px] font-bold uppercase tracking-wide text-white/80">
+                    <p className="text-xs font-bold uppercase tracking-wide text-white/80">
                       {t("partners.contactLabel")}
                     </p>
-                    <p className="font-bold leading-tight">
+                    <p className="mt-1 text-xl font-extrabold leading-tight sm:text-2xl">
                       {PARTNERS_CONTACT.name}
                     </p>
-                    <p className="text-xs text-white/85">
+                    <p className="mt-1 text-sm text-white/85">
                       {t("partners.contactRole")}
                     </p>
                   </div>

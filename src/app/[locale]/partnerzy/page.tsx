@@ -153,18 +153,18 @@ export default async function PartnersPage({ params }: Props) {
             </h2>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          {/* Masonry - pełne kadry bez przycinania */}
-          <div className="mt-8 columns-2 gap-3 sm:columns-3 lg:columns-4 [&>*]:mb-3">
+          {/* Równa siatka - jednolity kadr, wyrównane doły */}
+          <div className="mt-8 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
             {gallery.map((name) => (
               <div
                 key={name}
-                className="group break-inside-avoid overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
+                className="group overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/images/web/${name}.webp`}
                   alt=""
-                  className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="aspect-[4/3] w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
               </div>

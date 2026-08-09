@@ -258,7 +258,7 @@ export default async function HomePage({ params }: Props) {
       {/* Czym są DA */}
       <Reveal>
         <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-20">
-          <div className="rounded-tile bg-mint-soft p-6 sm:p-10">
+          <div className="rounded-tile bg-[oklch(88%_0.14_150)] p-6 sm:p-10">
             <h2 className="text-2xl font-bold sm:text-3xl">
               {t("home.aboutTitle")}
             </h2>

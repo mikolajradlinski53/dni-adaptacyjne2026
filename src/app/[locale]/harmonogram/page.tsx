@@ -49,7 +49,7 @@ export default async function SchedulePage({ params }: Props) {
         {t("schedule.lead")}
       </p>
 
-      <p className="mt-6 max-w-2xl rounded-tile bg-blue-soft p-5 text-sm font-bold text-ink">
+      <p className="mt-6 max-w-2xl rounded-tile border-l-4 border-green bg-[oklch(89%_0.13_150)] p-5 text-base font-bold text-ink sm:text-lg">
         {t("schedule.note")}
       </p>
 

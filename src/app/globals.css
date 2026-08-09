@@ -24,20 +24,20 @@
   --color-violet: oklch(49% 0.19 353);
   --color-magenta: oklch(62% 0.2 350);
   --color-blue: oklch(72% 0.12 150);
-  --color-violet-soft: oklch(96% 0.03 350);
-  --color-magenta-soft: oklch(96% 0.03 348);
-  --color-blue-soft: oklch(95% 0.05 150);
+  --color-violet-soft: oklch(93% 0.06 350);
+  --color-magenta-soft: oklch(93% 0.06 348);
+  --color-blue-soft: oklch(91% 0.1 150);
 
   /* Akcenty motywu: złoto (żółty), mięta (zielony), błękit.
-     Jasne warianty = tła; *-ink = ciemniejsze, czytelne pod ikony/tekst. */
+     Jasne warianty = tła (wyraziste, ale wciąż czytelne pod ciemny tekst). */
   --color-gold: oklch(83% 0.14 88);
-  --color-gold-soft: oklch(96% 0.06 90);
+  --color-gold-soft: oklch(92% 0.12 90);
   --color-amber: oklch(64% 0.15 72);
   --color-mint: oklch(72% 0.12 150);
-  --color-mint-soft: oklch(95% 0.05 150);
+  --color-mint-soft: oklch(91% 0.1 150);
   --color-green: oklch(52% 0.13 155);
   --color-sky: oklch(56% 0.15 240);
-  --color-sky-soft: oklch(95% 0.045 240);
+  --color-sky-soft: oklch(92% 0.09 240);
 
   --font-display: "Unbounded Variable", system-ui, sans-serif;
   --font-sans: "Inter Variable", system-ui, sans-serif;

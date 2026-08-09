@@ -55,23 +55,24 @@ export default async function PartnersPage({ params }: Props) {
   ];
 
   // Zdjęcia z wydarzenia pokazujące obecność partnerów.
-  // Galeria „justified": zdjęcia mają różne szerokości (wg proporcji), ale
-  // każdy rząd wypełnia całą szerokość - całość to prostokąt bez dziur.
-  const gallery: { n: string; ar: number }[] = [
-    { n: "partnerzy19", ar: 1.5 },
-    { n: "partnerzy6", ar: 0.667 },
-    { n: "partnerzy13", ar: 0.75 },
-    { n: "partnerzy12", ar: 0.667 },
-    { n: "partnerzy14", ar: 0.75 },
-    { n: "partnerzy9", ar: 1.5 },
-    { n: "partnerzy8", ar: 0.667 },
-    { n: "partnerzy15", ar: 0.75 },
-    { n: "partnerzy7", ar: 0.667 },
-    { n: "partnerzy16", ar: 0.75 },
-    { n: "partnerzy10", ar: 1.5 },
-    { n: "partnerzy17", ar: 0.75 },
-    { n: "partnerzy11", ar: 1.5 },
-    { n: "partnerzy18", ar: 0.75 },
+  // Galeria „masonry": zdjęcia zachowują proporcje (różne wysokości),
+  // kolumny są w miarę zbalansowane. Kolejność przeplata pion/poziom,
+  // żeby rozkład był równiejszy.
+  const gallery = [
+    "partnerzy19",
+    "partnerzy6",
+    "partnerzy9",
+    "partnerzy13",
+    "partnerzy12",
+    "partnerzy10",
+    "partnerzy14",
+    "partnerzy8",
+    "partnerzy11",
+    "partnerzy15",
+    "partnerzy7",
+    "partnerzy17",
+    "partnerzy16",
+    "partnerzy18",
   ];
 
   return (
@@ -156,23 +157,18 @@ export default async function PartnersPage({ params }: Props) {
             </h2>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          {/* Układ justified: różne szerokości, pełne rzędy, bez dziur */}
-          <div className="mt-8 flex flex-wrap gap-3 [--gh:8rem] sm:[--gh:11rem] lg:[--gh:13rem]">
-            {gallery.map(({ n, ar }) => (
+          {/* Masonry: zbalansowane kolumny, różne wysokości, bez przycinania */}
+          <div className="mt-8 columns-2 gap-3 sm:columns-3 lg:columns-4 [&>*]:mb-3">
+            {gallery.map((n) => (
               <div
                 key={n}
-                className="group overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
-                style={{
-                  height: "var(--gh)",
-                  flexGrow: ar,
-                  flexBasis: `calc(var(--gh) * ${ar})`,
-                }}
+                className="group break-inside-avoid overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
               >
                 {/* eslint-disable-next-line @next/next/no-img-element */}
                 <img
                   src={`/images/web/${n}.webp`}
                   alt=""
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
+                  className="h-auto w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]"
                   loading="lazy"
                 />
               </div>

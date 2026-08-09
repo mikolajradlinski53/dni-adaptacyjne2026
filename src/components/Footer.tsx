@@ -95,6 +95,10 @@ export default async function Footer() {
       </div>
       <div className="relative border-t border-line py-5 text-center text-xs text-ink-soft">
         {t("footer.legal")}
+        {/* Dyskretny, widoczny credit autorstwa — Mikołaj Radliński */}
+        <span className="ml-2 text-[10px] text-ink-soft/35">
+          · Made by Mikołaj Radliński
+        </span>
       </div>
     </footer>
   );

@@ -108,12 +108,14 @@
     "formLead": "Masz pytanie? Wyślij wiadomość, a odezwiemy się na podany adres."
   },
   "form": {
+    "name": "Imię (opcjonalnie)",
     "email": "Twój e-mail",
-    "message": "Twoje pytanie",
+    "message": "Treść wiadomości",
     "send": "Wyślij",
     "sending": "Wysyłanie…",
-    "success": "Dziękujemy! Odezwiemy się na podany e-mail.",
-    "error": "Coś poszło nie tak. Spróbuj ponownie lub napisz na nasz e-mail."
+    "success": "Dzięki! Zgłoszenie zostało wysłane.",
+    "errorValidation": "Sprawdź adres e-mail i treść wiadomości.",
+    "errorServer": "Coś poszło nie tak. Spróbuj ponownie za chwilę."
   },
   "partners": {
     "title": "Partnerzy",

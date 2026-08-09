@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CaretDown } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/i18n/routing";
-import { getFaq, FORMSPREE_ID } from "@/lib/content";
+import { getFaq } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
-import FormspreeForm from "@/components/FormspreeForm";
+import FormularzKontaktowy from "@/components/FormularzKontaktowy";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -56,17 +56,7 @@ export default async function FaqPage({ params }: Props) {
         <h2 className="text-xl font-bold sm:text-2xl">{t("faq.formTitle")}</h2>
         <p className="mt-1.5 text-ink-soft">{t("faq.formLead")}</p>
         <div className="mt-5">
-          <FormspreeForm
-            endpoint={`https://formspree.io/f/${FORMSPREE_ID}`}
-            labels={{
-              email: t("form.email"),
-              message: t("form.message"),
-              send: t("form.send"),
-              sending: t("form.sending"),
-              success: t("form.success"),
-              error: t("form.error"),
-            }}
-          />
+          <FormularzKontaktowy formularz="ogolny" />
         </div>
       </section>
     </div>

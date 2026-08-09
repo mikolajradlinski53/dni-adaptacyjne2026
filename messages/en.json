@@ -108,12 +108,14 @@
     "formLead": "Have a question? Send a message and we'll reply to the address you provide."
   },
   "form": {
+    "name": "Name (optional)",
     "email": "Your email",
-    "message": "Your question",
+    "message": "Your message",
     "send": "Send",
     "sending": "Sending…",
-    "success": "Thank you! We'll reply to the email you provided.",
-    "error": "Something went wrong. Please try again or write to our email."
+    "success": "Thanks! Your message has been sent.",
+    "errorValidation": "Please check your email address and message.",
+    "errorServer": "Something went wrong. Please try again in a moment."
   },
   "partners": {
     "title": "Partners",

@@ -7,9 +7,9 @@ import {
   User,
 } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/i18n/routing";
-import { CONTACT_EMAIL, FORMSPREE_ID, getTeam } from "@/lib/content";
+import { CONTACT_EMAIL, getTeam } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
-import FormspreeForm from "@/components/FormspreeForm";
+import FormularzKontaktowy from "@/components/FormularzKontaktowy";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
@@ -62,17 +62,7 @@ export default async function ContactPage({ params }: Props) {
         </h2>
         <p className="mt-1.5 text-ink-soft">{t("contact.formLead")}</p>
         <div className="mt-5">
-          <FormspreeForm
-            endpoint={`https://formspree.io/f/${FORMSPREE_ID}`}
-            labels={{
-              email: t("form.email"),
-              message: t("form.message"),
-              send: t("form.send"),
-              sending: t("form.sending"),
-              success: t("form.success"),
-              error: t("form.error"),
-            }}
-          />
+          <FormularzKontaktowy formularz="ogolny" />
         </div>
       </section>
 

@@ -76,13 +76,6 @@ export async function getPartners(locale: Locale): Promise<Partner[]> {
 export const EVENT_START = "2026-10-01T00:00:00+02:00";
 export const CONTACT_EMAIL = "dni.adaptacyjne@samorzad.ue.wroc.pl";
 
-/**
- * Formspree - formularz pytań (FAQ) i kontakt.
- * ZMIEŃ na własny identyfikator z panelu Formspree (https://formspree.io).
- * Do czasu podmiany formularz wyśle na testowy endpoint (nie dotrze do skrzynki).
- */
-export const FORMSPREE_ID = "xotd"; // ← podmień na swój (np. "xoqgabcd")
-
 /** Kontakt ds. partnerstw (Członek Zarządu ds. Kontaktów Zewnętrznych). */
 export const PARTNERS_CONTACT = {
   name: "Ida Majewska",

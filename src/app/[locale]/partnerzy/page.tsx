@@ -5,12 +5,11 @@ import {
   Target,
   Storefront,
   HandHeart,
-  EnvelopeSimple,
-  ArrowRight,
   User,
 } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/i18n/routing";
 import { getPartners, PARTNERS_CONTACT } from "@/lib/content";
+import FormularzKontaktowy from "@/components/FormularzKontaktowy";
 import { pageMetadata } from "@/lib/seo";
 import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 import PartnersShowcase from "@/components/PartnersShowcase";
@@ -164,7 +163,7 @@ export default async function PartnersPage({ params }: Props) {
       <Reveal>
         <section className="mx-auto max-w-6xl px-4 pt-16 sm:px-6 sm:pt-20">
           <div className="grad-brand relative overflow-hidden rounded-tile p-8 text-white sm:p-12">
-            <div className="relative grid items-center gap-8 md:grid-cols-[1.5fr_1fr]">
+            <div className="relative grid items-start gap-8 md:grid-cols-2">
               <div>
                 <h2 className="text-2xl font-extrabold sm:text-3xl">
                   {t("partners.ctaTitle")}
@@ -172,53 +171,48 @@ export default async function PartnersPage({ params }: Props) {
                 <p className="mt-3 max-w-xl text-white/90">
                   {t("partners.ctaBody")}
                 </p>
-                <a
-                  href={`mailto:${PARTNERS_CONTACT.email}`}
-                  className="mt-7 inline-flex items-center gap-2 rounded-full bg-white px-6 py-3.5 text-sm font-bold text-violet shadow-lg transition-transform hover:scale-[1.03] active:scale-[0.99]"
-                >
-                  <EnvelopeSimple size={18} weight="bold" />
-                  {t("partners.ctaButton")}
-                  <ArrowRight size={16} weight="bold" />
-                </a>
+
+                {/* Wizytówka kontaktu dla partnerów: Ida Majewska */}
+                <div className="mt-6 flex items-center gap-3 rounded-tile border border-white/25 bg-white/10 p-4 backdrop-blur-sm">
+                  <div className="relative shrink-0">
+                    <div className="size-16 overflow-hidden rounded-2xl bg-white/20">
+                      {PARTNERS_CONTACT.photo ? (
+                        // eslint-disable-next-line @next/next/no-img-element
+                        <img
+                          src={PARTNERS_CONTACT.photo}
+                          alt={PARTNERS_CONTACT.name}
+                          className="size-full object-cover object-top"
+                        />
+                      ) : (
+                        <div className="flex size-full items-center justify-center">
+                          <User size={30} weight="duotone" className="text-white" />
+                        </div>
+                      )}
+                    </div>
+                    <span
+                      aria-hidden
+                      className="absolute -right-2 -top-2 flex size-6 items-center justify-center rounded-full bg-white text-xs shadow"
+                    >
+                      🎓
+                    </span>
+                  </div>
+                  <div className="min-w-0">
+                    <p className="text-[10px] font-bold uppercase tracking-wide text-white/80">
+                      {t("partners.contactLabel")}
+                    </p>
+                    <p className="font-bold leading-tight">
+                      {PARTNERS_CONTACT.name}
+                    </p>
+                    <p className="text-xs text-white/85">
+                      {t("partners.contactRole")}
+                    </p>
+                  </div>
+                </div>
               </div>
 
-              {/* Kontakt dla partnerów: Ida Majewska */}
-              <div className="rounded-tile border border-white/25 bg-white/10 p-5 backdrop-blur-sm">
-                <p className="text-xs font-bold uppercase tracking-wide text-white/80">
-                  {t("partners.contactLabel")}
-                </p>
-                <div className="relative mt-3 overflow-hidden rounded-2xl bg-white/20">
-                  {PARTNERS_CONTACT.photo ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={PARTNERS_CONTACT.photo}
-                      alt={PARTNERS_CONTACT.name}
-                      className="aspect-[4/3] w-full object-cover object-top"
-                    />
-                  ) : (
-                    <div className="flex aspect-[4/3] items-center justify-center">
-                      <User size={44} weight="duotone" className="text-white" />
-                    </div>
-                  )}
-                  <span
-                    aria-hidden
-                    className="absolute right-2 top-2 flex size-8 items-center justify-center rounded-full bg-white text-base shadow"
-                  >
-                    🎓
-                  </span>
-                </div>
-                <p className="mt-3 font-bold leading-tight">
-                  {PARTNERS_CONTACT.name}
-                </p>
-                <p className="text-xs text-white/85">
-                  {t("partners.contactRole")}
-                </p>
-                <a
-                  href={`mailto:${PARTNERS_CONTACT.email}`}
-                  className="mt-4 block break-all text-sm font-semibold text-white underline-offset-4 hover:underline"
-                >
-                  {PARTNERS_CONTACT.email}
-                </a>
+              {/* Formularz współpracy (trafia do osoby od kontaktów zewn.) */}
+              <div className="rounded-tile bg-surface p-5 text-ink shadow-lg sm:p-6">
+                <FormularzKontaktowy formularz="wspolpraca" />
               </div>
             </div>
 

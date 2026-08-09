@@ -44,7 +44,7 @@ export default async function HomePage({ params }: Props) {
     },
     {
       label: t("home.socialSsuew"),
-      href: "https://samorzad.ue.wroc.pl",
+      href: "https://samorzad.ue.wroc.pl/",
       icon: <UsersThree size={22} weight="duotone" />,
     },
   ];

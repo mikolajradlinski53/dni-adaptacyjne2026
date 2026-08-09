@@ -27,6 +27,7 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { getLinks } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
+import { Stagger, RevealItem } from "@/components/Reveal";
 
 const ICONS: Record<string, Icon> = {
   book: Book,
@@ -79,7 +80,7 @@ export default async function LinksPage({ params }: Props) {
         {categories.map((cat) => (
           <section key={cat.category}>
             <h2 className="text-xl font-bold sm:text-2xl">{cat.category}</h2>
-            <ul className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            <Stagger className="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3" gap={0.06}>
               {cat.items.map((item, i) => {
                 const IconComponent = ICONS[item.icon] ?? Star;
                 const accents = [
@@ -142,32 +143,37 @@ export default async function LinksPage({ params }: Props) {
                 const activeCls = `${base} hover:-translate-y-1.5 hover:rotate-1 hover:scale-[1.03] hover:border-violet hover:shadow-xl ${accent.ring} ${accent.glow}`;
                 const disabledCls = `${base} opacity-70`;
 
+                const card =
+                  item.href && item.internal ? (
+                    <Link href={item.href} className={activeCls}>
+                      {inner}
+                    </Link>
+                  ) : item.href ? (
+                    <a
+                      href={item.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={activeCls}
+                    >
+                      {inner}
+                    </a>
+                  ) : (
+                    <div className={disabledCls}>{inner}</div>
+                  );
+
                 return (
-                  <li
+                  <div
                     key={item.label}
                     className="tile-float h-full"
                     style={{ animationDelay: `${(i % 6) * 0.4}s` }}
                   >
-                    {item.href && item.internal ? (
-                      <Link href={item.href} className={activeCls}>
-                        {inner}
-                      </Link>
-                    ) : item.href ? (
-                      <a
-                        href={item.href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className={activeCls}
-                      >
-                        {inner}
-                      </a>
-                    ) : (
-                      <div className={disabledCls}>{inner}</div>
-                    )}
-                  </li>
+                    <RevealItem className="h-full" y={26}>
+                      {card}
+                    </RevealItem>
+                  </div>
                 );
               })}
-            </ul>
+            </Stagger>
           </section>
         ))}
       </div>

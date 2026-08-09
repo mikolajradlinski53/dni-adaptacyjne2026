@@ -8,7 +8,7 @@
         "icon": "facebook"
       },
       {
-        "label": "FB event: UE Party x DA",
+        "label": "UE Party fanpage",
         "href": "https://www.facebook.com/ueparty",
         "icon": "confetti"
       },
@@ -16,6 +16,11 @@
         "label": "Student Zone (Student Union)",
         "href": "https://samorzad.ue.wroc.pl/dla-studenta",
         "icon": "star"
+      },
+      {
+        "label": "Student Union website",
+        "href": "https://samorzad.ue.wroc.pl/",
+        "icon": "users"
       },
       {
         "label": "UEW website",

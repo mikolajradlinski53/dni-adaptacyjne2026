@@ -8,7 +8,7 @@
         "icon": "facebook"
       },
       {
-        "label": "Подія FB: UE Party x DA",
+        "label": "Фанпейдж UE Party",
         "href": "https://www.facebook.com/ueparty",
         "icon": "confetti"
       },
@@ -16,6 +16,11 @@
         "label": "Зона студента (Самоврядування)",
         "href": "https://samorzad.ue.wroc.pl/dla-studenta",
         "icon": "star"
+      },
+      {
+        "label": "Сайт Студентського самоврядування",
+        "href": "https://samorzad.ue.wroc.pl/",
+        "icon": "users"
       },
       {
         "label": "Сайт UEW",

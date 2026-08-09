@@ -8,7 +8,7 @@
         "icon": "facebook"
       },
       {
-        "label": "Wydarzenie FB: UE Party x DA",
+        "label": "Fanpage UE Party",
         "href": "https://www.facebook.com/ueparty",
         "icon": "confetti"
       },
@@ -16,6 +16,11 @@
         "label": "Strefa Studenta (Samorząd)",
         "href": "https://samorzad.ue.wroc.pl/dla-studenta",
         "icon": "star"
+      },
+      {
+        "label": "Strona Samorządu Studentów",
+        "href": "https://samorzad.ue.wroc.pl/",
+        "icon": "users"
       },
       {
         "label": "Strona UEW",

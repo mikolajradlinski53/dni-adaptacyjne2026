@@ -96,10 +96,9 @@
         "note": "Strefa Studenta"
       },
       {
-        "label": "Obsługa osób z niepełnosprawnościami",
-        "href": "https://uew.pl/",
-        "icon": "wheelchair",
-        "note": "strona uczelni"
+        "label": "Sekcja ds. Obsługi Osób z Niepełnosprawnościami",
+        "href": "https://bon.uew.pl/",
+        "icon": "wheelchair"
       },
       {
         "label": "Pomoc psychologiczna",

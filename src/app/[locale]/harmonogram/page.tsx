@@ -28,16 +28,23 @@ export default async function SchedulePage({ params }: Props) {
     getModes(locale),
   ]);
 
-  const web = (n: string) => `/images/web/${n}.webp`;
-  const photos: Record<string, string[]> = {
+  // { n: nazwa pliku w /images/web, ar: proporcja szer/wys (do masonry) }
+  const photos: Record<string, { n: string; ar: number }[]> = {
     full1: [
-      "harmo_full1_bfk",
-      "harmo_full1_1",
-      "harmo_full1_2",
-      "harmo_full1_3",
-    ].map(web),
-    full2: ["harmo_full2_new", "harmo_full2_2"].map(web),
-    part: ["harmo_part_2", "harmo_part_3"].map(web),
+      { n: "harmo_full1_bfk", ar: 1.5 },
+      { n: "harmo_full1_2", ar: 1.5 },
+      { n: "harmo_full1_3", ar: 0.75 },
+    ],
+    full2: [
+      { n: "harmo_full2_new", ar: 1.5 },
+      { n: "harmo_stacjo_2", ar: 1.5 },
+      { n: "harmo_full2_2", ar: 0.75 },
+    ],
+    part: [
+      { n: "harmo_part_2", ar: 1.78 },
+      { n: "harmo_part_3", ar: 1.78 },
+      { n: "harmo_niestacjo", ar: 1.547 },
+    ],
   };
 
   return (

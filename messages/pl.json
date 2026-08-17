@@ -14,7 +14,8 @@
     "map": "Mapa kampusu",
     "rules": "Regulamin",
     "openMenu": "Otwórz menu",
-    "closeMenu": "Zamknij menu"
+    "closeMenu": "Zamknij menu",
+    "privacy": "Polityka prywatności"
   },
   "common": {
     "learnMore": "Dowiedz się więcej",
@@ -173,5 +174,10 @@
     "title": "Nie ma takiej strony",
     "body": "Sprawdź adres albo wróć na stronę główną.",
     "cta": "Wróć na start"
+  },
+  "privacy": {
+    "title": "Polityka prywatności",
+    "note": "Dokument w wersji wstępnej - treść może zostać zaktualizowana po zatwierdzeniu.",
+    "updated": "Ostatnia aktualizacja"
   }
 }

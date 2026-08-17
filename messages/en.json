@@ -14,7 +14,8 @@
     "map": "Campus map",
     "rules": "Rules",
     "openMenu": "Open menu",
-    "closeMenu": "Close menu"
+    "closeMenu": "Close menu",
+    "privacy": "Privacy policy"
   },
   "common": {
     "learnMore": "Learn more",
@@ -173,5 +174,10 @@
     "title": "Page not found",
     "body": "Check the address or go back to the home page.",
     "cta": "Back to home"
+  },
+  "privacy": {
+    "title": "Privacy policy",
+    "note": "Preliminary version - the content may be updated after approval. The binding version is in Polish.",
+    "updated": "Last updated"
   }
 }

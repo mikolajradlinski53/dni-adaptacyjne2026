@@ -1,15 +1,86 @@
 [
-  { "mode": "full1", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "title": "Droga przez kampus", "place": "Start: teren kampusu", "desc": "Spacer po kampusie z wolontariuszami: budynki, dziekanaty, biblioteka." },
-  { "mode": "full1", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "title": "Stoiska organizacji i kół naukowych", "place": "Teren kampusu", "desc": "Poznajcie organizacje studenckie i koła naukowe UEW." },
-  { "mode": "full1", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "title": "Integracja na Zaprzegubiu", "place": "Zaprzegubie", "desc": "Pierwsza wspólna integracja pierwszorocznych." },
-  { "mode": "full1", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "title": "Prelekcje: prawa i obowiązki studenta", "desc": "Obowiązkowe szkolenie z praw i obowiązków studenta oraz zasad studiowania." },
-  { "mode": "full1", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "title": "UE Party x DA", "desc": "Wieczorem impreza otwarta dla wszystkich pierwszorocznych.", "highlight": true },
-
-  { "mode": "full2", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "title": "Prelekcje dla II stopnia", "desc": "Prawa i obowiązki studenta oraz organizacja studiów II stopnia." },
-  { "mode": "full2", "date": "2026-10-01", "dayLabel": "Czwartek, 1 października", "title": "Część ogólna: stoiska i integracja", "place": "Teren kampusu", "desc": "Dołączcie do części wspólnej z I stopniem, jeśli macie ochotę." },
-  { "mode": "full2", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "title": "Tego dnia zajęcia odbywają się według planu", "desc": "Dla II stopnia piątek to zwykły dzień zajęć - bierzecie w nich udział zgodnie ze swoim planem." },
-  { "mode": "full2", "date": "2026-10-02", "dayLabel": "Piątek, 2 października", "title": "UE Party x DA", "desc": "Wieczorem impreza otwarta także dla II stopnia.", "highlight": true },
-
-  { "mode": "part", "date": "2026-10-03", "dayLabel": "Sobota, 3 października · online", "title": "Transmisja online", "desc": "Najważniejsze informacje o prawach i obowiązkach studenta oraz organizacji studiów niestacjonarnych. Link do transmisji pojawi się tutaj." },
-  { "mode": "part", "date": "2026-10-02", "dayLabel": "Wydarzenie towarzyszące", "title": "UE Party x DA", "desc": "Możecie też wziąć udział w UE Party x DA (piątek, 2 października wieczorem) razem z pozostałymi pierwszorocznymi.", "highlight": true }
+  {
+    "mode": "full1",
+    "date": "2026-10-01",
+    "dayLabel": "Czwartek, 1 października",
+    "title": "Droga przez kampus",
+    "place": "Start: teren kampusu",
+    "desc": "Spacer po kampusie z wolontariuszami: budynki, dziekanaty, biblioteka."
+  },
+  {
+    "mode": "full1",
+    "date": "2026-10-01",
+    "dayLabel": "Czwartek, 1 października",
+    "title": "Stoiska organizacji i kół naukowych",
+    "place": "Teren kampusu",
+    "desc": "Poznajcie organizacje studenckie i koła naukowe UEW."
+  },
+  {
+    "mode": "full1",
+    "date": "2026-10-01",
+    "dayLabel": "Czwartek, 1 października",
+    "title": "Integracja na Zaprzegubiu",
+    "place": "Zaprzegubie",
+    "desc": "Pierwsza wspólna integracja pierwszorocznych."
+  },
+  {
+    "mode": "full1",
+    "date": "2026-10-02",
+    "dayLabel": "Piątek, 2 października",
+    "title": "Prelekcje: prawa i obowiązki studenta",
+    "desc": "Obowiązkowe szkolenie z praw i obowiązków studenta oraz zasad studiowania."
+  },
+  {
+    "mode": "full1",
+    "date": "2026-10-02",
+    "dayLabel": "Piątek, 2 października",
+    "title": "UE Party x DA",
+    "desc": "Wieczorem impreza otwarta dla wszystkich pierwszorocznych.",
+    "highlight": true
+  },
+  {
+    "mode": "full2",
+    "date": "2026-10-01",
+    "dayLabel": "Czwartek, 1 października",
+    "title": "Prelekcje dla II stopnia",
+    "desc": "Prawa i obowiązki studenta oraz organizacja studiów II stopnia."
+  },
+  {
+    "mode": "full2",
+    "date": "2026-10-01",
+    "dayLabel": "Czwartek, 1 października",
+    "title": "Część ogólna: stoiska i integracja",
+    "place": "Teren kampusu",
+    "desc": "Dołączcie do części wspólnej z I stopniem, jeśli macie ochotę."
+  },
+  {
+    "mode": "full2",
+    "date": "2026-10-02",
+    "dayLabel": "Piątek, 2 października",
+    "title": "Tego dnia zajęcia odbywają się według planu",
+    "desc": "Dla II stopnia piątek to zwykły dzień zajęć - bierzecie w nich udział zgodnie ze swoim planem."
+  },
+  {
+    "mode": "full2",
+    "date": "2026-10-02",
+    "dayLabel": "Piątek, 2 października",
+    "title": "UE Party x DA",
+    "desc": "Wieczorem impreza otwarta także dla II stopnia.",
+    "highlight": true
+  },
+  {
+    "mode": "part",
+    "date": "2026-10-03",
+    "dayLabel": "Sobota, 3 października · online",
+    "title": "Transmisja online",
+    "desc": "Najważniejsze informacje o prawach i obowiązkach studenta oraz organizacji studiów niestacjonarnych. Link do transmisji pojawi się **tutaj** i na Facebooku!"
+  },
+  {
+    "mode": "part",
+    "date": "2026-10-02",
+    "dayLabel": "Wydarzenie towarzyszące · 2 października",
+    "title": "UE Party x DA",
+    "desc": "Możecie też wziąć udział w UE Party x DA (piątek, 2 października wieczorem) razem z pozostałymi pierwszorocznymi.",
+    "highlight": true
+  }
 ]

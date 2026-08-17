@@ -12,6 +12,7 @@ const STATIC_PATHS = [
   "/kontakt",
   "/mapa-kampusu",
   "/regulamin",
+  "/polityka-prywatnosci",
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

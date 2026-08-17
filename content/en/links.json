@@ -96,10 +96,9 @@
         "note": "Student Zone"
       },
       {
-        "label": "Accessibility support office",
-        "href": "https://uew.pl/",
-        "icon": "wheelchair",
-        "note": "university website"
+        "label": "Disability Support Section",
+        "href": "https://bon.uew.pl/",
+        "icon": "wheelchair"
       },
       {
         "label": "Psychological support",

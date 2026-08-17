@@ -17,6 +17,7 @@ import { pageMetadata } from "@/lib/seo";
 import Countdown from "@/components/Countdown";
 import HeroPhotos from "@/components/HeroPhotos";
 import HeroDoodles from "@/components/HeroDoodles";
+import CyclingImage from "@/components/CyclingImage";
 import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 
 type Props = { params: Promise<{ locale: Locale }> };
@@ -252,16 +253,12 @@ export default async function HomePage({ params }: Props) {
                 <ArrowRight size={16} weight="bold" />
               </Link>
             </div>
-            {/* Zdjęcie z wydarzenia */}
-            <div className="overflow-hidden rounded-tile shadow-lg ring-1 ring-black/5">
-              {/* eslint-disable-next-line @next/next/no-img-element */}
-              <img
-                src="/images/web/poznajcie.webp"
-                alt=""
-                className="aspect-[16/10] w-full object-cover"
-                loading="lazy"
-              />
-            </div>
+            {/* Zdjęcie zespołu (docelowo rotacja 2 zdjęć „poznajcie nas") */}
+            <CyclingImage
+              images={["/images/web/poznajcie1.webp"]}
+              interval={4500}
+              className="aspect-[16/10] rounded-tile shadow-lg ring-1 ring-black/5"
+            />
           </div>
         </section>
       </Reveal>

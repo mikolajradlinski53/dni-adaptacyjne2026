@@ -2,9 +2,26 @@
 
 import { MapPin, Confetti } from "@phosphor-icons/react";
 import { motion, useReducedMotion } from "motion/react";
+import type { ReactNode } from "react";
 import type { ModeInfo, ScheduleEntry } from "@/lib/content";
 import ModeSwitcher from "./ModeSwitcher";
+import MasonryGallery from "./MasonryGallery";
 import { useStudyMode } from "./StudyModeContext";
+
+type Foto = { n: string; ar: number };
+
+// Prosty rendering: fragmenty **pogrubione** -> <strong>.
+function tekst(s: string): ReactNode {
+  return s.split(/(\*\*[^*]+\*\*)/g).map((part, i) =>
+    part.startsWith("**") && part.endsWith("**") ? (
+      <strong key={i} className="font-bold">
+        {part.slice(2, -2)}
+      </strong>
+    ) : (
+      part
+    )
+  );
+}
 
 export default function ScheduleTimeline({
   entries,
@@ -16,7 +33,7 @@ export default function ScheduleTimeline({
   entries: ScheduleEntry[];
   modes: ModeInfo[];
   emptyLabel: string;
-  photos?: Partial<Record<string, string[]>>;
+  photos?: Partial<Record<string, Foto[]>>;
   galleryLabel: string;
 }) {
   const { mode } = useStudyMode();
@@ -101,7 +118,7 @@ export default function ScheduleTimeline({
                             item.highlight ? "text-white/90" : "text-ink-soft"
                           }`}
                         >
-                          {item.desc}
+                          {tekst(item.desc)}
                         </p>
                       ) : null}
                     </div>
@@ -121,18 +138,7 @@ export default function ScheduleTimeline({
             </h3>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          <div className="mt-5 columns-2 gap-3 sm:columns-3 [&>*]:mb-3">
-            {modePhotos.map((src) => (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                key={src}
-                src={src}
-                alt=""
-                loading="lazy"
-                className="w-full break-inside-avoid rounded-2xl shadow-md ring-1 ring-black/5"
-              />
-            ))}
-          </div>
+          <MasonryGallery items={modePhotos} />
         </div>
       ) : null}
     </div>

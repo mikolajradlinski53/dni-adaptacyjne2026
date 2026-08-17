@@ -181,7 +181,7 @@ export default async function PartnersPage({ params }: Props) {
                         <img
                           src={PARTNERS_CONTACT.photo}
                           alt={PARTNERS_CONTACT.name}
-                          className="size-full object-cover object-top"
+                          className="size-full object-cover object-[center_58%]"
                         />
                       ) : (
                         <div className="flex size-full items-center justify-center">

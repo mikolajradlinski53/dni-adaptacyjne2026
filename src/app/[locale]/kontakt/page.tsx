@@ -83,7 +83,7 @@ export default async function ContactPage({ params }: Props) {
                     <img
                       src={member.photo}
                       alt={member.name}
-                      className="size-full object-cover object-top"
+                      className="size-full object-cover object-[center_60%]"
                       style={
                         member.photoPos
                           ? { objectPosition: member.photoPos }

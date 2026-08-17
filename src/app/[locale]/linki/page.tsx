@@ -119,13 +119,13 @@ export default async function LinksPage({ params }: Props) {
                       />
                     </span>
                     <span className="min-w-0">
-                      <span className="flex items-center gap-1.5 font-semibold">
-                        <span className="truncate">{item.label}</span>
+                      <span className="flex items-start gap-1.5 font-semibold">
+                        <span className="min-w-0 break-words">{item.label}</span>
                         {item.href && !item.internal ? (
                           <ArrowSquareOut
                             size={14}
                             weight="bold"
-                            className="shrink-0 text-ink-soft"
+                            className="mt-1 shrink-0 text-ink-soft"
                             aria-label={t("common.external")}
                           />
                         ) : null}

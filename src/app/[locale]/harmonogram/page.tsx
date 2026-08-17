@@ -32,6 +32,7 @@ export default async function SchedulePage({ params }: Props) {
   const photos: Record<string, { n: string; ar: number }[]> = {
     full1: [
       { n: "harmo_full1_bfk", ar: 1.5 },
+      { n: "harmo_stacjo_1", ar: 0.75 },
       { n: "harmo_full1_2", ar: 1.5 },
       { n: "harmo_full1_3", ar: 0.75 },
     ],

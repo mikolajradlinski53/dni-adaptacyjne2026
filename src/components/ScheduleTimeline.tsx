@@ -5,7 +5,7 @@ import { motion, useReducedMotion } from "motion/react";
 import type { ReactNode } from "react";
 import type { ModeInfo, ScheduleEntry } from "@/lib/content";
 import ModeSwitcher from "./ModeSwitcher";
-import MasonryGallery from "./MasonryGallery";
+import JustifiedGallery from "./JustifiedGallery";
 import { useStudyMode } from "./StudyModeContext";
 
 type Foto = { n: string; ar: number };
@@ -138,7 +138,7 @@ export default function ScheduleTimeline({
             </h3>
             <span className="grad-line h-px flex-1 rounded-full opacity-60" />
           </div>
-          <MasonryGallery items={modePhotos} />
+          <JustifiedGallery items={modePhotos} />
         </div>
       ) : null}
     </div>

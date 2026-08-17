@@ -151,7 +151,7 @@ export default async function HomePage({ params }: Props) {
                   <p className="text-xs font-semibold uppercase tracking-wide text-ink-soft">
                     {fact.label}
                   </p>
-                  <p className="truncate font-bold">{fact.value}</p>
+                  <p className="font-bold leading-tight">{fact.value}</p>
                 </div>
               </div>
             ))}

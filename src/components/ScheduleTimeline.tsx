@@ -8,7 +8,7 @@ import ModeSwitcher from "./ModeSwitcher";
 import JustifiedGallery from "./JustifiedGallery";
 import { useStudyMode } from "./StudyModeContext";
 
-type Foto = { n: string; ar: number };
+type Foto = { n: string; ar: number; full?: boolean };
 
 // Prosty rendering: fragmenty **pogrubione** -> <strong>.
 function tekst(s: string): ReactNode {

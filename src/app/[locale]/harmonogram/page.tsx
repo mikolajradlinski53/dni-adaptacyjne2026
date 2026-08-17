@@ -29,7 +29,10 @@ export default async function SchedulePage({ params }: Props) {
   ]);
 
   // { n: nazwa pliku w /images/web, ar: proporcja szer/wys (do masonry) }
-  const photos: Record<string, { n: string; ar: number }[]> = {
+  const photos: Record<
+    string,
+    { n: string; ar: number; full?: boolean }[]
+  > = {
     full1: [
       { n: "harmo_full1_bfk", ar: 1.5 },
       { n: "harmo_stacjo_1", ar: 0.75 },
@@ -44,7 +47,7 @@ export default async function SchedulePage({ params }: Props) {
     part: [
       { n: "harmo_part_2", ar: 1.78 },
       { n: "harmo_part_3", ar: 1.78 },
-      { n: "harmo_niestacjo", ar: 1.547 },
+      { n: "harmo_niestacjo", ar: 1.547, full: true },
     ],
   };
 

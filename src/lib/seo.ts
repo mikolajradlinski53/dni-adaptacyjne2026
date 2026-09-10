@@ -4,7 +4,10 @@ import { routing, type Locale } from "@/i18n/routing";
 // Projekt i wykonanie: Mikołaj Radliński (Made by Mikołaj Radliński).
 export const SITE_AUTHOR = "Mikołaj Radliński";
 
-export const SITE_URL = "https://dni.adaptacyjne.uew.pl";
+export const SITE_URL = "https://dni-adaptacyjne.uew.pl";
+
+// Obrazek Open Graph (udostępnienia w social media / podglądy w wyszukiwarce).
+export const OG_IMAGE = "/og-image.png";
 
 const OG_LOCALES: Record<Locale, string> = {
   pl: "pl_PL",
@@ -42,11 +45,13 @@ export function pageMetadata(
       siteName,
       locale: OG_LOCALES[locale],
       type: "website",
+      images: [{ url: OG_IMAGE, width: 1200, height: 630, alt: siteName }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [OG_IMAGE],
     },
   };
 }

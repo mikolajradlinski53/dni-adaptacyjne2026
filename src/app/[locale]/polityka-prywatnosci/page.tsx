@@ -24,7 +24,7 @@ const SEKCJE: { h: string; p: string[] }[] = [
     h: "1. Administrator danych",
     p: [
       "Administratorem Twoich danych osobowych jest Uniwersytet Ekonomiczny we Wrocławiu, ul. Komandorska 118/120, 53-345 Wrocław (dalej: „Administrator” lub „Uczelnia”).",
-      "Serwis „Dni Adaptacyjne” (dni.adaptacyjne.uew.pl) jest prowadzony przez Samorząd Studentów Uniwersytetu Ekonomicznego we Wrocławiu w imieniu i na rzecz Uczelni. Administratorem danych pozostaje Uczelnia.",
+      "Serwis „Dni Adaptacyjne” (dni-adaptacyjne.uew.pl) jest prowadzony przez Samorząd Studentów Uniwersytetu Ekonomicznego we Wrocławiu w imieniu i na rzecz Uczelni. Administratorem danych pozostaje Uczelnia.",
     ],
   },
   {

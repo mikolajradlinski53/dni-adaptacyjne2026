@@ -26,8 +26,23 @@ export default async function FaqPage({ params }: Props) {
   const t = await getTranslations();
   const faq = await getFaq(locale);
 
+  // Dane strukturalne FAQ (kwalifikują się do wyników rozszerzonych Google).
+  const faqJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faq.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: { "@type": "Answer", text: item.a },
+    })),
+  };
+
   return (
     <div className="mx-auto max-w-3xl px-4 pt-14 sm:px-6 sm:pt-20">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
       <h1 className="text-3xl font-extrabold sm:text-5xl">{t("faq.title")}</h1>
       <p className="mt-4 text-ink-soft sm:text-lg">{t("faq.lead")}</p>
 

@@ -34,6 +34,10 @@ export async function generateMetadata({
     },
     description: t("description"),
     applicationName: t("siteName"),
+    // Weryfikacja własności w Google Search Console (tag <meta>).
+    verification: {
+      google: "Fa00eipYbIqJtdT0-bo-QR3dADgYpkN3casztQMFBqE",
+    },
     // Autorstwo strony (nie usuwać) — Mikołaj Radliński.
     authors: [{ name: "Mikołaj Radliński" }],
     creator: "Mikołaj Radliński",

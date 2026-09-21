@@ -38,7 +38,7 @@ export async function generateMetadata({
     verification: {
       google: "pJsKNY59d4x-0O2o_D01fYbYZn-RMw4Ha6Zks-or1Gw",
     },
-    // Autorstwo strony (nie usuwać) — Mikołaj Radliński.
+    // Autorstwo strony (nie usuwać) - Mikołaj Radliński.
     authors: [{ name: "Mikołaj Radliński" }],
     creator: "Mikołaj Radliński",
     publisher: "Mikołaj Radliński",
@@ -91,37 +91,60 @@ export default async function LocaleLayout({
 
   const t = await getTranslations({ locale });
 
-  // Dane strukturalne (JSON-LD) - wydarzenie w wynikach wyszukiwania.
+  // Dane strukturalne (JSON-LD) - graf encji dla wyszukiwarek.
+  const orgId = `${SITE_URL}/#organizer`;
+  const siteId = `${SITE_URL}/#website`;
   const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Event",
-    name: t("meta.siteName"),
-    description: t("meta.description"),
-    startDate: "2026-10-01",
-    endDate: "2026-10-03",
-    eventStatus: "https://schema.org/EventScheduled",
-    eventAttendanceMode:
-      "https://schema.org/MixedEventAttendanceMode",
-    inLanguage: locale,
-    isAccessibleForFree: true,
-    url: `${SITE_URL}/${locale}`,
-    image: [`${SITE_URL}${OG_IMAGE}`],
-    location: {
-      "@type": "Place",
-      name: "Uniwersytet Ekonomiczny we Wrocławiu",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "ul. Komandorska 118/120",
-        postalCode: "53-345",
-        addressLocality: "Wrocław",
-        addressCountry: "PL",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": orgId,
+        name: "Samorząd Studentów Uniwersytetu Ekonomicznego we Wrocławiu",
+        url: "https://samorzad.ue.wroc.pl/",
+        logo: `${SITE_URL}/icon.png`,
+        parentOrganization: {
+          "@type": "CollegeOrUniversity",
+          name: "Uniwersytet Ekonomiczny we Wrocławiu",
+          url: "https://uew.pl/",
+        },
       },
-    },
-    organizer: {
-      "@type": "Organization",
-      name: "Samorząd Studentów Uniwersytetu Ekonomicznego we Wrocławiu",
-      url: "https://samorzad.ue.wroc.pl/",
-    },
+      {
+        "@type": "WebSite",
+        "@id": siteId,
+        url: SITE_URL,
+        name: t("meta.siteName"),
+        description: t("meta.description"),
+        inLanguage: locale,
+        publisher: { "@id": orgId },
+      },
+      {
+        "@type": "Event",
+        name: t("meta.siteName"),
+        description: t("meta.description"),
+        startDate: "2026-10-01",
+        endDate: "2026-10-03",
+        eventStatus: "https://schema.org/EventScheduled",
+        eventAttendanceMode: "https://schema.org/MixedEventAttendanceMode",
+        inLanguage: locale,
+        isAccessibleForFree: true,
+        url: `${SITE_URL}/${locale}`,
+        image: [`${SITE_URL}${OG_IMAGE}`],
+        sameAs: ["https://fb.me/e/8psHItxw2"],
+        location: {
+          "@type": "Place",
+          name: "Uniwersytet Ekonomiczny we Wrocławiu",
+          address: {
+            "@type": "PostalAddress",
+            streetAddress: "ul. Komandorska 118/120",
+            postalCode: "53-345",
+            addressLocality: "Wrocław",
+            addressCountry: "PL",
+          },
+        },
+        organizer: { "@id": orgId },
+      },
+    ],
   };
 
   const searchEntries = await buildSearchIndex(locale as Locale, {
@@ -146,7 +169,7 @@ export default async function LocaleLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
-        {/* Autorstwo — Mikołaj Radliński. Ukryte, obecne na każdej podstronie. */}
+        {/* Autorstwo - Mikołaj Radliński. Ukryte, obecne na każdej podstronie. */}
         <span className="sr-only" aria-hidden data-author-credit>
           Made by Mikołaj Radliński
         </span>

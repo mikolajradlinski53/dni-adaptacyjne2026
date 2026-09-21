@@ -67,7 +67,7 @@ const PARAGRAFY: Paragraf[] = [
         t: "Organizatorem Wydarzenia jest Uniwersytet Ekonomiczny we Wrocławiu z siedzibą we Wrocławiu przy ul. Komandorskiej 118/120, 53-345 Wrocław, w imieniu i na rzecz którego czynności operacyjne podejmuje Samorząd Studentów Uniwersytetu Ekonomicznego we Wrocławiu.",
       },
       {
-        t: "Wydarzenie odbywa się w dniach 1–3 października 2026 r. na terenie kampusu Uczelni we Wrocławiu oraz w formie zdalnej.",
+        t: "Wydarzenie odbywa się w dniach 1-3 października 2026 r. na terenie kampusu Uczelni we Wrocławiu oraz w formie zdalnej.",
       },
       {
         t: "Celem Wydarzenia jest wdrożenie w prawa i obowiązki studenta przed oficjalnym rozpoczęciem semestru oraz zapoznanie nowo przyjętych studentów z organizacją studiów, topografią kampusu oraz działalnością studencką.",
@@ -78,13 +78,13 @@ const PARAGRAFY: Paragraf[] = [
       {
         t: "Ilekroć w treści niniejszego Regulaminu używa się poniższych pojęć pisanych wielką literą, należy przez nie rozumieć:",
         sub: [
-          "Regulamin – niniejszy dokument stanowiący wzorzec umowny w rozumieniu art. 384 Kodeksu cywilnego;",
-          "Wydarzenie – Wydarzenie pod nazwą „Dni Adaptacyjne 2026”, realizowane w dniach 1-3.10.2026 r. na terenie Uniwersytetu Ekonomicznego we Wrocławiu;",
-          "Organizator – Uniwersytet Ekonomiczny we Wrocławiu z siedzibą we Wrocławiu przy ul. Komandorskiej 118/120, 53-345 Wrocław, NIP: 896-000-69-97, REGON: 000001497, w imieniu i na rzecz którego czynności operacyjne podejmuje Samorząd Studentów UEW;",
-          "Miejsce Wydarzenia – Uniwersytet Ekonomiczny we Wrocławiu z siedzibą we Wrocławiu przy ul. Komandorskiej 118/120;",
-          "Grupa Projektowa – zespół organizacyjny Dni Adaptacyjnych 2026 działający z upoważnienia Organizatora i odpowiedzialny za bieżącą organizację oraz prawidłowy przebieg Wydarzenia;",
-          "Uczestnik – osoba fizyczna, będąca studentem Uniwersytetu Ekonomicznego we Wrocławiu, przebywająca na terenie Wydarzenia, z wyłączeniem pracowników obiektu oraz członków Grupy Projektowej;",
-          "Impreza – Wydarzenie towarzyszące pod nazwą „UE Party x Dni Adaptacyjne”, odbywające się poza terenem Uczelni w ramach Wydarzenia.",
+          "Regulamin - niniejszy dokument stanowiący wzorzec umowny w rozumieniu art. 384 Kodeksu cywilnego;",
+          "Wydarzenie - Wydarzenie pod nazwą „Dni Adaptacyjne 2026”, realizowane w dniach 1-3.10.2026 r. na terenie Uniwersytetu Ekonomicznego we Wrocławiu;",
+          "Organizator - Uniwersytet Ekonomiczny we Wrocławiu z siedzibą we Wrocławiu przy ul. Komandorskiej 118/120, 53-345 Wrocław, NIP: 896-000-69-97, REGON: 000001497, w imieniu i na rzecz którego czynności operacyjne podejmuje Samorząd Studentów UEW;",
+          "Miejsce Wydarzenia - Uniwersytet Ekonomiczny we Wrocławiu z siedzibą we Wrocławiu przy ul. Komandorskiej 118/120;",
+          "Grupa Projektowa - zespół organizacyjny Dni Adaptacyjnych 2026 działający z upoważnienia Organizatora i odpowiedzialny za bieżącą organizację oraz prawidłowy przebieg Wydarzenia;",
+          "Uczestnik - osoba fizyczna, będąca studentem Uniwersytetu Ekonomicznego we Wrocławiu, przebywająca na terenie Wydarzenia, z wyłączeniem pracowników obiektu oraz członków Grupy Projektowej;",
+          "Impreza - Wydarzenie towarzyszące pod nazwą „UE Party x Dni Adaptacyjne”, odbywające się poza terenem Uczelni w ramach Wydarzenia.",
         ],
       },
     ],
@@ -96,7 +96,7 @@ const PARAGRAFY: Paragraf[] = [
     ],
     items: [
       {
-        t: "Studia stacjonarne I stopnia (1–2 października)",
+        t: "Studia stacjonarne I stopnia (1-2 października)",
         sub: [
           "Dzień 1 (czwartek, 1 października): Dzień wprowadzający i integracyjny na kampusie. W programie m.in. „Droga przez kampus” (zapoznanie z najważniejszymi budynkami), zapoznanie ze stoiskami organizacji studenckich i kół naukowych oraz integracja na obszarze Zaprzegubia.",
           "Dzień 2 (piątek, 2 października): Dzień merytoryczny. Obejmuje obowiązkowe prelekcje dotyczące praw i obowiązków studenta oraz zasad studiowania na Uczelni.",
@@ -212,7 +212,7 @@ const PARAGRAFY: Paragraf[] = [
         t: "Jeżeli podstawą przetwarzania danych osobowych w postaci wizerunku jest zgoda Uczestnika, Uczestnik ma prawo cofnąć zgodę w dowolnym momencie pisząc na adres dni.adaptacyjne@samorzad.ue.wroc.pl lub iod@ue.wroc.pl, przy czym cofnięcie zgody nie wpływa na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem. W odniesieniu do materiałów już opublikowanych cofnięcie zgody może wymagać oceny technicznych, organizacyjnych i prawnych możliwości ich usunięcia lub ograniczenia dalszego rozpowszechniania.",
       },
       {
-        t: "Podczas trwania prelekcji Dni Adaptacyjnych obowiązuje zakaz filmowania i fotografowania przez Uczestników, chyba że Organizator wyraźnie i publicznie zezwoli na taką aktywność. Naruszenie tego zakazu może skutkować zobowiązaniem Uczestnika do zaprzestania naruszeń, usunięcia nagrania lub zdjęcia, a w przypadku naruszeń rażących albo uporczywych – zobowiązaniem do opuszczenia Wydarzenia.",
+        t: "Podczas trwania prelekcji Dni Adaptacyjnych obowiązuje zakaz filmowania i fotografowania przez Uczestników, chyba że Organizator wyraźnie i publicznie zezwoli na taką aktywność. Naruszenie tego zakazu może skutkować zobowiązaniem Uczestnika do zaprzestania naruszeń, usunięcia nagrania lub zdjęcia, a w przypadku naruszeń rażących albo uporczywych - zobowiązaniem do opuszczenia Wydarzenia.",
       },
     ],
   },
@@ -234,33 +234,33 @@ const PARAGRAFY: Paragraf[] = [
       {
         t: "Dane osobowe Uczestników przetwarzane są w następujących celach i na następujących podstawach prawnych:",
         sub: [
-          "zawarcie i wykonanie umowy o udział w Wydarzeniu — art. 6 ust. 1 lit. b RODO;",
-          "realizacja obowiązków prawnych ciążących na Administratorze, w szczególności obowiązków rachunkowych, podatkowych, dokumentacyjnych lub archiwalnych — art. 6 ust. 1 lit. c RODO;",
-          "realizacja prawnie uzasadnionych interesów Administratora, w tym zapewnienie bezpieczeństwa i porządku Wydarzenia, dochodzenie roszczeń lub obrona przed roszczeniami — art. 6 ust. 1 lit. f RODO;",
-          "dokumentacja i promocja Organizatora, w zakresie indywidualnego wykorzystania wizerunku Uczestnika, jeżeli wymagana jest zgoda — art. 6 ust. 1 lit. a RODO.",
+          "zawarcie i wykonanie umowy o udział w Wydarzeniu - art. 6 ust. 1 lit. b RODO;",
+          "realizacja obowiązków prawnych ciążących na Administratorze, w szczególności obowiązków rachunkowych, podatkowych, dokumentacyjnych lub archiwalnych - art. 6 ust. 1 lit. c RODO;",
+          "realizacja prawnie uzasadnionych interesów Administratora, w tym zapewnienie bezpieczeństwa i porządku Wydarzenia, dochodzenie roszczeń lub obrona przed roszczeniami - art. 6 ust. 1 lit. f RODO;",
+          "dokumentacja i promocja Organizatora, w zakresie indywidualnego wykorzystania wizerunku Uczestnika, jeżeli wymagana jest zgoda - art. 6 ust. 1 lit. a RODO.",
         ],
       },
       {
         t: "Dane osobowe Uczestników mogą być udostępniane:",
         sub: [
-          "podmiotom przetwarzającym dane w imieniu Administratora, w szczególności dostawcom usług IT, operatorom formularzy, podmiotom obsługującym komunikację, ubezpieczycielom, podmiotom świadczącym usługi organizacyjne lub techniczne — wyłącznie w zakresie niezbędnym i na podstawie właściwych podstaw prawnych;",
-          "organom publicznym — wyłącznie na podstawie bezwzględnie obowiązujących przepisów prawa;",
-          "innym podmiotom zaangażowanym w organizację Wydarzenia — wyłącznie wtedy, gdy jest to niezbędne do realizacji Wydarzenia i istnieje właściwa podstawa prawna.",
+          "podmiotom przetwarzającym dane w imieniu Administratora, w szczególności dostawcom usług IT, operatorom formularzy, podmiotom obsługującym komunikację, ubezpieczycielom, podmiotom świadczącym usługi organizacyjne lub techniczne - wyłącznie w zakresie niezbędnym i na podstawie właściwych podstaw prawnych;",
+          "organom publicznym - wyłącznie na podstawie bezwzględnie obowiązujących przepisów prawa;",
+          "innym podmiotom zaangażowanym w organizację Wydarzenia - wyłącznie wtedy, gdy jest to niezbędne do realizacji Wydarzenia i istnieje właściwa podstawa prawna.",
         ],
       },
       {
         t: "Dane osobowe przechowywane są przez następujące okresy:",
         sub: [
-          "dane związane z wykonaniem umowy — przez czas trwania umowy, a następnie przez okres przedawnienia ewentualnych roszczeń;",
-          "dane do celów archiwalnych — zgodnie z obowiązującymi przepisami prawa i regulacjami wewnętrznymi Administratora;",
-          "dane przetwarzane na podstawie zgody — do czasu cofnięcia zgody, chyba że istnieje inna podstawa dalszego przetwarzania.",
+          "dane związane z wykonaniem umowy - przez czas trwania umowy, a następnie przez okres przedawnienia ewentualnych roszczeń;",
+          "dane do celów archiwalnych - zgodnie z obowiązującymi przepisami prawa i regulacjami wewnętrznymi Administratora;",
+          "dane przetwarzane na podstawie zgody - do czasu cofnięcia zgody, chyba że istnieje inna podstawa dalszego przetwarzania.",
         ],
       },
       {
         t: "Uczestnikowi przysługują następujące prawa w zakresie ochrony danych osobowych: prawo dostępu do danych, prawo do sprostowania danych, prawo do usunięcia danych w zakresie dopuszczonym przepisami RODO, prawo do ograniczenia przetwarzania, prawo do przenoszenia danych, prawo do sprzeciwu, jeżeli przetwarzanie odbywa się na podstawie prawnie uzasadnionego interesu, oraz prawo do cofnięcia zgody w dowolnym momencie bez wpływu na zgodność z prawem przetwarzania dokonanego przed jej cofnięciem.",
       },
       {
-        t: "W przypadku naruszenia przepisów o ochronie danych osobowych Uczestnik ma prawo wniesienia skargi do organu nadzorczego — Prezesa Urzędu Ochrony Danych Osobowych.",
+        t: "W przypadku naruszenia przepisów o ochronie danych osobowych Uczestnik ma prawo wniesienia skargi do organu nadzorczego - Prezesa Urzędu Ochrony Danych Osobowych.",
       },
       {
         t: "Podanie danych osobowych jest dobrowolne, lecz niezbędne do uczestnictwa w Wydarzeniu oraz uzyskania obecności w zakresie danych koniecznych do organizacji Wydarzenia. Odmowa podania tych danych uniemożliwia uzyskanie obecności za dni Wydarzenia.",
@@ -298,7 +298,7 @@ const PARAGRAFY: Paragraf[] = [
 const ZALACZNIK = {
   h: "Załącznik nr 1 do Regulaminu Wydarzenia Dni Adaptacyjne 2026",
   p: [
-    "Uczestników Imprezy obowiązuje Regulamin cyklicznej imprezy UE Party, dostępny pod adresem: https://drive.google.com/file/d/1kCgO_sKcKx3cmNeRj4LGZMsp_oo-Bvmn/view?usp=drive_link",
+    "Uczestników Imprezy obowiązuje Regulamin cyklicznej imprezy UE Party, dostępny pod adresem: https://drive.google.com/file/d/1cyO-cfO7wQ2_D1PsvPSfW9xEoQqFQhw4/view?usp=sharing",
     "Regulamin Imprezy stanowi integralną część Regulaminu Wydarzenia.",
   ],
 };
@@ -351,7 +351,7 @@ export default async function RulesPage({ params }: Props) {
           Regulamin wydarzenia „Dni Adaptacyjne 2026”
         </h2>
         <p className="mt-1 text-sm text-ink-soft">
-          Uniwersytet Ekonomiczny we Wrocławiu · 1–3 października 2026 r.
+          Uniwersytet Ekonomiczny we Wrocławiu · 1-3 października 2026 r.
         </p>
       </div>
 

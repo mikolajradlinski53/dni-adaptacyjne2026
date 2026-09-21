@@ -102,7 +102,7 @@ export default async function Footer() {
         >
           {t("nav.privacy")}
         </Link>
-        {/* Dyskretny, widoczny credit autorstwa — Mikołaj Radliński */}
+        {/* Dyskretny, widoczny credit autorstwa - Mikołaj Radliński */}
         <span className="ml-2 text-[10px] text-ink-soft/35">
           · Made by Mikołaj Radliński
         </span>

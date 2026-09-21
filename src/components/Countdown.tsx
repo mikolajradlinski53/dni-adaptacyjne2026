@@ -45,17 +45,17 @@ export default function Countdown({ labels }: { labels: Labels }) {
   }
 
   const segments = [
-    { value: time === "pending" ? "––" : String(time.d), label: labels.days },
+    { value: time === "pending" ? "--" : String(time.d), label: labels.days },
     {
-      value: time === "pending" ? "––" : String(time.h).padStart(2, "0"),
+      value: time === "pending" ? "--" : String(time.h).padStart(2, "0"),
       label: labels.hours,
     },
     {
-      value: time === "pending" ? "––" : String(time.m).padStart(2, "0"),
+      value: time === "pending" ? "--" : String(time.m).padStart(2, "0"),
       label: labels.minutes,
     },
     {
-      value: time === "pending" ? "––" : String(time.s).padStart(2, "0"),
+      value: time === "pending" ? "--" : String(time.s).padStart(2, "0"),
       label: labels.seconds,
     },
   ];

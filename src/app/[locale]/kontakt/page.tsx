@@ -129,6 +129,15 @@ export default async function ContactPage({ params }: Props) {
             <p className="mt-1.5 text-sm text-ink-soft sm:text-base">
               {t("contact.teamRoleBody")}
             </p>
+            <div className="mt-4 overflow-hidden rounded-2xl bg-surface p-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/web/koszulka_team.webp"
+                alt="Różowa koszulka organizatora Dni Adaptacyjnych z napisem Organizator"
+                loading="lazy"
+                className="w-full"
+              />
+            </div>
           </div>
           <div className="rounded-tile bg-blue-soft p-6 sm:p-7">
             <TShirt size={30} weight="duotone" className="text-blue" />
@@ -138,6 +147,15 @@ export default async function ContactPage({ params }: Props) {
             <p className="mt-1.5 text-sm text-ink-soft sm:text-base">
               {t("contact.volunteersBody")}
             </p>
+            <div className="mt-4 overflow-hidden rounded-2xl bg-surface p-3">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/images/web/koszulka_wolo.webp"
+                alt="Biała koszulka wolontariusza Dni Adaptacyjnych z napisem Wolontariusz"
+                loading="lazy"
+                className="w-full"
+              />
+            </div>
           </div>
         </div>
         <p className="mt-5 text-sm text-ink-soft">{t("contact.outfitNote")}</p>

@@ -139,7 +139,6 @@ export default async function PartnersPage({ params }: Props) {
           <div className="mt-8">
             <PartnersShowcase
               partners={partners}
-              comingSoon={t("partners.comingSoon")}
               visitSite={t("partners.visitSite")}
             />
           </div>

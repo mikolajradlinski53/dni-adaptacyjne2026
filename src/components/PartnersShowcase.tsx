@@ -6,17 +6,14 @@ import type { Partner } from "@/lib/content";
 
 export default function PartnersShowcase({
   partners,
-  comingSoon,
   visitSite,
 }: {
   partners: Partner[];
-  comingSoon: string;
   visitSite: string;
 }) {
   const reduce = useReducedMotion();
   const strategic = partners.filter((p) => p.tier === "strategic");
   const regular = partners.filter((p) => p.tier !== "strategic");
-  const placeholderCount = Math.max(0, 8 - regular.length);
 
   // Delikatne „skakanie" kafli - różne fazy, żeby ruszały się niezależnie.
   const bob = (i: number) =>
@@ -76,45 +73,36 @@ export default function PartnersShowcase({
         </div>
       ))}
 
-      {/* Pozostali partnerzy + sloty „wkrótce" */}
-      <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
-        {regular.map((p, i) => (
-          <motion.a
-            key={p.name}
-            href={p.href ?? "#"}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={p.name}
-            title={p.desc ?? p.name}
-            {...bob(i)}
-            className="group flex aspect-[3/2] items-center justify-center rounded-tile border border-line bg-surface p-6 transition-all hover:border-violet hover:shadow-md"
-          >
-            {p.logo ? (
-              // eslint-disable-next-line @next/next/no-img-element
-              <img
-                src={p.logo}
-                alt={p.name}
-                className="max-h-10 w-auto max-w-[80%] object-contain transition-transform group-hover:scale-105"
-              />
-            ) : (
-              <span className="text-center font-semibold text-ink">{p.name}</span>
-            )}
-          </motion.a>
-        ))}
-
-        {Array.from({ length: placeholderCount }).map((_, i) => (
-          <motion.div
-            key={`ph-${i}`}
-            {...bob(regular.length + i)}
-            className="shimmer flex aspect-[3/2] flex-col items-center justify-center gap-2 rounded-tile border border-dashed border-line bg-surface"
-          >
-            <span className="grad-brand size-8 rounded-full opacity-25" />
-            <span className="text-xs font-medium text-ink-soft/70">
-              {comingSoon}
-            </span>
-          </motion.div>
-        ))}
-      </div>
+      {/* Pozostali partnerzy (bez pustych slotów „wkrótce") */}
+      {regular.length > 0 ? (
+        <div className="grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          {regular.map((p, i) => (
+            <motion.a
+              key={p.name}
+              href={p.href ?? "#"}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={p.name}
+              title={p.desc ?? p.name}
+              {...bob(i)}
+              className="group flex aspect-[3/2] items-center justify-center rounded-tile border border-line bg-surface p-6 transition-all hover:border-violet hover:shadow-md"
+            >
+              {p.logo ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={p.logo}
+                  alt={p.name}
+                  className="max-h-10 w-auto max-w-[80%] object-contain transition-transform group-hover:scale-105"
+                />
+              ) : (
+                <span className="text-center font-semibold text-ink">
+                  {p.name}
+                </span>
+              )}
+            </motion.a>
+          ))}
+        </div>
+      ) : null}
     </div>
   );
 }

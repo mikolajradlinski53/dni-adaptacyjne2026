@@ -8,6 +8,7 @@ import { SITE_URL, OG_IMAGE } from "@/lib/seo";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingBackground from "@/components/FloatingBackground";
+import BreadcrumbsJsonLd from "@/components/BreadcrumbsJsonLd";
 import { StudyModeProvider } from "@/components/StudyModeContext";
 
 import "@fontsource-variable/inter";
@@ -175,6 +176,7 @@ export default async function LocaleLayout({
         </span>
         <FloatingBackground />
         <NextIntlClientProvider>
+          <BreadcrumbsJsonLd />
           <StudyModeProvider>
             <Header entries={searchEntries} />
             <main>{children}</main>

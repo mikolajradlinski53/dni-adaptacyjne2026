@@ -22,10 +22,20 @@ import Reveal, { Stagger, RevealItem } from "@/components/Reveal";
 
 type Props = { params: Promise<{ locale: Locale }> };
 
+// Pełna nazwa uczelni do tytułu strony głównej (fraza brandowa w Google).
+const UCZELNIA: Record<Locale, string> = {
+  pl: "Uniwersytet Ekonomiczny we Wrocławiu",
+  en: "Wroclaw University of Economics and Business",
+  uk: "Вроцлавський економічний університет",
+};
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
   const t = await getTranslations({ locale, namespace: "meta" });
-  return pageMetadata(locale, "", t("siteName"), t("description"), t("siteName"));
+  const md = pageMetadata(locale, "", t("siteName"), t("description"), t("siteName"));
+  // Tytuł absolutny (bez szablonu) - celuje we frazę „Dni Adaptacyjne UEW".
+  md.title = { absolute: `${t("siteName")} - ${UCZELNIA[locale]}` };
+  return md;
 }
 
 export default async function HomePage({ params }: Props) {

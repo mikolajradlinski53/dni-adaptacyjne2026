@@ -63,7 +63,8 @@ Dla II stopnia piątek to zwykły dzień zajęć (bez zmian względem obecnej st
 
 ### Piątek 2.10 · wszyscy (I i II stopień, także chętni niestacjonarni) (str. 5)
 
-- UE Party x DA w klubie Jamaica, od 22:00. Adres na razie nieznany (pole opcjonalne).
+- UE Party x DA w klubie Jamaica (ul. Ruska 51B, 50-079 Wrocław), od 22:00.
+  Adres z linkiem do Google Maps.
 
 ### Sobota 3.10 · niestacjonarne · transmisje na YouTube (str. 6)
 
@@ -94,7 +95,10 @@ Na II stopniu nie ma grup: kierunek wyznacza salę.
 
 ### Sale → budynki na mapie (`/images/web/mapa.webp`)
 
-`CKU` → CKU · `A` → A · `Z` → Z · `W` → W · `E` → E · `1 P` → P1 · `1+2 P` → P1+P2 · `3 P` → P3.
+Format sali: „numer + budynek”, np. `113 Z` = sala 113 w budynku Z, `1 P` = sala 1
+w budynku P, `1+2 P` = sale 1 i 2 w budynku P.
+
+`CKU` → CKU · `A` → A · `Z` → Z · `W` → W · `E` → E · `P` → cały zespół P (P, P1, P2, P3 na mapie).
 
 ## Architektura
 
@@ -158,4 +162,4 @@ Na II stopniu nie ma grup: kierunek wyznacza salę.
 ## Poza zakresem
 
 - Rozkład dla zaocznych poza 4 slotami YT (dojdzie, gdy przyjdą dane).
-- Adres klubu Jamaica, konkretne atrakcje i nazwa DJ-a (pola opcjonalne do uzupełnienia).
+- Konkretne atrakcje i nazwa DJ-a (pola opcjonalne do uzupełnienia).

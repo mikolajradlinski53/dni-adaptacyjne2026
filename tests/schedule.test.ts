@@ -1,0 +1,122 @@
+import { test } from "node:test";
+import assert from "node:assert/strict";
+import { readFileSync } from "node:fs";
+import {
+  buildPlan,
+  buildingOf,
+  findLectureRoom,
+  findTour,
+  sanitizePicks,
+  validateScheduleData,
+  validateLabels,
+  type ScheduleData,
+  type ScheduleLabels,
+} from "../src/lib/schedule.ts";
+import { CAMPUS_BUILDINGS } from "../src/lib/campusMap.ts";
+
+const json = (p: string) =>
+  JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), "utf8"));
+
+const data: ScheduleData = json("content/schedule-data.json");
+
+test("dane harmonogramu są spójne", () => {
+  assert.deepEqual(
+    validateScheduleData(data, Object.keys(CAMPUS_BUILDINGS)),
+    []
+  );
+});
+
+for (const locale of ["pl", "en", "uk"]) {
+  test(`etykiety ${locale} są kompletne`, () => {
+    const labels: ScheduleLabels = json(`content/${locale}/schedule-labels.json`);
+    assert.deepEqual(validateLabels(data, labels), []);
+  });
+}
+
+test("findTour: sala i godzina zbiórki", () => {
+  assert.deepEqual(findTour(data, "FIR", 5), { tour: 1, time: "9:00", room: "106 A" });
+  assert.deepEqual(findTour(data, "ZIIP", 10), { tour: 3, time: "13:00", room: "1 E" });
+  assert.deepEqual(findTour(data, "MA", 1), { tour: 4, time: "15:00", room: "2 E" });
+  assert.equal(findTour(data, "FIR", 9), null);
+});
+
+test("findLectureRoom: sala prelekcji", () => {
+  assert.equal(findLectureRoom(data, 1, "Z", 6), "214 A");
+  assert.equal(findLectureRoom(data, 1, "Z", 2), "1+2 P");
+  assert.equal(findLectureRoom(data, 1, "Z"), null);
+  assert.equal(findLectureRoom(data, 1, "BI"), "3 P");
+  assert.equal(findLectureRoom(data, 2, "CTR"), "1 CKU");
+  assert.equal(findLectureRoom(data, 2, "NGP"), "401 E");
+});
+
+test("buildingOf: budynek z nazwy sali", () => {
+  assert.equal(buildingOf("1+2 P"), "P");
+  assert.equal(buildingOf("111 CKU"), "CKU");
+  assert.equal(buildingOf("113 Z"), "Z");
+});
+
+test("sanitizePicks odrzuca nieznane wartości", () => {
+  assert.deepEqual(sanitizePicks(data, "full1", { program: "XYZ", group: 2 }), {});
+  assert.deepEqual(sanitizePicks(data, "full1", { program: "FIR", group: 99 }), { program: "FIR" });
+  assert.deepEqual(sanitizePicks(data, "full1", { program: "EKOB" }), { program: "EKOB", group: 1 });
+  assert.deepEqual(sanitizePicks(data, "full2", { program: "CTR", group: 3 }), { program: "CTR" });
+  assert.deepEqual(sanitizePicks(data, "full2", { program: "ZIIP" }), {});
+  assert.deepEqual(sanitizePicks(data, "part", { online: { level: 2, lang: "en" } }), {
+    online: { level: 2, lang: "en" },
+  });
+  assert.deepEqual(sanitizePicks(data, "part", { online: { level: 3, lang: "en" } }), {});
+  assert.deepEqual(sanitizePicks(data, "full1", null), {});
+});
+
+const ids = (day: { items: { id: string }[] }) => day.items.map((i) => i.id);
+
+test("buildPlan full1 bez wyboru: ogólny plan", () => {
+  const plan = buildPlan(data, "full1", {});
+  assert.deepEqual(plan.map((d) => d.date), ["2026-10-01", "2026-10-02"]);
+  const tour = plan[0].items[0];
+  assert.equal(tour.id, "tour");
+  assert.equal(tour.room, undefined);
+  assert.equal(tour.needs, "program");
+});
+
+test("buildPlan full1 FIR 5", () => {
+  const plan = buildPlan(data, "full1", { program: "FIR", group: 5 });
+  assert.deepEqual(ids(plan[0]), ["tour", "stands", "attractions", "after"]);
+  assert.equal(plan[0].items[0].room, "106 A");
+  assert.equal(plan[0].items[0].from, "9:00");
+  assert.equal(plan[0].items[0].tour, 1);
+  assert.deepEqual(ids(plan[1]), ["lecture", "party"]);
+  assert.equal(plan[1].items[0].room, "1 CKU");
+});
+
+test("buildPlan full1 AG 2: tura o 15:00 ląduje po standach", () => {
+  const plan = buildPlan(data, "full1", { program: "AG", group: 2 });
+  assert.deepEqual(ids(plan[0]), ["stands", "attractions", "tour", "after"]);
+});
+
+test("buildPlan full1 Z bez grupy: potrzebna grupa", () => {
+  const plan = buildPlan(data, "full1", { program: "Z" });
+  assert.equal(plan[0].items[0].needs, "group");
+  assert.equal(plan[1].items[0].needs, "group");
+  const fir = buildPlan(data, "full1", { program: "FIR" });
+  assert.equal(fir[1].items[0].room, "1 CKU");
+  assert.equal(fir[1].items[0].needs, undefined);
+});
+
+test("buildPlan full2 CTR", () => {
+  const plan = buildPlan(data, "full2", { program: "CTR" });
+  assert.deepEqual(ids(plan[0]), ["lecture", "stands", "attractions", "after"]);
+  assert.equal(plan[0].items[0].room, "1 CKU");
+  assert.deepEqual(ids(plan[1]), ["classes", "party"]);
+});
+
+test("buildPlan part II st. ANG", () => {
+  const plan = buildPlan(data, "part", { online: { level: 2, lang: "en" } });
+  assert.deepEqual(plan.map((d) => d.date), ["2026-10-02", "2026-10-03"]);
+  const slots = plan[1].items;
+  assert.equal(slots.length, 4);
+  assert.deepEqual(
+    slots.filter((s) => s.online?.active).map((s) => s.from),
+    ["15:50"]
+  );
+});

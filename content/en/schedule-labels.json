@@ -1,0 +1,65 @@
+{
+  "days": {
+    "2026-10-01": "Thursday, 1 October",
+    "2026-10-02": "Friday, 2 October",
+    "2026-10-03": "Saturday, 3 October · online"
+  },
+  "programs": {
+    "AG": "Economic Analytics",
+    "BI": "Business Informatics",
+    "BM": "Business Management",
+    "CTR": "Controlling",
+    "E": "Economics",
+    "E-B": "E-business",
+    "EKOB": "Ecobusiness",
+    "F": "Finance",
+    "FIR": "Finance and Accounting",
+    "IB": "International Business",
+    "IWB": "Business Informatics (taught in Polish)",
+    "IWZP": "IT in Production Management",
+    "KS": "Social Communication",
+    "L": "Logistics",
+    "MA": "Management Accounting",
+    "MSG": "International Economic Relations",
+    "NGP": "Real Estate and Spatial Economy",
+    "RP": "Accounting and Taxes",
+    "Z": "Management",
+    "ZIIP": "Management and Production Engineering",
+    "ZP": "Project Management"
+  },
+  "items": {
+    "tour": {
+      "title": "Campus walk",
+      "desc": "Meet in the room, then head out with a volunteer for a walk around campus: buildings, dean's offices, the library."
+    },
+    "lecture": {
+      "title": "Talks: student rights and duties",
+      "desc": "A compulsory meeting on student rights and duties and the rules of studying."
+    },
+    "stands": {
+      "title": "Student organisations and science clubs",
+      "desc": "Meet UEW's student organisations and science clubs."
+    },
+    "attractions": {
+      "title": "Attractions at Zaprzegubie",
+      "desc": "A shared integration for all first-year Bachelor's and Master's students."
+    },
+    "after": {
+      "title": "After-party at Zaprzegubie",
+      "desc": "A DJ closes the day - stay with us!"
+    },
+    "classes": {
+      "title": "Classes as scheduled",
+      "desc": "For Master's students Friday is a regular day of classes - attend them according to your timetable."
+    },
+    "party": {
+      "title": "UE Party x DA",
+      "desc": "An evening party for all first-year students, Bachelor's and Master's.",
+      "descPart": "You are also welcome to join UE Party x DA together with the other first-year students."
+    },
+    "online": {
+      "title": "YouTube broadcast",
+      "desc": "Key information on student rights and duties and the organisation of part-time studies."
+    }
+  }
+}

@@ -1,0 +1,228 @@
+{
+  "programs": [
+    { "code": "FIR", "level": 1, "groups": 8 },
+    { "code": "KS", "level": 1, "groups": 3 },
+    { "code": "IWB", "level": 1, "groups": 3 },
+    { "code": "F", "level": 1, "groups": 2 },
+    { "code": "Z", "level": 1, "groups": 7 },
+    { "code": "IWZP", "level": 1, "groups": 2 },
+    { "code": "EKOB", "level": 1, "groups": 1 },
+    { "code": "L", "level": 1, "groups": 2 },
+    { "code": "MSG", "level": 1, "groups": 2 },
+    { "code": "BM", "level": 1, "groups": 2 },
+    { "code": "E", "level": 1, "groups": 4 },
+    { "code": "ZIIP", "level": 1, "groups": 10 },
+    { "code": "IB", "level": 1, "groups": 2 },
+    { "code": "AG", "level": 1, "groups": 3 },
+    { "code": "NGP", "level": 1, "groups": 2 },
+    { "code": "RP", "level": 1, "groups": 3 },
+    { "code": "ZP", "level": 1, "groups": 3 },
+    { "code": "E-B", "level": 1, "groups": 2 },
+    { "code": "BI", "level": 1, "groups": 1 },
+    { "code": "MA", "level": 1, "groups": 1 },
+
+    { "code": "AG", "level": 2 },
+    { "code": "CTR", "level": 2 },
+    { "code": "E", "level": 2 },
+    { "code": "FIR", "level": 2 },
+    { "code": "RP", "level": 2 },
+    { "code": "Z", "level": 2 },
+    { "code": "BM", "level": 2 },
+    { "code": "F", "level": 2 },
+    { "code": "IWB", "level": 2 },
+    { "code": "KS", "level": 2 },
+    { "code": "L", "level": 2 },
+    { "code": "MSG", "level": 2 },
+    { "code": "NGP", "level": 2 }
+  ],
+
+  "tours": {
+    "date": "2026-10-01",
+    "rounds": [
+      {
+        "tour": 1,
+        "time": "9:00",
+        "slots": [
+          { "room": "111 CKU", "program": "FIR", "group": 1 },
+          { "room": "108 CKU", "program": "FIR", "group": 2 },
+          { "room": "102 CKU", "program": "FIR", "group": 3 },
+          { "room": "103 CKU", "program": "FIR", "group": 4 },
+          { "room": "106 A", "program": "FIR", "group": 5 },
+          { "room": "11 A", "program": "FIR", "group": 6 },
+          { "room": "113 Z", "program": "FIR", "group": 7 },
+          { "room": "113 Z", "program": "FIR", "group": 8 },
+          { "room": "4 W", "program": "KS", "group": 1 },
+          { "room": "1 P", "program": "KS", "group": 2 },
+          { "room": "1 P", "program": "KS", "group": 3 },
+          { "room": "1 E", "program": "IWB", "group": 1 },
+          { "room": "1 E", "program": "IWB", "group": 2 },
+          { "room": "1 E", "program": "IWB", "group": 3 },
+          { "room": "2 E", "program": "F", "group": 1 },
+          { "room": "2 E", "program": "F", "group": 2 }
+        ]
+      },
+      {
+        "tour": 2,
+        "time": "11:00",
+        "slots": [
+          { "room": "111 CKU", "program": "Z", "group": 1 },
+          { "room": "108 CKU", "program": "Z", "group": 2 },
+          { "room": "102 CKU", "program": "Z", "group": 3 },
+          { "room": "103 CKU", "program": "Z", "group": 4 },
+          { "room": "106 A", "program": "Z", "group": 5 },
+          { "room": "113 Z", "program": "Z", "group": 6 },
+          { "room": "113 Z", "program": "Z", "group": 7 },
+          { "room": "1 P", "program": "IWZP", "group": 1 },
+          { "room": "1 P", "program": "IWZP", "group": 2 },
+          { "room": "11 A", "program": "EKOB", "group": 1 },
+          { "room": "4 W", "program": "L", "group": 1 },
+          { "room": "4 W", "program": "L", "group": 2 },
+          { "room": "1 E", "program": "MSG", "group": 1 },
+          { "room": "1 E", "program": "MSG", "group": 2 },
+          { "room": "2 E", "program": "BM", "group": 1 },
+          { "room": "2 E", "program": "BM", "group": 2 }
+        ]
+      },
+      {
+        "tour": 3,
+        "time": "13:00",
+        "slots": [
+          { "room": "111 CKU", "program": "E", "group": 1 },
+          { "room": "108 CKU", "program": "E", "group": 2 },
+          { "room": "102 CKU", "program": "E", "group": 3 },
+          { "room": "103 CKU", "program": "E", "group": 4 },
+          { "room": "106 A", "program": "ZIIP", "group": 1 },
+          { "room": "11 A", "program": "ZIIP", "group": 2 },
+          { "room": "113 Z", "program": "ZIIP", "group": 3 },
+          { "room": "113 Z", "program": "ZIIP", "group": 4 },
+          { "room": "4 W", "program": "ZIIP", "group": 5 },
+          { "room": "1 P", "program": "ZIIP", "group": 6 },
+          { "room": "1 P", "program": "ZIIP", "group": 7 },
+          { "room": "1 E", "program": "ZIIP", "group": 8 },
+          { "room": "1 E", "program": "ZIIP", "group": 9 },
+          { "room": "1 E", "program": "ZIIP", "group": 10 },
+          { "room": "2 E", "program": "IB", "group": 1 },
+          { "room": "2 E", "program": "IB", "group": 2 }
+        ]
+      },
+      {
+        "tour": 4,
+        "time": "15:00",
+        "slots": [
+          { "room": "111 CKU", "program": "AG", "group": 1 },
+          { "room": "108 CKU", "program": "AG", "group": 2 },
+          { "room": "102 CKU", "program": "AG", "group": 3 },
+          { "room": "103 CKU", "program": "NGP", "group": 1 },
+          { "room": "106 A", "program": "NGP", "group": 2 },
+          { "room": "11 A", "program": "RP", "group": 1 },
+          { "room": "113 Z", "program": "RP", "group": 2 },
+          { "room": "113 Z", "program": "RP", "group": 3 },
+          { "room": "1 P", "program": "ZP", "group": 1 },
+          { "room": "4 W", "program": "ZP", "group": 2 },
+          { "room": "4 W", "program": "ZP", "group": 3 },
+          { "room": "1 E", "program": "E-B", "group": 1 },
+          { "room": "1 E", "program": "E-B", "group": 2 },
+          { "room": "2 E", "program": "BI", "group": 1 },
+          { "room": "2 E", "program": "MA", "group": 1 }
+        ]
+      }
+    ]
+  },
+
+  "lectures": [
+    {
+      "level": 2,
+      "date": "2026-10-01",
+      "time": "9:00",
+      "rooms": [
+        {
+          "room": "1 CKU",
+          "programs": [
+            { "code": "AG" },
+            { "code": "CTR" },
+            { "code": "E" },
+            { "code": "FIR" },
+            { "code": "RP" },
+            { "code": "Z" }
+          ]
+        },
+        { "room": "10 A", "programs": [{ "code": "BM" }, { "code": "F" }] },
+        {
+          "room": "214 A",
+          "programs": [
+            { "code": "IWB" },
+            { "code": "KS" },
+            { "code": "L" },
+            { "code": "MSG" }
+          ]
+        },
+        { "room": "401 E", "programs": [{ "code": "NGP" }] }
+      ]
+    },
+    {
+      "level": 1,
+      "date": "2026-10-02",
+      "time": "9:00",
+      "rooms": [
+        {
+          "room": "1 CKU",
+          "programs": [{ "code": "FIR" }, { "code": "MSG" }, { "code": "RP" }]
+        },
+        { "room": "106 A", "programs": [{ "code": "AG" }, { "code": "NGP" }] },
+        { "room": "307 A", "programs": [{ "code": "E-B" }] },
+        {
+          "room": "214 A",
+          "programs": [
+            { "code": "EKOB" },
+            { "code": "IWZP" },
+            { "code": "Z", "groups": [5, 6, 7] },
+            { "code": "ZP" }
+          ]
+        },
+        { "room": "113 Z", "programs": [{ "code": "E" }, { "code": "L" }] },
+        { "room": "1 A", "programs": [{ "code": "IWB" }] },
+        { "room": "205 A", "programs": [{ "code": "KS" }] },
+        {
+          "room": "1+2 P",
+          "programs": [{ "code": "Z", "groups": [1, 2, 3, 4] }, { "code": "ZIIP" }]
+        },
+        {
+          "room": "3 P",
+          "programs": [
+            { "code": "BI" },
+            { "code": "BM" },
+            { "code": "F" },
+            { "code": "IB" },
+            { "code": "MA" }
+          ]
+        }
+      ]
+    }
+  ],
+
+  "general": [
+    { "id": "stands", "date": "2026-10-01", "from": "11:00", "to": "18:00", "modes": ["full1", "full2"] },
+    { "id": "attractions", "date": "2026-10-01", "from": "11:00", "to": "16:00", "modes": ["full1", "full2"] },
+    { "id": "after", "date": "2026-10-01", "from": "16:00", "to": "18:00", "modes": ["full1", "full2"] },
+    { "id": "classes", "date": "2026-10-02", "modes": ["full2"] },
+    {
+      "id": "party",
+      "date": "2026-10-02",
+      "from": "22:00",
+      "modes": ["full1", "full2", "part"],
+      "highlight": true,
+      "place": "Jamaica, ul. Ruska 51B, 50-079 Wrocław",
+      "href": "https://www.google.com/maps/search/?api=1&query=Jamaica+Ruska+51B+Wroc%C5%82aw"
+    }
+  ],
+
+  "online": {
+    "date": "2026-10-03",
+    "slots": [
+      { "level": 1, "lang": "pl", "time": "10:50" },
+      { "level": 2, "lang": "pl", "time": "12:30" },
+      { "level": 1, "lang": "en", "time": "14:10" },
+      { "level": 2, "lang": "en", "time": "15:50" }
+    ]
+  }
+}

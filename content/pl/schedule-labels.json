@@ -1,0 +1,65 @@
+{
+  "days": {
+    "2026-10-01": "Czwartek, 1 października",
+    "2026-10-02": "Piątek, 2 października",
+    "2026-10-03": "Sobota, 3 października · online"
+  },
+  "programs": {
+    "AG": "Analityka gospodarcza",
+    "BI": "Business Informatics",
+    "BM": "Business Management",
+    "CTR": "Controlling",
+    "E": "Ekonomia",
+    "E-B": "E-biznes",
+    "EKOB": "Ekobiznes",
+    "F": "Finance",
+    "FIR": "Finanse i rachunkowość",
+    "IB": "International Business",
+    "IWB": "Informatyka w biznesie",
+    "IWZP": "Informatyka w zarządzaniu produkcją",
+    "KS": "Komunikacja społeczna",
+    "L": "Logistyka",
+    "MA": "Management Accounting",
+    "MSG": "Międzynarodowe stosunki gospodarcze",
+    "NGP": "Nieruchomości i gospodarka przestrzenna",
+    "RP": "Rachunkowość i podatki",
+    "Z": "Zarządzanie",
+    "ZIIP": "Zarządzanie i inżynieria produkcji",
+    "ZP": "Zarządzanie projektami"
+  },
+  "items": {
+    "tour": {
+      "title": "Droga przez kampus",
+      "desc": "Zbiórka w sali, skąd z wolontariuszem ruszacie na spacer po kampusie: budynki, dziekanaty, biblioteka."
+    },
+    "lecture": {
+      "title": "Prelekcje: prawa i obowiązki studenta",
+      "desc": "Obowiązkowe spotkanie o prawach i obowiązkach studenta oraz zasadach studiowania."
+    },
+    "stands": {
+      "title": "Stoiska organizacji studenckich i kół naukowych",
+      "desc": "Poznajcie organizacje studenckie i koła naukowe UEW."
+    },
+    "attractions": {
+      "title": "Atrakcje na Zaprzegubiu",
+      "desc": "Wspólna integracja pierwszorocznych I i II stopnia."
+    },
+    "after": {
+      "title": "After na Zaprzegubiu",
+      "desc": "Na koniec dnia gra DJ - zostańcie z nami!"
+    },
+    "classes": {
+      "title": "Zajęcia według planu",
+      "desc": "Dla II stopnia piątek to zwykły dzień zajęć - bierzecie w nich udział zgodnie ze swoim planem."
+    },
+    "party": {
+      "title": "UE Party x DA",
+      "desc": "Wieczorna impreza dla wszystkich pierwszorocznych, I i II stopnia.",
+      "descPart": "Możecie też wpaść na UE Party x DA razem z pozostałymi pierwszorocznymi."
+    },
+    "online": {
+      "title": "Transmisja na YouTube",
+      "desc": "Najważniejsze informacje o prawach i obowiązkach studenta oraz organizacji studiów niestacjonarnych."
+    }
+  }
+}

@@ -16,11 +16,12 @@ export default function JustifiedGallery({ items }: { items: Item[] }) {
   const full = items.filter((x) => x.full);
 
   const enter = (i: number) => ({
-    initial: reduce ? false : { opacity: 0, y: 22 },
+    // ten sam stan początkowy na serwerze i kliencie (bez błędu hydratacji)
+    initial: { opacity: 0, y: 22 },
     whileInView: { opacity: 1, y: 0 },
     viewport: { once: true, margin: "-40px" },
     transition: {
-      duration: 0.45,
+      duration: reduce ? 0 : 0.45,
       delay: reduce ? 0 : i * 0.09,
       ease: [0.22, 1, 0.36, 1] as const,
     },

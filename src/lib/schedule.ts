@@ -235,8 +235,11 @@ export function buildPlan(
     });
   }
 
+  // chronologicznie; dla niestacjonarnych najpierw transmisja (główne wydarzenie),
+  // a piątkowa impreza jako dodatek pod spodem
+  const main = mode === "part" ? data.online.date : null;
   return [...items.entries()]
-    .sort(([a], [b]) => a.localeCompare(b))
+    .sort(([a], [b]) => (a === main ? -1 : b === main ? 1 : a.localeCompare(b)))
     .map(([date, list]) => ({
       date,
       // stabilne sortowanie: przy tej samej godzinie zostaje kolejność wstawiania

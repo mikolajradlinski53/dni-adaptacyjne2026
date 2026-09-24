@@ -128,8 +128,8 @@ w budynku P, `1+2 P` = sale 1 i 2 w budynku P.
 - `RoomButton` + `CampusMapDialog`: przycisk z nazwą sali otwiera dialog z mapą i nakładką
   SVG (prostokąty budynków w procentach obrazu). Dialog zamyka się Escape i klikiem w tło,
   a fokus wraca do przycisku.
-- `FullSchedule`: zwinięta sekcja (`<details>`). Tabela tur jak w PDF-ie na `sm+`, lista
-  per tura na telefonie, do tego tabele sal z prelekcji. Wybrany kierunek i grupa są
+- `FullSchedule`: zwinięta sekcja (`<details>`). Tury jako siatka kafelków „FIR 5 · sala” (2 kolumny na telefonie, 8 na komputerze), lista
+  pod turą; do tego tabela sal z prelekcji. Wybrany kierunek i grupa są
   podświetlone.
 - Stan: `StudyModeContext` rozszerzony o `program`, `group` i `onlineSlot`, zapisywane
   w localStorage (try/catch jak teraz). Zmiana trybu czyści kierunek, jeśli ten nie

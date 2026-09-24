@@ -106,11 +106,13 @@ export default function ScheduleTimeline({
                 return (
                   <motion.li
                     key={`${day.date}-${item.id}-${item.from ?? i}`}
-                    initial={reduce ? false : { opacity: 0, x: -14 }}
+                    // stan początkowy taki sam na serwerze i kliencie (bez błędu
+                    // hydratacji); przy ograniczonym ruchu karta pojawia się od razu
+                    initial={{ opacity: 0, x: -14 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     viewport={{ once: true, margin: "-40px" }}
                     transition={{
-                      duration: 0.45,
+                      duration: reduce ? 0 : 0.45,
                       delay: reduce ? 0 : i * 0.07,
                       ease: [0.22, 1, 0.36, 1],
                     }}
@@ -120,7 +122,7 @@ export default function ScheduleTimeline({
                         : "border-line bg-surface hover:border-violet"
                     }`}
                   >
-                    <div className="flex shrink-0 items-center gap-2.5 sm:w-32 sm:flex-col sm:items-start">
+                    <div className="flex shrink-0 items-center gap-2.5 whitespace-nowrap sm:w-36 sm:flex-col sm:items-start">
                       {item.id === "party" ? (
                         <span className="inline-flex size-8 items-center justify-center rounded-full bg-white/20">
                           <Confetti size={17} weight="fill" />

@@ -12,7 +12,7 @@ import {
   type ScheduleData,
   type ScheduleLabels,
 } from "../src/lib/schedule.ts";
-import { CAMPUS_BUILDINGS } from "../src/lib/campusMap.ts";
+import { CAMPUS_BUILDINGS, CAMPUS_MAP, buildingView } from "../src/lib/campusMap.ts";
 
 const json = (p: string) =>
   JSON.parse(readFileSync(new URL(`../${p}`, import.meta.url), "utf8"));
@@ -53,6 +53,16 @@ test("buildingOf: budynek z nazwy sali", () => {
   assert.equal(buildingOf("1+2 P"), "P");
   assert.equal(buildingOf("111 CKU"), "CKU");
   assert.equal(buildingOf("113 Z"), "Z");
+});
+
+test("buildingView: kadr w granicach mapy i obejmuje cały budynek", () => {
+  for (const [b, rects] of Object.entries(CAMPUS_BUILDINGS)) {
+    const [x, y, w, h] = buildingView(b);
+    assert.ok(x >= 0 && y >= 0 && x + w <= CAMPUS_MAP.w && y + h <= CAMPUS_MAP.h, b);
+    for (const [x1, y1, x2, y2] of rects) {
+      assert.ok(x1 >= x && y1 >= y && x2 <= x + w && y2 <= y + h, `${b} poza kadrem`);
+    }
+  }
 });
 
 test("sanitizePicks odrzuca nieznane wartości", () => {
@@ -112,8 +122,9 @@ test("buildPlan full2 CTR", () => {
 
 test("buildPlan part II st. ANG", () => {
   const plan = buildPlan(data, "part", { online: { level: 2, lang: "en" } });
-  assert.deepEqual(plan.map((d) => d.date), ["2026-10-02", "2026-10-03"]);
-  const slots = plan[1].items;
+  // sobotnia transmisja (główne wydarzenie) przed piątkową imprezą
+  assert.deepEqual(plan.map((d) => d.date), ["2026-10-03", "2026-10-02"]);
+  const slots = plan[0].items;
   assert.equal(slots.length, 4);
   assert.deepEqual(
     slots.filter((s) => s.online?.active).map((s) => s.from),

@@ -51,10 +51,9 @@ export default function ScheduleTimeline({
   const plan = useMemo(() => buildPlan(data, mode, picks), [data, mode, picks]);
   const level = levelOf(mode);
   const modePhotos = photos?.[mode] ?? [];
-  const tourTimes = data.tours.rounds.map((r) => r.time).join(" · ");
+  const tourTimes = data.tours.rounds.map((r) => r.time);
 
   function time(item: PlanItem) {
-    if (item.id === "tour" && item.needs) return tourTimes;
     if (!item.from) return null;
     if (item.to) return `${item.from}-${item.to}`;
     return item.id === "lecture" || item.id === "online" || item.id === "party"
@@ -128,11 +127,21 @@ export default function ScheduleTimeline({
                           <Confetti size={17} weight="fill" />
                         </span>
                       ) : null}
-                      {when ? (
+                      {item.id === "tour" && item.needs ? (
+                        // 4 godziny tur: zawijają się w kolumnie, każda w całości
+                        <span className="flex flex-wrap gap-x-1.5 font-display text-sm font-bold tabular-nums text-violet">
+                          {tourTimes.map((tt, k) => (
+                            <span key={tt}>
+                              {tt}
+                              {k < tourTimes.length - 1 ? " ·" : ""}
+                            </span>
+                          ))}
+                        </span>
+                      ) : when ? (
                         <span
                           className={`font-display text-base font-bold tabular-nums sm:text-lg ${
                             hi ? "text-white" : "text-violet"
-                          } ${item.id === "tour" && item.needs ? "text-sm sm:text-sm" : ""}`}
+                          }`}
                         >
                           {when}
                         </span>

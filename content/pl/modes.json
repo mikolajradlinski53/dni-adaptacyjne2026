@@ -7,16 +7,16 @@
       {
         "title": "Dzień 1 · czwartek, 1 października",
         "items": [
-          "Droga przez kampus: poznacie budynki i najważniejsze miejsca",
-          "Stoiska organizacji studenckich i kół naukowych",
-          "Integracja na Zaprzegubiu"
+          "Od 9:00: Droga przez kampus w 4 turach - godzina i sala zależą od kierunku i grupy",
+          "11:00-18:00: stoiska organizacji studenckich i kół naukowych",
+          "11:00-16:00: atrakcje na Zaprzegubiu, a od 16:00 after z DJ-em"
         ]
       },
       {
         "title": "Dzień 2 · piątek, 2 października",
         "items": [
-          "Prelekcje: prawa i obowiązki studenta, zasady studiowania",
-          "Wieczorem: UE Party x DA"
+          "Od 9:00: prelekcje o prawach i obowiązkach studenta",
+          "Od 22:00: UE Party x DA w klubie Jamaica"
         ]
       }
     ]
@@ -24,13 +24,20 @@
   {
     "id": "full2",
     "label": "Stacjonarne · II stopień",
-    "short": "1 dzień wydarzenia: czwartek, 1 października. W piątek macie już zajęcia.",
+    "short": "1 dzień wydarzenia: czwartek, 1 października. W piątek macie już zajęcia, a wieczorem UE Party x DA.",
     "days": [
       {
         "title": "Dzień 1 · czwartek, 1 października",
         "items": [
-          "Prelekcje dla II stopnia: prawa i obowiązki studenta, organizacja studiów",
-          "Możliwość udziału w części ogólnej: stoiska organizacji i integracja"
+          "Od 9:00: prelekcje dla II stopnia o prawach i obowiązkach studenta",
+          "11:00-18:00: stoiska organizacji, atrakcje i after na Zaprzegubiu"
+        ]
+      },
+      {
+        "title": "Piątek, 2 października",
+        "items": [
+          "Zajęcia według planu",
+          "Od 22:00: UE Party x DA w klubie Jamaica"
         ]
       }
     ]
@@ -38,14 +45,14 @@
   {
     "id": "part",
     "label": "Niestacjonarne",
-    "short": "Sobota, 3 października, forma online (audycja). Nie musicie przyjeżdżać na kampus.",
+    "short": "Sobota, 3 października, transmisja online na YouTube. Nie musicie przyjeżdżać na kampus.",
     "days": [
       {
         "title": "Sobota, 3 października · online",
         "items": [
-          "Audycja online: najważniejsze informacje o prawach i obowiązkach studenta",
-          "Organizacja studiów niestacjonarnych",
-          "Link do transmisji pojawi się tutaj i w Newsach"
+          "I stopień: po polsku od 10:50, po angielsku od 14:10",
+          "II stopień: po polsku od 12:30, po angielsku od 15:50",
+          "Link do transmisji pojawi się w harmonogramie i na Facebooku"
         ]
       }
     ]

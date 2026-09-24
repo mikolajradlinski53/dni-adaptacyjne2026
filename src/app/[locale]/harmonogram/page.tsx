@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
-import { getModes, getSchedule } from "@/lib/content";
+import { getModes, getScheduleData, getScheduleLabels } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import ScheduleTimeline from "@/components/ScheduleTimeline";
 
@@ -23,8 +23,9 @@ export default async function SchedulePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
   const t = await getTranslations();
-  const [entries, modes] = await Promise.all([
-    getSchedule(locale),
+  const [data, labels, modes] = await Promise.all([
+    getScheduleData(),
+    getScheduleLabels(locale),
     getModes(locale),
   ]);
 
@@ -66,9 +67,9 @@ export default async function SchedulePage({ params }: Props) {
 
       <div className="mt-10">
         <ScheduleTimeline
-          entries={entries}
+          data={data}
+          labels={labels}
           modes={modes}
-          emptyLabel={t("schedule.empty")}
           photos={photos}
           galleryLabel={t("schedule.gallery")}
         />

@@ -79,10 +79,54 @@
   },
   "schedule": {
     "title": "Harmonogram",
-    "lead": "Wybierz tryb studiów, żeby zobaczyć plan, który Cię dotyczy.",
-    "note": "Poniżej schemat wydarzenia. Dokładne godziny i miejsca zostaną udostępnione wkrótce - zmiany ogłaszamy na Facebooku.",
-    "empty": "Harmonogram dla tego trybu pojawi się wkrótce.",
-    "gallery": "Migawki z wydarzenia"
+    "lead": "Wybierzcie tryb studiów, kierunek i grupę - pokażemy Wam godziny i sale, które Was dotyczą.",
+    "note": "Ewentualne zmiany ogłaszamy na bieżąco na Facebooku - zajrzyjcie tam przed wyjściem z domu.",
+    "gallery": "Migawki z wydarzenia",
+    "picker": {
+      "program": "Twój kierunek",
+      "search": "Szukaj kierunku, np. FIR albo logistyka",
+      "noResults": "Nie znaleźliśmy takiego kierunku.",
+      "change": "Zmień",
+      "group": "Twoja grupa",
+      "groupHint": "Numer grupy znajdziecie w USOS lub w mailu z uczelni.",
+      "missing": "Nie widzicie swojego kierunku?",
+      "missingLink": "Napiszcie do nas",
+      "level": "Stopień studiów",
+      "level1": "I stopień",
+      "level2": "II stopień",
+      "lang": "Język transmisji",
+      "langPl": "po polsku",
+      "langEn": "po angielsku"
+    },
+    "plan": {
+      "needsProgram": "Wybierzcie kierunek, żeby zobaczyć swoją salę.",
+      "needsGroup": "Wybierzcie grupę, żeby zobaczyć swoją salę.",
+      "needsTour": "Zbiórki w 4 turach - godzinę i salę pokażemy po wyborze kierunku i grupy.",
+      "needsOnline": "Wybierzcie stopień i język, żeby zobaczyć swoją transmisję.",
+      "meeting": "Zbiórka",
+      "from": "od",
+      "tour": "{n} tura",
+      "yourSlot": "Wasza transmisja",
+      "watch": "Oglądaj na YouTube",
+      "linkSoon": "Link pojawi się tutaj i na Facebooku.",
+      "directions": "Jak dojechać"
+    },
+    "map": {
+      "show": "Pokaż salę {room} na mapie",
+      "title": "Sala {room}",
+      "building": "Budynek {building} - zaznaczony na mapie",
+      "close": "Zamknij",
+      "full": "Otwórz mapę kampusu"
+    },
+    "full": {
+      "title": "Pełny rozkład",
+      "hint": "Wszystkie tury i sale w jednym miejscu.",
+      "tours": "Droga przez kampus: wszystkie tury",
+      "lectures": "Prelekcje: sale",
+      "room": "Sala",
+      "programs": "Kierunki",
+      "groups": "grupy {list}"
+    }
   },
   "links": {
     "title": "Ważne linki",

@@ -7,16 +7,16 @@
       {
         "title": "Day 1 · Thursday, 1 October",
         "items": [
-          "Campus walk: get to know the buildings and key places",
-          "Stands of student organisations and science clubs",
-          "Integration at Zaprzegubie"
+          "From 9:00: campus walk in 4 rounds - time and room depend on your programme and group",
+          "11:00-18:00: stands of student organisations and science clubs",
+          "11:00-16:00: attractions at Zaprzegubie, then an after-party with a DJ from 16:00"
         ]
       },
       {
         "title": "Day 2 · Friday, 2 October",
         "items": [
-          "Talks: student rights and duties, rules of studying",
-          "In the evening: UE Party x DA"
+          "From 9:00: talks on student rights and duties",
+          "From 22:00: UE Party x DA at Jamaica club"
         ]
       }
     ]
@@ -24,13 +24,20 @@
   {
     "id": "full2",
     "label": "Full-time · Master's",
-    "short": "1 event day: Thursday, 1 October. On Friday you already have classes.",
+    "short": "1 event day: Thursday, 1 October. On Friday you already have classes - and UE Party x DA in the evening.",
     "days": [
       {
         "title": "Day 1 · Thursday, 1 October",
         "items": [
-          "Talks for Master's students: rights and duties, study organisation",
-          "Optional: join the common part with stands and integration"
+          "From 9:00: talks for Master's students on student rights and duties",
+          "11:00-18:00: stands, attractions and an after-party at Zaprzegubie"
+        ]
+      },
+      {
+        "title": "Friday, 2 October",
+        "items": [
+          "Classes as scheduled",
+          "From 22:00: UE Party x DA at Jamaica club"
         ]
       }
     ]
@@ -38,14 +45,14 @@
   {
     "id": "part",
     "label": "Part-time",
-    "short": "Saturday, 3 October, online broadcast. No need to come to campus.",
+    "short": "Saturday, 3 October, online broadcast on YouTube. No need to come to campus.",
     "days": [
       {
         "title": "Saturday, 3 October · online",
         "items": [
-          "Online broadcast: key information on student rights and duties",
-          "Organisation of part-time studies",
-          "The stream link will appear here and in News"
+          "Bachelor's: in Polish from 10:50, in English from 14:10",
+          "Master's: in Polish from 12:30, in English from 15:50",
+          "The stream link will appear in the schedule and on Facebook"
         ]
       }
     ]

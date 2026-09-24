@@ -79,10 +79,54 @@
   },
   "schedule": {
     "title": "Schedule",
-    "lead": "Choose your study mode to see the plan that applies to you.",
-    "note": "Below is the outline of the event. Exact times and locations will be shared soon - updates are posted on Facebook.",
-    "empty": "The schedule for this mode will appear soon.",
-    "gallery": "Snapshots from the event"
+    "lead": "Choose your study mode, programme and group - we'll show you the times and rooms that apply to you.",
+    "note": "Any changes are announced on Facebook - check it before you leave home.",
+    "gallery": "Snapshots from the event",
+    "picker": {
+      "program": "Your programme",
+      "search": "Search for a programme, e.g. FIR or logistics",
+      "noResults": "We couldn't find that programme.",
+      "change": "Change",
+      "group": "Your group",
+      "groupHint": "You'll find your group number in USOS or in the e-mail from the university.",
+      "missing": "Can't see your programme?",
+      "missingLink": "Write to us",
+      "level": "Level of studies",
+      "level1": "Bachelor's",
+      "level2": "Master's",
+      "lang": "Broadcast language",
+      "langPl": "in Polish",
+      "langEn": "in English"
+    },
+    "plan": {
+      "needsProgram": "Choose your programme to see your room.",
+      "needsGroup": "Choose your group to see your room.",
+      "needsTour": "Meetings in 4 rounds - we'll show your time and room once you pick your programme and group.",
+      "needsOnline": "Choose your level and language to see your broadcast.",
+      "meeting": "Meeting point",
+      "from": "from",
+      "tour": "Round {n}",
+      "yourSlot": "Your broadcast",
+      "watch": "Watch on YouTube",
+      "linkSoon": "The link will appear here and on Facebook.",
+      "directions": "Directions"
+    },
+    "map": {
+      "show": "Show room {room} on the map",
+      "title": "Room {room}",
+      "building": "Building {building} - highlighted on the map",
+      "close": "Close",
+      "full": "Open the campus map"
+    },
+    "full": {
+      "title": "Full schedule",
+      "hint": "All rounds and rooms in one place.",
+      "tours": "Campus walk: all rounds",
+      "lectures": "Talks: rooms",
+      "room": "Room",
+      "programs": "Programmes",
+      "groups": "groups {list}"
+    }
   },
   "links": {
     "title": "Key links",

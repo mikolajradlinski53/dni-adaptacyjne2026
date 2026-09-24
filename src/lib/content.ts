@@ -1,4 +1,5 @@
 import type { Locale } from "@/i18n/routing";
+import type { ScheduleData, ScheduleLabels } from "./schedule";
 
 export type StudyMode = "full1" | "full2" | "part";
 
@@ -7,17 +8,6 @@ export type ModeInfo = {
   label: string;
   short: string;
   days: { title: string; items: string[] }[];
-};
-
-export type ScheduleEntry = {
-  mode: StudyMode;
-  date: string;
-  dayLabel: string;
-  title: string;
-  place?: string;
-  desc?: string;
-  /** Wyróżniony krok (np. UE Party) - mocniejsza wizualnie karta. */
-  highlight?: boolean;
 };
 
 export type LinkItem = {
@@ -53,8 +43,13 @@ export async function getModes(locale: Locale): Promise<ModeInfo[]> {
   return (await import(`../../content/${locale}/modes.json`)).default;
 }
 
-export async function getSchedule(locale: Locale): Promise<ScheduleEntry[]> {
-  return (await import(`../../content/${locale}/schedule.json`)).default;
+/** Dane harmonogramu (tury, sale, godziny) - wspólne dla wszystkich języków. */
+export async function getScheduleData(): Promise<ScheduleData> {
+  return (await import("../../content/schedule-data.json")).default as ScheduleData;
+}
+
+export async function getScheduleLabels(locale: Locale): Promise<ScheduleLabels> {
+  return (await import(`../../content/${locale}/schedule-labels.json`)).default;
 }
 
 export async function getLinks(locale: Locale): Promise<LinkCategory[]> {

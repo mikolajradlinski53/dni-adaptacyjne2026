@@ -202,8 +202,8 @@
 
   "general": [
     { "id": "stands", "date": "2026-10-01", "from": "11:00", "to": "18:00", "modes": ["full1", "full2"] },
-    { "id": "attractions", "date": "2026-10-01", "from": "11:00", "to": "16:00", "modes": ["full1", "full2"] },
-    { "id": "after", "date": "2026-10-01", "from": "16:00", "to": "18:00", "modes": ["full1", "full2"] },
+    { "id": "attractions", "date": "2026-10-01", "from": "11:00", "to": "17:00", "modes": ["full1", "full2"] },
+    { "id": "after", "date": "2026-10-01", "from": "17:00", "to": "21:00", "modes": ["full1", "full2"] },
     { "id": "classes", "date": "2026-10-02", "modes": ["full2"] },
     {
       "id": "party",
@@ -219,10 +219,10 @@
   "online": {
     "date": "2026-10-03",
     "slots": [
-      { "level": 1, "lang": "pl", "time": "10:50" },
-      { "level": 2, "lang": "pl", "time": "12:30" },
-      { "level": 1, "lang": "en", "time": "14:10" },
-      { "level": 2, "lang": "en", "time": "15:50" }
+      { "level": 1, "lang": "pl", "time": "10:50", "href": "https://www.youtube.com/live/nb3SFYyVgpY" },
+      { "level": 2, "lang": "pl", "time": "12:30", "href": "https://www.youtube.com/live/RLBWIU9Z62A" },
+      { "level": 1, "lang": "en", "time": "14:10", "href": "https://www.youtube.com/live/RGTcN8BAa0o" },
+      { "level": 2, "lang": "en", "time": "15:50", "href": "https://www.youtube.com/live/l3j87eYaH4E" }
     ]
   }
 }

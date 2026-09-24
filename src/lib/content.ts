@@ -70,6 +70,8 @@ export async function getPartners(locale: Locale): Promise<Partner[]> {
 
 export const EVENT_START = "2026-10-01T00:00:00+02:00";
 export const CONTACT_EMAIL = "dni.adaptacyjne@samorzad.ue.wroc.pl";
+/** Wydarzenie DA na Facebooku - tu ogłaszamy zmiany w harmonogramie. */
+export const FB_EVENT_URL = "https://fb.me/e/8psHItxw2";
 
 /** Kontakt ds. partnerstw (Członek Zarządu ds. Kontaktów Zewnętrznych). */
 export const PARTNERS_CONTACT = {

@@ -14,6 +14,7 @@ import {
 import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
+import { FB_EVENT_URL } from "@/lib/content";
 import Countdown from "@/components/Countdown";
 import HeroPhotos from "@/components/HeroPhotos";
 import HeroDoodles from "@/components/HeroDoodles";
@@ -46,7 +47,7 @@ export default async function HomePage({ params }: Props) {
   const socials = [
     {
       label: t("home.socialDa"),
-      href: "https://fb.me/e/8psHItxw2",
+      href: FB_EVENT_URL,
       domain: "facebook.com",
       fb: true,
       icon: <CalendarCheck size={22} weight="duotone" />,

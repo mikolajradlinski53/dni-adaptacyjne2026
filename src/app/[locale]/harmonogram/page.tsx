@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import type { Locale } from "@/i18n/routing";
-import { getModes, getScheduleData, getScheduleLabels } from "@/lib/content";
+import { FB_EVENT_URL, getModes, getScheduleData, getScheduleLabels } from "@/lib/content";
 import { pageMetadata } from "@/lib/seo";
 import ScheduleTimeline from "@/components/ScheduleTimeline";
 
@@ -62,7 +62,18 @@ export default async function SchedulePage({ params }: Props) {
       </p>
 
       <p className="mt-6 max-w-2xl rounded-tile border-l-4 border-green bg-[oklch(89%_0.13_150)] p-5 text-base font-bold text-ink sm:text-lg">
-        {t("schedule.note")}
+        {t.rich("schedule.note", {
+          link: (chunks) => (
+            <a
+              href={FB_EVENT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline decoration-2 underline-offset-2 hover:text-green"
+            >
+              {chunks}
+            </a>
+          ),
+        })}
       </p>
 
       <div className="mt-10">

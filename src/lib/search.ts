@@ -1,5 +1,7 @@
 import type { Locale } from "@/i18n/routing";
-import { getFaq, getLinks } from "./content";
+import { getTranslations } from "next-intl/server";
+import { getFaq, getLinks, getScheduleData, getScheduleLabels } from "./content";
+import { picksToQuery } from "./schedule";
 
 export type SearchEntry = {
   title: string;
@@ -30,7 +32,13 @@ export async function buildSearchIndex(
     { title: nav.rules, href: "/regulamin", group: nav.home },
   ];
 
-  const [links, faq] = await Promise.all([getLinks(locale), getFaq(locale)]);
+  const [links, faq, schedule, scheduleLabels, tp] = await Promise.all([
+    getLinks(locale),
+    getFaq(locale),
+    getScheduleData(),
+    getScheduleLabels(locale),
+    getTranslations({ locale, namespace: "schedule.picker" }),
+  ]);
 
   const linkEntries: SearchEntry[] = links.flatMap((cat) =>
     cat.items.map((item) => ({
@@ -48,5 +56,13 @@ export async function buildSearchIndex(
     group: nav.faq,
   }));
 
-  return [...pages, ...linkEntries, ...faqEntries];
+  // Kierunki: wynik prowadzi do harmonogramu z już wybranym kierunkiem.
+  const programEntries: SearchEntry[] = schedule.programs.map((p) => ({
+    title: `${scheduleLabels.programs[p.code]} (${p.code})`,
+    description: tp(p.level === 1 ? "level1" : "level2"),
+    href: `/harmonogram?${picksToQuery(p.level === 1 ? "full1" : "full2", { program: p.code })}`,
+    group: nav.schedule,
+  }));
+
+  return [...pages, ...programEntries, ...linkEntries, ...faqEntries];
 }

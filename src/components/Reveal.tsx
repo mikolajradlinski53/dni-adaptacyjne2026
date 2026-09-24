@@ -5,10 +5,13 @@ import type { ReactNode } from "react";
 
 const EASE = [0.22, 1, 0.36, 1] as const;
 
-/**
- * Delikatne pojawienie sekcji przy scrollu.
- * Treść jest widoczna domyślnie przy reduced motion.
- */
+/*
+  Przy reduced motion renderujemy TEN SAM motion.div co na serwerze, tylko
+  z animacją trwającą 0 s. Zwykły <div> zamiast motion.div dawał błąd
+  hydratacji: w DOM zostawał serwerowy styl opacity:0 i treść była niewidoczna.
+*/
+
+/** Delikatne pojawienie sekcji przy scrollu. */
 export default function Reveal({
   children,
   delay = 0,
@@ -22,17 +25,13 @@ export default function Reveal({
 }) {
   const reduce = useReducedMotion();
 
-  if (reduce) {
-    return <div className={className}>{children}</div>;
-  }
-
   return (
     <motion.div
       className={className}
       initial={{ opacity: 0, y }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.55, delay, ease: EASE }}
+      transition={reduce ? { duration: 0 } : { duration: 0.55, delay, ease: EASE }}
     >
       {children}
     </motion.div>
@@ -54,13 +53,9 @@ export function Stagger({
 }) {
   const reduce = useReducedMotion();
 
-  if (reduce) {
-    return <div className={className}>{children}</div>;
-  }
-
   const container: Variants = {
     hidden: {},
-    show: { transition: { staggerChildren: gap } },
+    show: { transition: { staggerChildren: reduce ? 0 : gap } },
   };
 
   return (
@@ -87,13 +82,13 @@ export function RevealItem({
 }) {
   const reduce = useReducedMotion();
 
-  if (reduce) {
-    return <div className={className}>{children}</div>;
-  }
-
   const item: Variants = {
     hidden: { opacity: 0, y },
-    show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: EASE } },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: reduce ? { duration: 0 } : { duration: 0.5, ease: EASE },
+    },
   };
 
   return (

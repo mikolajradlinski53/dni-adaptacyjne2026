@@ -44,11 +44,13 @@ export default function MasonryGallery({ items }: { items: Item[] }) {
             <motion.div
               key={n}
               className="group overflow-hidden rounded-2xl shadow-md ring-1 ring-black/5"
-              initial={reduce ? false : { opacity: 0, y: 26, scale: 0.96 }}
+              // ten sam stan początkowy na serwerze i kliencie (bez błędu
+              // hydratacji); przy ograniczonym ruchu zdjęcie pojawia się od razu
+              initial={{ opacity: 0, y: 26, scale: 0.96 }}
               whileInView={{ opacity: 1, y: 0, scale: 1 }}
               viewport={{ once: true, margin: "-40px" }}
               transition={{
-                duration: 0.5,
+                duration: reduce ? 0 : 0.5,
                 delay: reduce ? 0 : (ci * 0.05 + ri * 0.08),
                 ease: [0.22, 1, 0.36, 1],
               }}

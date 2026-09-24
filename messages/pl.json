@@ -126,6 +126,15 @@
       "room": "Sala",
       "programs": "Kierunki",
       "groups": "grupy {list}"
+    },
+    "actions": {
+      "calendar": "Dodaj do kalendarza",
+      "copy": "Skopiuj link do planu",
+      "share": "Udostępnij link do planu",
+      "copied": "Skopiowano link!",
+      "calName": "Dni Adaptacyjne 2026",
+      "calRoom": "Sala {room} (budynek {building})",
+      "calCampus": "Uniwersytet Ekonomiczny we Wrocławiu, ul. Komandorska 118/120, Wrocław"
     }
   },
   "links": {

@@ -161,6 +161,40 @@ export function sanitizePicks(
   return { program: program.code };
 }
 
+/* Linki z gotowym wyborem, np. /harmonogram?tryb=s1&kierunek=FIR&grupa=5 */
+const MODE_PARAM: Record<StudyMode, string> = { full1: "s1", full2: "s2", part: "ns" };
+
+/** Wybór -> query string (bez "?"); pusty, gdy nic nie wybrano. */
+export function picksToQuery(mode: StudyMode, picks: Picks): string {
+  const q = new URLSearchParams();
+  if (mode === "part" && picks.online) {
+    q.set("tryb", MODE_PARAM[mode]);
+    q.set("stopien", String(picks.online.level));
+    q.set("jezyk", picks.online.lang);
+  } else if (mode !== "part" && picks.program) {
+    q.set("tryb", MODE_PARAM[mode]);
+    q.set("kierunek", picks.program);
+    if (picks.group) q.set("grupa", String(picks.group));
+  }
+  return q.toString();
+}
+
+/** Query string -> tryb i (zwalidowany) wybór; null, gdy brak/nieznany tryb. */
+export function queryToPicks(
+  data: ScheduleData,
+  params: URLSearchParams
+): { mode: StudyMode; picks: Picks } | null {
+  const tryb = params.get("tryb");
+  const mode = (Object.keys(MODE_PARAM) as StudyMode[]).find((m) => MODE_PARAM[m] === tryb);
+  if (!mode) return null;
+  const raw = {
+    program: params.get("kierunek")?.toUpperCase(),
+    group: params.has("grupa") ? Number(params.get("grupa")) : undefined,
+    online: { level: Number(params.get("stopien")), lang: params.get("jezyk") },
+  };
+  return { mode, picks: sanitizePicks(data, mode, raw) };
+}
+
 function minutes(t?: string): number {
   if (!t) return -1;
   const [h, m] = t.split(":").map(Number);

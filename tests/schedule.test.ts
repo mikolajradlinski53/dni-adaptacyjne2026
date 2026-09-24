@@ -6,6 +6,8 @@ import {
   buildingOf,
   findLectureRoom,
   findTour,
+  picksToQuery,
+  queryToPicks,
   sanitizePicks,
   validateScheduleData,
   validateLabels,
@@ -76,6 +78,35 @@ test("sanitizePicks odrzuca nieznane wartości", () => {
   });
   assert.deepEqual(sanitizePicks(data, "part", { online: { level: 3, lang: "en" } }), {});
   assert.deepEqual(sanitizePicks(data, "full1", null), {});
+});
+
+test("picksToQuery: adres z wyborem", () => {
+  assert.equal(picksToQuery("full1", { program: "FIR", group: 5 }), "tryb=s1&kierunek=FIR&grupa=5");
+  assert.equal(picksToQuery("full1", { program: "Z" }), "tryb=s1&kierunek=Z");
+  assert.equal(picksToQuery("full2", { program: "CTR" }), "tryb=s2&kierunek=CTR");
+  assert.equal(picksToQuery("part", { online: { level: 2, lang: "en" } }), "tryb=ns&stopien=2&jezyk=en");
+  assert.equal(picksToQuery("full1", {}), "");
+});
+
+test("queryToPicks: wybór z adresu", () => {
+  const q = (s: string) => queryToPicks(data, new URLSearchParams(s));
+  assert.deepEqual(q("tryb=s1&kierunek=FIR&grupa=5"), { mode: "full1", picks: { program: "FIR", group: 5 } });
+  assert.deepEqual(q("tryb=s1&kierunek=fir&grupa=5"), { mode: "full1", picks: { program: "FIR", group: 5 } });
+  assert.deepEqual(q("tryb=s2&kierunek=CTR"), { mode: "full2", picks: { program: "CTR" } });
+  assert.deepEqual(q("tryb=ns&stopien=1&jezyk=pl"), { mode: "part", picks: { online: { level: 1, lang: "pl" } } });
+  assert.deepEqual(q("tryb=s1&kierunek=FIR&grupa=99"), { mode: "full1", picks: { program: "FIR" } });
+  assert.deepEqual(q("tryb=s1"), { mode: "full1", picks: {} });
+  assert.equal(q("kierunek=FIR"), null);
+  assert.equal(q("tryb=xx&kierunek=FIR"), null);
+  assert.equal(q(""), null);
+  // tam i z powrotem
+  for (const [mode, picks] of [
+    ["full1", { program: "ZIIP", group: 10 }],
+    ["full2", { program: "NGP" }],
+    ["part", { online: { level: 2, lang: "pl" } }],
+  ] as const) {
+    assert.deepEqual(q(picksToQuery(mode, picks)), { mode, picks });
+  }
 });
 
 const ids = (day: { items: { id: string }[] }) => day.items.map((i) => i.id);

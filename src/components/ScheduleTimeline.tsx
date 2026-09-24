@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
+import { Suspense, useMemo } from "react";
 import { useTranslations } from "next-intl";
 import {
   MapPin,
@@ -20,10 +20,11 @@ import {
 } from "@/lib/schedule";
 import ModeSwitcher from "./ModeSwitcher";
 import JustifiedGallery from "./JustifiedGallery";
-import { useStudyMode } from "./StudyModeContext";
 import ProgramPicker from "./schedule/ProgramPicker";
 import RoomButton from "./schedule/RoomButton";
 import FullSchedule from "./schedule/FullSchedule";
+import PlanActions from "./schedule/PlanActions";
+import QuerySync from "./schedule/QuerySync";
 import { usePicks } from "./schedule/usePicks";
 
 type Foto = { n: string; ar: number; full?: boolean };
@@ -45,8 +46,7 @@ export default function ScheduleTimeline({
 }) {
   const t = useTranslations("schedule");
   const tp = useTranslations("schedule.picker");
-  const { mode } = useStudyMode();
-  const { picks, setPicks } = usePicks(data, mode);
+  const { mode, picks, setPicks, applyQuery } = usePicks(data);
   const reduce = useReducedMotion();
   const plan = useMemo(() => buildPlan(data, mode, picks), [data, mode, picks]);
   const level = levelOf(mode);
@@ -81,7 +81,12 @@ export default function ScheduleTimeline({
           picks={picks}
           setPicks={setPicks}
         />
+        <PlanActions plan={plan} labels={labels} mode={mode} picks={picks} />
       </div>
+
+      <Suspense fallback={null}>
+        <QuerySync onQuery={applyQuery} />
+      </Suspense>
 
       <div className="mt-10 space-y-12">
         {plan.map((day) => (

@@ -72,14 +72,12 @@ export default function HeroPhotos() {
         <motion.div
           key={slot.className}
           className={`absolute overflow-hidden rounded-2xl bg-surface shadow-xl ring-1 ring-black/5 ${slot.className}`}
-          initial={
-            reduce
-              ? false
-              : { opacity: 0, y: 24, scale: 0.92, rotate: slot.rotate }
-          }
+          // ten sam stan początkowy na serwerze i kliencie (bez błędu
+          // hydratacji); przy ograniczonym ruchu od razu stan końcowy, bez unoszenia
+          initial={{ opacity: 0, y: 24, scale: 0.92, rotate: slot.rotate }}
           animate={
             reduce
-              ? { rotate: slot.rotate }
+              ? { opacity: 1, y: 0, scale: 1, rotate: slot.rotate }
               : {
                   opacity: 1,
                   y: [0, slot.float, 0],
@@ -89,7 +87,7 @@ export default function HeroPhotos() {
           }
           transition={
             reduce
-              ? undefined
+              ? { duration: 0 }
               : {
                   opacity: { duration: 0.6, delay: slot.delay, ease: EASE },
                   scale: { duration: 0.6, delay: slot.delay, ease: EASE },

@@ -126,6 +126,15 @@
       "room": "Room",
       "programs": "Programmes",
       "groups": "groups {list}"
+    },
+    "actions": {
+      "calendar": "Add to calendar",
+      "copy": "Copy link to your plan",
+      "share": "Share link to your plan",
+      "copied": "Link copied!",
+      "calName": "Orientation Days 2026",
+      "calRoom": "Room {room} (building {building})",
+      "calCampus": "Wroclaw University of Economics and Business, ul. Komandorska 118/120, Wrocław"
     }
   },
   "links": {

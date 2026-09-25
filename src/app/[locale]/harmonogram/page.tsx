@@ -61,20 +61,23 @@ export default async function SchedulePage({ params }: Props) {
         {t("schedule.lead")}
       </p>
 
-      <p className="mt-6 max-w-2xl rounded-tile border-l-4 border-green bg-[oklch(89%_0.13_150)] p-5 text-base font-bold text-ink sm:text-lg">
-        {t.rich("schedule.note", {
-          link: (chunks) => (
-            <a
-              href={FB_EVENT_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="underline decoration-2 underline-offset-2 hover:text-green"
-            >
-              {chunks}
-            </a>
-          ),
-        })}
-      </p>
+      <div className="mt-6 max-w-2xl rounded-tile border-l-4 border-green bg-[oklch(89%_0.13_150)] p-5 text-ink">
+        <p className="text-base font-bold sm:text-lg">
+          {t.rich("schedule.note", {
+            link: (chunks) => (
+              <a
+                href={FB_EVENT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline decoration-2 underline-offset-2 hover:text-green"
+              >
+                {chunks}
+              </a>
+            ),
+          })}
+        </p>
+        <p className="mt-2 text-sm font-medium sm:text-base">{t("schedule.mandatory")}</p>
+      </div>
 
       <div className="mt-10">
         <ScheduleTimeline

@@ -12,7 +12,7 @@
     { "code": "BM", "level": 1, "groups": 2 },
     { "code": "E", "level": 1, "groups": 4 },
     { "code": "ZIIP", "level": 1, "groups": 10 },
-    { "code": "IB", "level": 1, "groups": 2 },
+    { "code": "IB", "level": 1, "groups": 3 },
     { "code": "AG", "level": 1, "groups": 3 },
     { "code": "NGP", "level": 1, "groups": 2 },
     { "code": "RP", "level": 1, "groups": 3 },
@@ -51,7 +51,7 @@
           { "room": "11 A", "program": "FIR", "group": 6 },
           { "room": "113 Z", "program": "FIR", "group": 7 },
           { "room": "113 Z", "program": "FIR", "group": 8 },
-          { "room": "4 W", "program": "KS", "group": 1 },
+          { "room": "1 P", "program": "KS", "group": 1 },
           { "room": "1 P", "program": "KS", "group": 2 },
           { "room": "1 P", "program": "KS", "group": 3 },
           { "room": "1 E", "program": "IWB", "group": 1 },
@@ -75,8 +75,8 @@
           { "room": "1 P", "program": "IWZP", "group": 1 },
           { "room": "1 P", "program": "IWZP", "group": 2 },
           { "room": "11 A", "program": "EKOB", "group": 1 },
-          { "room": "4 W", "program": "L", "group": 1 },
-          { "room": "4 W", "program": "L", "group": 2 },
+          { "room": "1 P", "program": "L", "group": 1 },
+          { "room": "1 P", "program": "L", "group": 2 },
           { "room": "1 E", "program": "MSG", "group": 1 },
           { "room": "1 E", "program": "MSG", "group": 2 },
           { "room": "2 E", "program": "BM", "group": 1 },
@@ -95,14 +95,15 @@
           { "room": "11 A", "program": "ZIIP", "group": 2 },
           { "room": "113 Z", "program": "ZIIP", "group": 3 },
           { "room": "113 Z", "program": "ZIIP", "group": 4 },
-          { "room": "4 W", "program": "ZIIP", "group": 5 },
+          { "room": "1 P", "program": "ZIIP", "group": 5 },
           { "room": "1 P", "program": "ZIIP", "group": 6 },
           { "room": "1 P", "program": "ZIIP", "group": 7 },
           { "room": "1 E", "program": "ZIIP", "group": 8 },
           { "room": "1 E", "program": "ZIIP", "group": 9 },
           { "room": "1 E", "program": "ZIIP", "group": 10 },
           { "room": "2 E", "program": "IB", "group": 1 },
-          { "room": "2 E", "program": "IB", "group": 2 }
+          { "room": "2 E", "program": "IB", "group": 2 },
+          { "room": "2 E", "program": "IB", "group": 3 }
         ]
       },
       {
@@ -118,8 +119,8 @@
           { "room": "113 Z", "program": "RP", "group": 2 },
           { "room": "113 Z", "program": "RP", "group": 3 },
           { "room": "1 P", "program": "ZP", "group": 1 },
-          { "room": "4 W", "program": "ZP", "group": 2 },
-          { "room": "4 W", "program": "ZP", "group": 3 },
+          { "room": "1 P", "program": "ZP", "group": 2 },
+          { "room": "1 P", "program": "ZP", "group": 3 },
           { "room": "1 E", "program": "E-B", "group": 1 },
           { "room": "1 E", "program": "E-B", "group": 2 },
           { "room": "2 E", "program": "BI", "group": 1 },
@@ -156,7 +157,7 @@
             { "code": "MSG" }
           ]
         },
-        { "room": "401 E", "programs": [{ "code": "NGP" }] }
+        { "room": "402 A", "programs": [{ "code": "NGP" }] }
       ]
     },
     {
@@ -169,7 +170,7 @@
           "programs": [{ "code": "FIR" }, { "code": "MSG" }, { "code": "RP" }]
         },
         { "room": "106 A", "programs": [{ "code": "AG" }, { "code": "NGP" }] },
-        { "room": "307 A", "programs": [{ "code": "E-B" }] },
+        { "room": "11 A", "programs": [{ "code": "E-B" }] },
         {
           "room": "214 A",
           "programs": [

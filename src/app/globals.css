@@ -334,6 +334,49 @@ p {
   }
 }
 
+/* Licznik w dni wydarzenia: „To już dziś!" - słowa wskakują po kolei */
+@keyframes today-pop {
+  0% {
+    opacity: 0;
+    transform: translateY(0.4em) scale(0.6) rotate(-6deg);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-0.08em) scale(1.08) rotate(2deg);
+  }
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+.today-word {
+  display: inline-block;
+  animation: today-pop 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+.today-word.grad-brand {
+  animation:
+    today-pop 0.8s cubic-bezier(0.22, 1, 0.36, 1) both,
+    grad-pan 6s ease infinite;
+}
+.today-fade {
+  animation: rise-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;
+}
+.today-fade.grad-brand {
+  animation:
+    rise-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.55s both,
+    grad-pan 14s ease infinite;
+}
+@keyframes today-ping {
+  75%,
+  100% {
+    transform: scale(2.4);
+    opacity: 0;
+  }
+}
+.today-ping {
+  animation: today-ping 1.4s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
 /* Widoczny fokus klawiaturowy - wymóg dostępności */
 :focus-visible {
   outline: 3px solid var(--color-violet);

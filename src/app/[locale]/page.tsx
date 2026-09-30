@@ -120,6 +120,10 @@ export default async function HomePage({ params }: Props) {
                 minutes: t("countdown.minutes"),
                 seconds: t("countdown.seconds"),
                 after: t("countdown.after"),
+                today: t("countdown.today"),
+                todayBadge: t("countdown.todayBadge"),
+                todayLead: t("countdown.todayLead"),
+                todayCta: t("countdown.todayCta"),
               }}
             />
           </div>

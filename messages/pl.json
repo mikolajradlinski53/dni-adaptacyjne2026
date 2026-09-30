@@ -41,7 +41,11 @@
     "hours": "godzin",
     "minutes": "minut",
     "seconds": "sekund",
-    "after": "Do zobaczenia na kampusie!"
+    "after": "Do zobaczenia na kampusie!",
+    "today": "To już dziś!",
+    "todayBadge": "Trwa teraz",
+    "todayLead": "Dni Adaptacyjne właśnie trwają. Sprawdź w harmonogramie, gdzie i o której się widzimy.",
+    "todayCta": "Mój plan na dziś"
   },
   "home": {
     "socialTitle": "Bądźcie z nami na bieżąco",

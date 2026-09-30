@@ -41,7 +41,11 @@
     "hours": "hours",
     "minutes": "minutes",
     "seconds": "seconds",
-    "after": "See you on campus!"
+    "after": "See you on campus!",
+    "today": "It's today!",
+    "todayBadge": "Happening now",
+    "todayLead": "Orientation Days are on. Check the schedule to see where and when we meet.",
+    "todayCta": "My plan for today"
   },
   "home": {
     "socialTitle": "Stay up to date",

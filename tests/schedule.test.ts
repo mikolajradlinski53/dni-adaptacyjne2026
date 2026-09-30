@@ -48,7 +48,7 @@ test("findLectureRoom: sala prelekcji", () => {
   assert.equal(findLectureRoom(data, 1, "Z"), null);
   assert.equal(findLectureRoom(data, 1, "BI"), "3 P");
   assert.equal(findLectureRoom(data, 2, "CTR"), "1 CKU");
-  assert.equal(findLectureRoom(data, 2, "NGP"), "401 E");
+  assert.equal(findLectureRoom(data, 2, "NGP"), "402 A");
 });
 
 test("buildingOf: budynek z nazwy sali", () => {

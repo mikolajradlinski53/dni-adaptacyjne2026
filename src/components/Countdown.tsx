@@ -54,11 +54,16 @@ function Today({ labels }: { labels: Labels }) {
         {words.map((w, i) => (
           <Fragment key={i}>
             {i > 0 ? " " : null}
+            {/* Animacja na zewnętrznym spanie, gradient na wewnętrznym (inline):
+                Safari ucina background-clip:text na elemencie z transformacją,
+                a padding inline poszerza tło bez zmiany układu - ogonek "j" się mieści */}
             <span
-              className="today-word grad-brand -my-[0.2em] bg-clip-text py-[0.2em] text-transparent"
-              style={{ animationDelay: `${i * 0.12}s, 0s` }}
+              className="today-word"
+              style={{ animationDelay: `${i * 0.12}s` }}
             >
-              {w}
+              <span className="today-grad grad-brand bg-clip-text px-[0.08em] py-[0.3em] text-transparent">
+                {w}
+              </span>
             </span>
           </Fragment>
         ))}

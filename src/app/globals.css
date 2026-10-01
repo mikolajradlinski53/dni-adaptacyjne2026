@@ -353,10 +353,10 @@ p {
   display: inline-block;
   animation: today-pop 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
 }
-.today-word.grad-brand {
-  animation:
-    today-pop 0.8s cubic-bezier(0.22, 1, 0.36, 1) both,
-    grad-pan 6s ease infinite;
+.today-grad {
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  animation-duration: 6s;
 }
 .today-fade {
   animation: rise-up 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.45s both;

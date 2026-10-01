@@ -50,12 +50,12 @@ function Today({ labels }: { labels: Labels }) {
         </span>
         {labels.todayBadge}
       </p>
-      <p className="font-display text-5xl font-bold leading-none sm:text-7xl md:text-8xl">
+      <p className="font-display text-5xl font-bold leading-[1.05] sm:text-7xl md:text-8xl">
         {words.map((w, i) => (
           <Fragment key={i}>
             {i > 0 ? " " : null}
             <span
-              className="today-word grad-brand bg-clip-text text-transparent"
+              className="today-word grad-brand -my-[0.2em] bg-clip-text py-[0.2em] text-transparent"
               style={{ animationDelay: `${i * 0.12}s, 0s` }}
             >
               {w}

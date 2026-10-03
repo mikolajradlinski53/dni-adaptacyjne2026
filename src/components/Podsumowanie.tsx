@@ -1,5 +1,5 @@
 import { getTranslations } from "next-intl/server";
-import { Camera, EnvelopeSimple, Heart } from "@phosphor-icons/react/dist/ssr";
+import { Camera, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import type { Locale } from "@/i18n/routing";
 import { CONTACT_EMAIL, getPartners, getTeam } from "@/lib/content";
 import HeroDoodles from "./HeroDoodles";
@@ -30,17 +30,24 @@ export default async function Podsumowanie({ locale }: { locale: Locale }) {
       {/* PODZIĘKOWANIA */}
       <section className="aurora relative overflow-hidden border-b border-line">
         <HeroDoodles />
-        <div className="relative mx-auto max-w-6xl px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20">
-          <p className="rise rise-1 inline-flex items-center gap-2 rounded-full border border-line bg-surface/80 px-4 py-1.5 text-sm font-semibold backdrop-blur">
-            <Heart size={17} weight="duotone" className="text-violet" />
-            {t("closing.badge")}
-          </p>
-          <h1 className="rise rise-2 mt-6 text-5xl font-extrabold leading-[1.05] sm:text-7xl">
-            {t("closing.title")}
-          </h1>
-          <p className="rise rise-3 mt-5 max-w-2xl text-base text-ink-soft sm:text-lg">
-            {t("closing.lead")}
-          </p>
+        <div className="relative mx-auto grid max-w-6xl items-center gap-8 px-4 pb-16 pt-14 sm:px-6 sm:pb-20 sm:pt-20 md:grid-cols-[1.4fr_1fr] md:gap-12">
+          <div>
+            <h1 className="rise rise-1 text-4xl font-extrabold leading-[1.05] sm:text-6xl">
+              {t("closing.title")}
+            </h1>
+            <p className="rise rise-2 mt-5 max-w-2xl text-base text-ink-soft sm:text-lg">
+              {t("closing.lead")}
+            </p>
+          </div>
+          {/* Logo wydarzenia: na telefonie nad tekstem, od md po prawej */}
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img
+            src="/images/web/logo.webp"
+            alt="Dni Adaptacyjne"
+            width={520}
+            height={302}
+            className="rise rise-3 order-first mx-auto w-56 max-w-full sm:w-72 md:order-last md:w-full md:max-w-sm"
+          />
         </div>
       </section>
 

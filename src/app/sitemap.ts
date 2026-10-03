@@ -1,6 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 import { SITE_URL } from "@/lib/seo";
+import { WYDARZENIE_ZAKONCZONE } from "@/lib/zakonczenie";
 
 const STATIC_PATHS = [
   "",
@@ -18,7 +19,10 @@ const STATIC_PATHS = [
 export default function sitemap(): MetadataRoute.Sitemap {
   const entries: MetadataRoute.Sitemap = [];
 
-  for (const path of STATIC_PATHS) {
+  // Po wydarzeniu zostaje tylko podsumowanie i polityka prywatności.
+  const paths = WYDARZENIE_ZAKONCZONE ? ["", "/polityka-prywatnosci"] : STATIC_PATHS;
+
+  for (const path of paths) {
     const languages = Object.fromEntries(
       routing.locales.map((l) => [l, `${SITE_URL}/${l}${path}`])
     );

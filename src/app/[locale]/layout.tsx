@@ -5,6 +5,7 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing, type Locale } from "@/i18n/routing";
 import { buildSearchIndex } from "@/lib/search";
 import { SITE_URL, OG_IMAGE } from "@/lib/seo";
+import { WYDARZENIE_ZAKONCZONE } from "@/lib/zakonczenie";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FloatingBackground from "@/components/FloatingBackground";
@@ -148,7 +149,8 @@ export default async function LocaleLayout({
     ],
   };
 
-  const searchEntries = await buildSearchIndex(locale as Locale, {
+  // Po wydarzeniu wyszukiwarka jest ukryta - indeks tylko by puchł w HTML.
+  const searchEntries = WYDARZENIE_ZAKONCZONE ? [] : await buildSearchIndex(locale as Locale, {
     home: t("nav.home"),
     about: t("nav.about"),
     schedule: t("nav.schedule"),

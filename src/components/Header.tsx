@@ -5,6 +5,7 @@ import { useLocale, useTranslations } from "next-intl";
 import { List, X, MapPinLine } from "@phosphor-icons/react";
 import { Link, usePathname } from "@/i18n/navigation";
 import { routing } from "@/i18n/routing";
+import { WYDARZENIE_ZAKONCZONE } from "@/lib/zakonczenie";
 import AnimatedLogo from "./AnimatedLogo";
 import type { SearchEntry } from "@/lib/search";
 import SearchOverlay from "./SearchOverlay";
@@ -55,6 +56,8 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
           <AnimatedLogo className="h-11 shrink-0 sm:h-12" />
         </Link>
 
+        {/* Po wydarzeniu: tylko logo i języki (podstrony przekierowują na główną). */}
+        {!WYDARZENIE_ZAKONCZONE && (
         <nav
           className="hidden items-center gap-0.5 lg:flex xl:gap-1"
           aria-label="main"
@@ -98,13 +101,18 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
             {mapItem.label}
           </Link>
         </nav>
+        )}
 
         <div className="flex items-center gap-2">
-          <SearchOverlay entries={entries} labels={searchLabels} />
+          {!WYDARZENIE_ZAKONCZONE && (
+            <SearchOverlay entries={entries} labels={searchLabels} />
+          )}
 
           <nav
             aria-label={t("langSwitcher.label")}
-            className="hidden items-center rounded-full border border-line bg-surface p-1 sm:flex"
+            className={`items-center rounded-full border border-line bg-surface p-1 ${
+              WYDARZENIE_ZAKONCZONE ? "flex" : "hidden sm:flex"
+            }`}
           >
             {routing.locales.map((loc) => (
               <Link
@@ -123,6 +131,7 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
             ))}
           </nav>
 
+          {!WYDARZENIE_ZAKONCZONE && (
           <button
             onClick={() => setMenuOpen((v) => !v)}
             aria-expanded={menuOpen}
@@ -135,10 +144,11 @@ export default function Header({ entries }: { entries: SearchEntry[] }) {
               <List size={20} weight="bold" />
             )}
           </button>
+          )}
         </div>
       </div>
 
-      {menuOpen ? (
+      {menuOpen && !WYDARZENIE_ZAKONCZONE ? (
         <div className="border-t border-line bg-bg lg:hidden">
           <nav className="mx-auto max-w-6xl px-4 py-4 sm:px-6" aria-label="mobile">
             <ul className="grid gap-1">

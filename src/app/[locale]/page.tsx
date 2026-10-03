@@ -15,6 +15,8 @@ import { Link } from "@/i18n/navigation";
 import type { Locale } from "@/i18n/routing";
 import { pageMetadata } from "@/lib/seo";
 import { FB_EVENT_URL } from "@/lib/content";
+import { WYDARZENIE_ZAKONCZONE } from "@/lib/zakonczenie";
+import Podsumowanie from "@/components/Podsumowanie";
 import Countdown from "@/components/Countdown";
 import HeroPhotos from "@/components/HeroPhotos";
 import HeroDoodles from "@/components/HeroDoodles";
@@ -42,6 +44,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+
+  // Po wydarzeniu: tylko podsumowanie. Kod poniżej zostaje na kolejną edycję.
+  if (WYDARZENIE_ZAKONCZONE) return <Podsumowanie locale={locale} />;
+
   const t = await getTranslations();
 
   const socials = [

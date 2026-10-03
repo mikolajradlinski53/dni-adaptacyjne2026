@@ -2,6 +2,7 @@ import { getTranslations } from "next-intl/server";
 import { CalendarDots, MapPin, EnvelopeSimple } from "@phosphor-icons/react/dist/ssr";
 import { Link } from "@/i18n/navigation";
 import { CONTACT_EMAIL } from "@/lib/content";
+import { WYDARZENIE_ZAKONCZONE } from "@/lib/zakonczenie";
 import AnimatedLogo from "./AnimatedLogo";
 
 export default async function Footer() {
@@ -41,7 +42,13 @@ export default async function Footer() {
         <span className="absolute -bottom-16 left-1/3 size-56 rounded-full bg-gold-soft/50 blur-3xl" />
       </div>
 
-      <div className="relative mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 md:grid-cols-[1.7fr_1.1fr_1.1fr]">
+      <div
+        className={`relative mx-auto grid max-w-6xl gap-10 px-4 py-14 sm:px-6 ${
+          WYDARZENIE_ZAKONCZONE
+            ? "md:grid-cols-[1.7fr_1.1fr]"
+            : "md:grid-cols-[1.7fr_1.1fr_1.1fr]"
+        }`}
+      >
         <div>
           <AnimatedLogo className="h-20 sm:h-24" />
           <p className="mt-5 max-w-sm text-sm text-ink-soft">
@@ -59,6 +66,8 @@ export default async function Footer() {
           </div>
         </div>
 
+        {/* Po wydarzeniu bez nawigacji (podstrony przekierowują na główną). */}
+        {!WYDARZENIE_ZAKONCZONE && (
         <div>
           <h2 className="text-sm font-bold">{t("footer.navTitle")}</h2>
           <ul className="mt-3 grid grid-cols-2 gap-x-4 gap-y-2">
@@ -74,6 +83,7 @@ export default async function Footer() {
             ))}
           </ul>
         </div>
+        )}
 
         <div>
           <h2 className="text-sm font-bold">{t("footer.contact")}</h2>
